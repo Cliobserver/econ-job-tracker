@@ -6482,7 +6482,7 @@
    "institution": "Insubria University",
    "department": "",
    "type": "Industry/Nonprofit",
-   "section": "Full-Time Nonacademic",
+   "section": "",
    "fields": [
     "Finance",
     "Econometrics",
@@ -6490,16 +6490,14 @@
    ],
    "ag_env": false,
    "geo": {
-    "countries": [
-     "Italy"
-    ],
+    "countries": [],
     "regions": [
-     "Europe"
+     "Unknown"
     ],
     "us_states": [],
-    "primary": "Italy"
+    "primary": "Unknown"
    },
-   "location_text": "Varese, Lombardy, Italy",
+   "location_text": "Varese, Lombardy",
    "jel_codes": [
     "A"
    ],
@@ -48466,67 +48464,6 @@
    "status": "active"
   },
   {
-   "title": "Research Assistant (Job ID: 2026-3891)",
-   "institution": "Brookings Institution",
-   "department": "",
-   "type": "Industry/Nonprofit",
-   "section": "",
-   "fields": [
-    "Public",
-    "Political Economy",
-    "Any Field"
-   ],
-   "ag_env": false,
-   "geo": {
-    "countries": [
-     "United States"
-    ],
-    "regions": [
-     "US-South"
-    ],
-    "us_states": [
-     "District of Columbia"
-    ],
-    "primary": "District of Columbia"
-   },
-   "location_text": "Washington, District of Columbia, United States",
-   "jel_codes": [
-    "H",
-    "A",
-    "P"
-   ],
-   "categories": [
-    "Economics",
-    "Economics and Social Sciences"
-   ],
-   "deadline": null,
-   "posted": "2026-09-08",
-   "start_date_text": "",
-   "start_year": 2027,
-   "degree_required": "",
-   "phd_required": false,
-   "requirements": [],
-   "salary": "",
-   "summary": "To advance our mission, we are committed to the following four goals: \nDevelop economic growth strategies for a changing world\nExpand economic and social opportunity for all\nRevitalize U.S. democratic institutions\nAdvance peace and security worldwide\nAt the core of our mission is the quality, independence, and impact of our research. We are dedicated to finding bold, pragmatic solutions for societal challenges through open-minded inquiry, diverse perspectives, and holding ourselves to the highest standards of scholastic rigor.\nBeyond the pursuit of excellence and intellectual rigor, Brookings ",
-   "passes_filter": false,
-   "exclusion_reasons": [
-    "PhD not required"
-   ],
-   "sources": [
-    {
-     "source": "inomics",
-     "url": "https://inomics.com/job/research-assistant-job-id-2026-3891-1555008",
-     "id": "1555008"
-    }
-   ],
-   "source_keys": [
-    "inomics:1555008"
-   ],
-   "first_seen": "2026-10-04",
-   "last_seen": "2026-10-04",
-   "status": "active"
-  },
-  {
    "title": "Senior Research Assistant, The Hamilton Project (Job ID: 2026-3892)",
    "institution": "Brookings Institution",
    "department": "",
@@ -48582,6 +48519,67 @@
    ],
    "source_keys": [
     "inomics:1555024"
+   ],
+   "first_seen": "2026-10-04",
+   "last_seen": "2026-10-04",
+   "status": "active"
+  },
+  {
+   "title": "Research Assistant (Job ID: 2026-3891)",
+   "institution": "Brookings Institution",
+   "department": "",
+   "type": "Student/Intern",
+   "section": "Student",
+   "fields": [
+    "Public",
+    "Political Economy",
+    "Any Field"
+   ],
+   "ag_env": false,
+   "geo": {
+    "countries": [
+     "United States"
+    ],
+    "regions": [
+     "US-South"
+    ],
+    "us_states": [
+     "District of Columbia"
+    ],
+    "primary": "District of Columbia"
+   },
+   "location_text": "Washington, District of Columbia, United States",
+   "jel_codes": [
+    "H",
+    "A",
+    "P"
+   ],
+   "categories": [
+    "Economics",
+    "Economics and Social Sciences"
+   ],
+   "deadline": null,
+   "posted": "2026-09-08",
+   "start_date_text": "",
+   "start_year": 2027,
+   "degree_required": "Masters",
+   "phd_required": false,
+   "requirements": [],
+   "salary": "",
+   "summary": "To advance our mission, we are committed to the following four goals: \nDevelop economic growth strategies for a changing world\nExpand economic and social opportunity for all\nRevitalize U.S. democratic institutions\nAdvance peace and security worldwide\nAt the core of our mission is the quality, independence, and impact of our research. We are dedicated to finding bold, pragmatic solutions for societal challenges through open-minded inquiry, diverse perspectives, and holding ourselves to the highest standards of scholastic rigor.\nBeyond the pursuit of excellence and intellectual rigor, Brookings ",
+   "passes_filter": false,
+   "exclusion_reasons": [
+    "student/intern role"
+   ],
+   "sources": [
+    {
+     "source": "inomics",
+     "url": "https://inomics.com/job/research-assistant-job-id-2026-3891-1555008",
+     "id": "1555008"
+    }
+   ],
+   "source_keys": [
+    "inomics:1555008"
    ],
    "first_seen": "2026-10-04",
    "last_seen": "2026-10-04",
