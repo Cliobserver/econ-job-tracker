@@ -2837,9 +2837,11 @@
    "jel_codes": [
     "Q5"
    ],
-   "categories": [],
+   "categories": [
+    "Environmental"
+   ],
    "deadline": "2026-10-01",
-   "posted": null,
+   "posted": "2026-09-14",
    "start_date_text": "",
    "start_year": 2027,
    "degree_required": "",
@@ -2854,10 +2856,16 @@
      "source": "joe",
      "url": "https://www.aeaweb.org/joe/listing.php?JOE_ID=2026-02_111477881",
      "id": "111477881"
+    },
+    {
+     "source": "aere",
+     "url": "https://apptrkr.com/9822154",
+     "id": "https-apptrkr-com-9822154"
     }
    ],
    "source_keys": [
-    "joe:111477881"
+    "joe:111477881",
+    "aere:https-apptrkr-com-9822154"
    ],
    "first_seen": "2026-10-04",
    "last_seen": "2026-10-04",
@@ -10662,9 +10670,11 @@
     "Q4",
     "Q5"
    ],
-   "categories": [],
+   "categories": [
+    "Environmental"
+   ],
    "deadline": "2026-11-01",
-   "posted": null,
+   "posted": "2026-09-21",
    "start_date_text": "",
    "start_year": null,
    "degree_required": "",
@@ -10679,10 +10689,16 @@
      "source": "joe",
      "url": "https://www.aeaweb.org/joe/listing.php?JOE_ID=2026-02_111477644",
      "id": "111477644"
+    },
+    {
+     "source": "aere",
+     "url": "https://secure7.saashr.com/ta/6213629.careers?CareersSearch=&ein_id=119000450&lang=en-US",
+     "id": "https-secure7-saashr-com-ta-6213629-careers-careerssearch-ein-id-119000450-lang-"
     }
    ],
    "source_keys": [
-    "joe:111477644"
+    "joe:111477644",
+    "aere:https-secure7-saashr-com-ta-6213629-careers-careerssearch-ein-id-119000450-lang-"
    ],
    "first_seen": "2026-10-04",
    "last_seen": "2026-10-04",
@@ -21054,58 +21070,6 @@
    "status": "active"
   },
   {
-   "title": "Assistant or Associate Professor of Professional Practice",
-   "institution": "Rutgers Business School at Newark and New Brunswick",
-   "department": "",
-   "type": "Visiting/Teaching",
-   "section": "Other Academic (Visiting or Temporary)",
-   "fields": [
-    "Finance"
-   ],
-   "ag_env": false,
-   "geo": {
-    "countries": [
-     "United States"
-    ],
-    "regions": [
-     "US-Northeast"
-    ],
-    "us_states": [
-     "New Jersey"
-    ],
-    "primary": "New Jersey"
-   },
-   "location_text": "Newark, New Jersey, United States",
-   "jel_codes": [],
-   "categories": [
-    "Finance"
-   ],
-   "deadline": "2026-11-18",
-   "posted": "2026-09-18",
-   "start_date_text": "",
-   "start_year": null,
-   "degree_required": "",
-   "phd_required": true,
-   "requirements": [],
-   "salary": "$110,000 - $120,000 commensurate with experience",
-   "summary": "The Department of Finance and Economics at Rutgers Business School–Newark and New Brunswick, Rutgers University, is seeking a full-time, non-tenure-track faculty member at the rank of Assistant Professor or Associate Professor, subject to funding availability. Candidates must possess a master’s degree or higher in Finance, Economics. \r\n\r\nThe Finance & Economics Department at Rutgers Business School–Newark and New Brunswick comprises a large faculty of scholars and professional faculty whose teaching and research span finance, economics, and related fields. The department supports a range of ac",
-   "passes_filter": true,
-   "exclusion_reasons": [],
-   "sources": [
-    {
-     "source": "chronicle",
-     "url": "https://jobs.chronicle.com/job/38040897/assistant-or-associate-professor-of-professional-practice/",
-     "id": "38040897"
-    }
-   ],
-   "source_keys": [
-    "chronicle:38040897"
-   ],
-   "first_seen": "2026-10-04",
-   "last_seen": "2026-10-04",
-   "status": "active"
-  },
-  {
    "title": "Assistant / Associate Professor Position in Finance",
    "institution": "Rutgers Business School at Newark and New Brunswick",
    "department": "",
@@ -21154,6 +21118,58 @@
    ],
    "source_keys": [
     "chronicle:38040952"
+   ],
+   "first_seen": "2026-10-04",
+   "last_seen": "2026-10-04",
+   "status": "active"
+  },
+  {
+   "title": "Assistant or Associate Professor of Professional Practice",
+   "institution": "Rutgers Business School at Newark and New Brunswick",
+   "department": "",
+   "type": "Visiting/Teaching",
+   "section": "Other Academic (Visiting or Temporary)",
+   "fields": [
+    "Finance"
+   ],
+   "ag_env": false,
+   "geo": {
+    "countries": [
+     "United States"
+    ],
+    "regions": [
+     "US-Northeast"
+    ],
+    "us_states": [
+     "New Jersey"
+    ],
+    "primary": "New Jersey"
+   },
+   "location_text": "Newark, New Jersey, United States",
+   "jel_codes": [],
+   "categories": [
+    "Finance"
+   ],
+   "deadline": "2026-11-18",
+   "posted": "2026-09-18",
+   "start_date_text": "",
+   "start_year": null,
+   "degree_required": "",
+   "phd_required": true,
+   "requirements": [],
+   "salary": "$110,000 - $120,000 commensurate with experience",
+   "summary": "The Department of Finance and Economics at Rutgers Business School–Newark and New Brunswick, Rutgers University, is seeking a full-time, non-tenure-track faculty member at the rank of Assistant Professor or Associate Professor, subject to funding availability. Candidates must possess a master’s degree or higher in Finance, Economics. \r\n\r\nThe Finance & Economics Department at Rutgers Business School–Newark and New Brunswick comprises a large faculty of scholars and professional faculty whose teaching and research span finance, economics, and related fields. The department supports a range of ac",
+   "passes_filter": true,
+   "exclusion_reasons": [],
+   "sources": [
+    {
+     "source": "chronicle",
+     "url": "https://jobs.chronicle.com/job/38040897/assistant-or-associate-professor-of-professional-practice/",
+     "id": "38040897"
+    }
+   ],
+   "source_keys": [
+    "chronicle:38040897"
    ],
    "first_seen": "2026-10-04",
    "last_seen": "2026-10-04",
@@ -45389,6 +45405,56 @@
    "status": "active"
   },
   {
+   "title": "Faculty-Interdisciplinary Research at the Intersection of AI and the Humanities and Social Sciences",
+   "institution": "Fudan University, The MOE Laboratory for National Development and Intelligent Governance",
+   "department": "",
+   "type": "Government/IO",
+   "section": "",
+   "fields": [
+    "Environmental"
+   ],
+   "ag_env": true,
+   "geo": {
+    "countries": [
+     "China"
+    ],
+    "regions": [
+     "Asia"
+    ],
+    "us_states": [],
+    "primary": "China"
+   },
+   "location_text": "Shanghai, China",
+   "jel_codes": [],
+   "categories": [
+    "Environmental"
+   ],
+   "deadline": null,
+   "posted": "2026-06-03",
+   "start_date_text": "",
+   "start_year": null,
+   "degree_required": "",
+   "phd_required": null,
+   "requirements": [],
+   "salary": "",
+   "summary": "",
+   "passes_filter": true,
+   "exclusion_reasons": [],
+   "sources": [
+    {
+     "source": "aere",
+     "url": "https://ghforum.fudan.edu.cn/c7/94/c13206a706452/page.htm",
+     "id": "https-ghforum-fudan-edu-cn-c7-94-c13206a706452-page-htm"
+    }
+   ],
+   "source_keys": [
+    "aere:https-ghforum-fudan-edu-cn-c7-94-c13206a706452-page-htm"
+   ],
+   "first_seen": "2026-10-04",
+   "last_seen": "2026-10-04",
+   "status": "active"
+  },
+  {
    "title": "Assistant/Associate/Full Professor of Economics",
    "institution": "Furman University",
    "department": "Economics",
@@ -45682,6 +45748,59 @@
    "status": "active"
   },
   {
+   "title": "Fishery Analyst and/or Economist",
+   "institution": "North Pacific Fishery Management Council",
+   "department": "",
+   "type": "Industry/Nonprofit",
+   "section": "",
+   "fields": [
+    "Environmental",
+    "Natural Resources"
+   ],
+   "ag_env": true,
+   "geo": {
+    "countries": [
+     "United States"
+    ],
+    "regions": [
+     "US-West"
+    ],
+    "us_states": [
+     "Alaska"
+    ],
+    "primary": "Alaska"
+   },
+   "location_text": "Anchorage, Alaska, United States",
+   "jel_codes": [],
+   "categories": [
+    "Environmental"
+   ],
+   "deadline": null,
+   "posted": "2026-06-29",
+   "start_date_text": "",
+   "start_year": null,
+   "degree_required": "",
+   "phd_required": null,
+   "requirements": [],
+   "salary": "",
+   "summary": "",
+   "passes_filter": true,
+   "exclusion_reasons": [],
+   "sources": [
+    {
+     "source": "aere",
+     "url": "https://www.npfmc.org/vacancy-announcement-fishery-analyst-and-or-economist/",
+     "id": "https-www-npfmc-org-vacancy-announcement-fishery-analyst-and-or-economist-"
+    }
+   ],
+   "source_keys": [
+    "aere:https-www-npfmc-org-vacancy-announcement-fishery-analyst-and-or-economist-"
+   ],
+   "first_seen": "2026-10-04",
+   "last_seen": "2026-10-04",
+   "status": "active"
+  },
+  {
    "title": "Farm Management Extension Educator",
    "institution": "Penn State University",
    "department": "",
@@ -45790,6 +45909,56 @@
    ],
    "source_keys": [
     "joe:111477485"
+   ],
+   "first_seen": "2026-10-04",
+   "last_seen": "2026-10-04",
+   "status": "active"
+  },
+  {
+   "title": "Faculty",
+   "institution": "Science, Technology, and Environmental Policy, KAPSARC School of Public Policy",
+   "department": "",
+   "type": "Industry/Nonprofit",
+   "section": "",
+   "fields": [
+    "Environmental"
+   ],
+   "ag_env": true,
+   "geo": {
+    "countries": [
+     "Riyadh"
+    ],
+    "regions": [
+     "Other"
+    ],
+    "us_states": [],
+    "primary": "Riyadh"
+   },
+   "location_text": "Riyadh",
+   "jel_codes": [],
+   "categories": [
+    "Environmental"
+   ],
+   "deadline": null,
+   "posted": "2026-05-06",
+   "start_date_text": "",
+   "start_year": null,
+   "degree_required": "",
+   "phd_required": null,
+   "requirements": [],
+   "salary": "",
+   "summary": "",
+   "passes_filter": true,
+   "exclusion_reasons": [],
+   "sources": [
+    {
+     "source": "aere",
+     "url": "https://www.kspp.edu.sa/careers/faculty-science-technology-and-environmental-policy",
+     "id": "https-www-kspp-edu-sa-careers-faculty-science-technology-and-environmental-polic"
+    }
+   ],
+   "source_keys": [
+    "aere:https-www-kspp-edu-sa-careers-faculty-science-technology-and-environmental-polic"
    ],
    "first_seen": "2026-10-04",
    "last_seen": "2026-10-04",
@@ -46191,6 +46360,58 @@
    ],
    "source_keys": [
     "joe:111477678"
+   ],
+   "first_seen": "2026-10-04",
+   "last_seen": "2026-10-04",
+   "status": "active"
+  },
+  {
+   "title": "Research Associate or Research Scientist in Applied Economics and Remote Sensing",
+   "institution": "Virginia Tech, Agricultural & Applied Economics",
+   "department": "",
+   "type": "Industry/Nonprofit",
+   "section": "",
+   "fields": [
+    "Environmental"
+   ],
+   "ag_env": true,
+   "geo": {
+    "countries": [
+     "United States"
+    ],
+    "regions": [
+     "US-South"
+    ],
+    "us_states": [
+     "Virginia"
+    ],
+    "primary": "Virginia"
+   },
+   "location_text": "Blacksburg, Virginia, United States",
+   "jel_codes": [],
+   "categories": [
+    "Environmental"
+   ],
+   "deadline": null,
+   "posted": "2026-07-08",
+   "start_date_text": "",
+   "start_year": null,
+   "degree_required": "",
+   "phd_required": null,
+   "requirements": [],
+   "salary": "",
+   "summary": "",
+   "passes_filter": true,
+   "exclusion_reasons": [],
+   "sources": [
+    {
+     "source": "aere",
+     "url": "https://jobs.apply.vt.edu/jobs/research-associate-or-research-scientist-ag-economics-and-remote-sensing-blacksburg-virginia-united-states",
+     "id": "https-jobs-apply-vt-edu-jobs-research-associate-or-research-scientist-ag-economi"
+    }
+   ],
+   "source_keys": [
+    "aere:https-jobs-apply-vt-edu-jobs-research-associate-or-research-scientist-ag-economi"
    ],
    "first_seen": "2026-10-04",
    "last_seen": "2026-10-04",

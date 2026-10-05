@@ -49,6 +49,12 @@ jobs:
         env:
           # Optional: enables Claude-based extraction for free-text postings (Chronicle, Substack).
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          # Optional: Gmail mailing-list ingestion (RESECON, CWAE, AAEA, ARE Grads) over IMAP OAuth.
+          GMAIL_USER: ${{ secrets.GMAIL_USER }}
+          GMAIL_CLIENT_ID: ${{ secrets.GMAIL_CLIENT_ID }}
+          GMAIL_CLIENT_SECRET: ${{ secrets.GMAIL_CLIENT_SECRET }}
+          GMAIL_REFRESH_TOKEN: ${{ secrets.GMAIL_REFRESH_TOKEN }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
         run: python -m src.run
 
       - name: Commit results

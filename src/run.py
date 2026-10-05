@@ -22,10 +22,10 @@ from .fields import field_tags, is_ag_env, tags_from_body
 from .filters import position_type, screen, phd_required, start_year
 from .geo import geo_tags
 from .models import Location
-from .sources import joe, ejm, chronicle, substack
+from .sources import joe, ejm, chronicle, substack, gmail, aere
 
 # Sources whose postings are free text: run the optional Claude extraction on them.
-UNSTRUCTURED = {"chronicle", "substack"}
+UNSTRUCTURED = {"chronicle", "substack", "gmail"}
 
 try:
     TZ = ZoneInfo("America/Los_Angeles")
@@ -101,7 +101,7 @@ def enrich(job) -> dict:
 
 def canonical(cluster) -> dict:
     """Merge a cluster of the same posting into one record; structured boards win on fields."""
-    rank = {"joe": 0, "ejm": 1, "chronicle": 2, "substack": 3}
+    rank = {"joe": 0, "ejm": 1, "chronicle": 2, "substack": 3, "aere": 4, "gmail": 5}
     cluster = sorted(cluster, key=lambda j: rank.get(j.source, 9))
     recs = [enrich(j) for j in cluster]
     base = recs[0]
@@ -148,6 +148,10 @@ def fetch_all(offline_dir: Path | None):
         ("chronicle", lambda: chronicle.fetch(session) if offline_dir is None else offline_chronicle()),
         ("substack", lambda: substack.fetch(session) if offline_dir is None
          else substack.fetch(raw=(offline_dir / "substack.xml").read_bytes())),
+        ("aere", lambda: aere.fetch(session) if offline_dir is None
+         else aere.fetch(raw=(offline_dir / "aere.html").read_bytes())),
+        ("gmail", lambda: gmail.fetch(session) if offline_dir is None
+         else gmail.fetch(raw_messages=[p.read_bytes() for p in sorted(offline_dir.glob("gmail_*.eml"))])),
     ]
     for name, fn in sources:
         try:

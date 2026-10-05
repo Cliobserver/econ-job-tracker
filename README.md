@@ -9,7 +9,7 @@ Sources: AEA JOE (official XML export), EconJobMarket.org (public listings), Chr
 Runs every day at 12:00 America/Los_Angeles via GitHub Actions.
 
 
-_Last run: 2026-10-04. Active postings passing the filter: 638 (638 new today)._
+_Last run: 2026-10-04. Active postings passing the filter: 642 (642 new today)._
 
 | Source | Fetched | Status |
 |---|---|---|
@@ -17,6 +17,8 @@ _Last run: 2026-10-04. Active postings passing the filter: 638 (638 new today)._
 | ejm | 170 | ok |
 | chronicle | 277 | ok |
 | substack | 19 | ok |
+| aere | 6 | ok |
+| gmail | 0 | ok |
 
 ## Next 60 deadlines
 
