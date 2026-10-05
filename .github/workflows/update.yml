@@ -1,0 +1,61 @@
+name: Update job listings
+
+on:
+  schedule:
+    # 12:00 America/Los_Angeles is 19:00 UTC during PDT and 20:00 UTC during PST.
+    # Both fire; the gate step runs the pipeline only when it is actually noon in LA.
+    - cron: "0 19 * * *"
+    - cron: "0 20 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-listings
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Gate on local noon
+        id: gate
+        run: |
+          H=$(TZ=America/Los_Angeles date +%H)
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] || [ "$H" = "12" ]; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "run=false" >> "$GITHUB_OUTPUT"
+            echo "Not noon in Los Angeles (hour=$H); skipping."
+          fi
+
+      - uses: actions/checkout@v4
+        if: steps.gate.outputs.run == 'true'
+
+      - uses: actions/setup-python@v5
+        if: steps.gate.outputs.run == 'true'
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        if: steps.gate.outputs.run == 'true'
+        run: pip install -r requirements.txt
+
+      - name: Fetch, tag, and render
+        if: steps.gate.outputs.run == 'true'
+        run: python -m src.run
+
+      - name: Commit results
+        if: steps.gate.outputs.run == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data docs README.md
+          if git diff --cached --quiet; then
+            echo "No changes."
+          else
+            git commit -m "Update listings $(TZ=America/Los_Angeles date +%F)"
+            git push
+          fi

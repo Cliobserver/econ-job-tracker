@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Econ Job Tracker</title>
+<meta name="description" content="Daily aggregated economics job postings for the 2026-27 market, filtered to PhD-required 2027 starts, tagged by field and region.">
+<style>
+  :root {
+    --bg: #f7f7f5; --panel: #ffffff; --text: #1c1c1a; --muted: #6b6b66; --line: #e3e3de;
+    --accent: #2b6cb0; --accent-soft: #e6f0fa; --new: #c05621; --new-soft: #fdf0e6;
+    --ag: #2f7d4f; --ag-soft: #e6f4ea; --danger: #b83232; --chip: #efefeb; --chip-on: #1c1c1a; --chip-on-text: #fff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #141413; --panel: #1e1e1c; --text: #ecece8; --muted: #9a9a93; --line: #2e2e2b;
+      --accent: #7fb3ea; --accent-soft: #1d2b3b; --new: #f0a070; --new-soft: #3a2518;
+      --ag: #7fd19a; --ag-soft: #1c3324; --danger: #ef8a8a; --chip: #2a2a27; --chip-on: #ecece8; --chip-on-text: #141413;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #141413; --panel: #1e1e1c; --text: #ecece8; --muted: #9a9a93; --line: #2e2e2b;
+    --accent: #7fb3ea; --accent-soft: #1d2b3b; --new: #f0a070; --new-soft: #3a2518;
+    --ag: #7fd19a; --ag-soft: #1c3324; --danger: #ef8a8a; --chip: #2a2a27; --chip-on: #ecece8; --chip-on-text: #141413;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 15px/1.45 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  header { padding: 20px 16px 8px; max-width: 1280px; margin: 0 auto; }
+  h1 { font-size: 22px; margin: 0 0 4px; }
+  .sub { color: var(--muted); font-size: 13px; }
+  main { max-width: 1280px; margin: 0 auto; padding: 0 16px 48px; }
+  .controls { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; margin: 12px 0 16px; }
+  .row { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; margin-bottom: 8px; }
+  .row:last-child { margin-bottom: 0; }
+  .label { font-size: 12px; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); min-width: 64px; }
+  input[type=search] { flex: 1 1 260px; padding: 8px 10px; border: 1px solid var(--line); border-radius: 8px; background: var(--bg); color: var(--text); font: inherit; }
+  select { padding: 7px 8px; border: 1px solid var(--line); border-radius: 8px; background: var(--bg); color: var(--text); font: inherit; }
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+  .chip { border: 1px solid var(--line); background: var(--chip); color: var(--text); border-radius: 999px; padding: 3px 10px; font-size: 13px; cursor: pointer; user-select: none; }
+  .chip.on { background: var(--chip-on); color: var(--chip-on-text); border-color: var(--chip-on); }
+  .chip small { color: inherit; opacity: .65; margin-left: 4px; }
+  label.tog { font-size: 13px; display: inline-flex; gap: 6px; align-items: center; cursor: pointer; }
+  .meta { font-size: 13px; color: var(--muted); margin: 6px 0 10px; display: flex; gap: 16px; flex-wrap: wrap; }
+  table { width: 100%; border-collapse: collapse; background: var(--panel); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+  th, td { text-align: left; padding: 9px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { font-size: 12px; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); cursor: pointer; white-space: nowrap; background: var(--panel); position: sticky; top: 0; }
+  tr.job:hover { background: var(--accent-soft); }
+  tr.job { cursor: pointer; }
+  td.dl { white-space: nowrap; font-variant-numeric: tabular-nums; }
+  td.dl.soon { color: var(--danger); font-weight: 600; }
+  .t { font-weight: 600; }
+  .inst { color: var(--muted); font-size: 13px; }
+  .tag { display: inline-block; font-size: 12px; padding: 1px 7px; border-radius: 6px; background: var(--chip); margin: 1px 3px 1px 0; }
+  .tag.ag { background: var(--ag-soft); color: var(--ag); }
+  .badge-new { font-size: 11px; font-weight: 700; color: var(--new); background: var(--new-soft); padding: 1px 6px; border-radius: 6px; margin-left: 6px; vertical-align: middle; }
+  .src a { font-size: 12px; margin-right: 6px; color: var(--accent); text-decoration: none; border: 1px solid var(--line); padding: 1px 6px; border-radius: 6px; }
+  tr.detail td { background: var(--bg); font-size: 14px; }
+  .detail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 24px; }
+  .detail-grid div b { color: var(--muted); font-weight: 500; font-size: 12px; text-transform: uppercase; letter-spacing: .04em; display: block; }
+  .summary { grid-column: 1 / -1; color: var(--text); opacity: .9; }
+  .excl { color: var(--danger); font-size: 12px; }
+  .empty { padding: 40px; text-align: center; color: var(--muted); }
+  @media (max-width: 760px) {
+    th.hide-m, td.hide-m { display: none; }
+    .detail-grid { grid-template-columns: 1fr; }
+    header { padding-top: 14px; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>Econ Job Tracker</h1>
+  <div class="sub" id="status">Loading…</div>
+</header>
+<main>
+  <div class="controls">
+    <div class="row">
+      <input id="q" type="search" placeholder="Search title, institution, department, keywords…" autocomplete="off">
+      <select id="sort">
+        <option value="deadline">Sort: deadline ↑</option>
+        <option value="new">Sort: newest first</option>
+        <option value="inst">Sort: institution</option>
+      </select>
+      <select id="window">
+        <option value="all">Deadline: any</option>
+        <option value="7">within 7 days</option>
+        <option value="14">within 14 days</option>
+        <option value="30">within 30 days</option>
+        <option value="60">within 60 days</option>
+      </select>
+    </div>
+    <div class="row"><span class="label">Field</span><div class="chips" id="fields"></div></div>
+    <div class="row"><span class="label">Region</span><div class="chips" id="regions"></div></div>
+    <div class="row"><span class="label">US state</span><div class="chips" id="states"></div></div>
+    <div class="row"><span class="label">Type</span><div class="chips" id="types"></div></div>
+    <div class="row">
+      <span class="label">Show</span>
+      <label class="tog"><input type="checkbox" id="newonly"> new in last 7 days</label>
+      <label class="tog"><input type="checkbox" id="agonly"> ag / env / resource only</label>
+      <label class="tog"><input type="checkbox" id="showexcl"> include excluded (non-PhD / non-2027)</label>
+      <label class="tog"><input type="checkbox" id="pastdl"> include past deadlines</label>
+      <button class="chip" id="reset">Reset</button>
+    </div>
+  </div>
+  <div class="meta" id="meta"></div>
+  <table>
+    <thead><tr>
+      <th data-k="deadline">Deadline</th>
+      <th data-k="title">Position</th>
+      <th data-k="inst" class="hide-m">Institution</th>
+      <th data-k="geo">Location</th>
+      <th class="hide-m">Fields</th>
+      <th class="hide-m">Type</th>
+      <th>Links</th>
+    </tr></thead>
+    <tbody id="rows"></tbody>
+  </table>
+  <div class="empty" id="empty" hidden>No postings match these filters.</div>
+</main>
+<script>
+(function () {
+  const $ = (s) => document.querySelector(s);
+  const state = { q: "", fields: new Set(), regions: new Set(), states: new Set(), types: new Set(),
+                  newonly: false, agonly: false, showexcl: false, pastdl: false, sort: "deadline", window: "all" };
+  let DATA = null;
+  const todayISO = new Date().toISOString().slice(0, 10);
+  const daysBetween = (a, b) => Math.round((new Date(a) - new Date(b)) / 86400000);
+
+  try {
+    const saved = JSON.parse(localStorage.getItem("ejt-filters") || "null");
+    if (saved) { for (const k of ["fields","regions","states","types"]) state[k] = new Set(saved[k] || []);
+      for (const k of ["q","newonly","agonly","showexcl","pastdl","sort","window"]) if (k in saved) state[k] = saved[k]; }
+  } catch (e) {}
+  function persist() {
+    try { localStorage.setItem("ejt-filters", JSON.stringify({ ...state, fields: [...state.fields], regions: [...state.regions],
+      states: [...state.states], types: [...state.types] })); } catch (e) {}
+  }
+
+  fetch("data.json", { cache: "no-store" }).then(r => r.json()).then(d => { DATA = d; init(); }).catch(err => {
+    $("#status").textContent = "Could not load data.json (" + err + ").";
+  });
+
+  function counts(key, pick) {
+    const m = new Map();
+    for (const j of DATA.jobs) if (j.status === "active" && j.passes_filter) for (const v of pick(j)) m.set(v, (m.get(v) || 0) + 1);
+    return [...m.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+  }
+  function chips(el, items, set) {
+    el.innerHTML = "";
+    for (const [v, n] of items) {
+      const b = document.createElement("button"); b.className = "chip" + (set.has(v) ? " on" : "");
+      b.innerHTML = esc(v) + "<small>" + n + "</small>";
+      b.onclick = () => { set.has(v) ? set.delete(v) : set.add(v); b.classList.toggle("on"); render(); };
+      el.appendChild(b);
+    }
+  }
+  function esc(s) { return String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c])); }
+
+  function init() {
+    const c = DATA.counts;
+    const health = Object.entries(DATA.health || {}).map(([k, h]) => k.toUpperCase() + " " + h.count + (h.status === "ok" ? "" : " ⚠")).join(" · ");
+    $("#status").textContent = `Updated ${DATA.updated} · ${c.passing} active postings pass the PhD + 2027 filter · ${c.new_today} new today · ${health}`;
+    chips($("#fields"), counts("fields", j => j.fields), state.fields);
+    chips($("#regions"), counts("regions", j => j.geo.regions), state.regions);
+    chips($("#states"), counts("states", j => j.geo.us_states), state.states);
+    chips($("#types"), counts("types", j => [j.type]), state.types);
+    $("#q").value = state.q; $("#sort").value = state.sort; $("#window").value = state.window;
+    for (const k of ["newonly","agonly","showexcl","pastdl"]) $("#" + k).checked = state[k];
+    $("#q").oninput = e => { state.q = e.target.value; render(); };
+    $("#sort").onchange = e => { state.sort = e.target.value; render(); };
+    $("#window").onchange = e => { state.window = e.target.value; render(); };
+    for (const k of ["newonly","agonly","showexcl","pastdl"]) $("#" + k).onchange = e => { state[k] = e.target.checked; render(); };
+    $("#reset").onclick = () => { for (const k of ["fields","regions","states","types"]) state[k].clear();
+      Object.assign(state, { q: "", newonly: false, agonly: false, showexcl: false, pastdl: false, sort: "deadline", window: "all" }); init(); render(); };
+    document.querySelectorAll("th[data-k]").forEach(th => th.onclick = () => { state.sort = th.dataset.k === "inst" ? "inst" : th.dataset.k === "deadline" ? "deadline" : state.sort; $("#sort").value = state.sort; render(); });
+    render();
+  }
+
+  function matches(j) {
+    if (j.status !== "active") return false;
+    if (!state.showexcl && !j.passes_filter) return false;
+    if (!state.pastdl && j.deadline && j.deadline < todayISO) return false;
+    if (state.window !== "all") { if (!j.deadline) return false; const d = daysBetween(j.deadline, todayISO); if (d < 0 || d > +state.window) return false; }
+    if (state.newonly && daysBetween(todayISO, j.first_seen) > 7) return false;
+    if (state.agonly && !j.ag_env) return false;
+    if (state.fields.size && !j.fields.some(f => state.fields.has(f))) return false;
+    if (state.regions.size && !j.geo.regions.some(r => state.regions.has(r))) return false;
+    if (state.states.size && !j.geo.us_states.some(s => state.states.has(s))) return false;
+    if (state.types.size && !state.types.has(j.type)) return false;
+    if (state.q) {
+      const q = state.q.toLowerCase();
+      const hay = [j.title, j.institution, j.department, j.location_text, ...(j.categories || []), ...(j.fields || []), ...(j.jel_codes || [])].join(" ").toLowerCase();
+      if (!hay.includes(q)) return false;
+    }
+    return true;
+  }
+
+  function render() {
+    persist();
+    const list = DATA.jobs.filter(matches);
+    const key = { deadline: j => (j.deadline || "9999") + j.institution, new: j => "", inst: j => j.institution + (j.deadline || "9999"), title: j => j.title, geo: j => j.geo.primary }[state.sort];
+    if (state.sort === "new") list.sort((a, b) => (b.first_seen.localeCompare(a.first_seen)) || (a.deadline || "9999").localeCompare(b.deadline || "9999"));
+    else list.sort((a, b) => key(a).localeCompare(key(b)));
+    const newCount = list.filter(j => daysBetween(todayISO, j.first_seen) <= 7).length;
+    $("#meta").innerHTML = `<span>${list.length} postings shown</span><span>${newCount} new in last 7 days</span>`;
+    const tb = $("#rows"); tb.innerHTML = "";
+    $("#empty").hidden = list.length > 0;
+    for (const j of list) {
+      const tr = document.createElement("tr"); tr.className = "job";
+      const dl = j.deadline || "—"; const soon = j.deadline && daysBetween(j.deadline, todayISO) <= 10 && daysBetween(j.deadline, todayISO) >= 0;
+      const isNew = daysBetween(todayISO, j.first_seen) <= 1;
+      tr.innerHTML = `<td class="dl${soon ? " soon" : ""}">${dl}</td>
+        <td><span class="t">${esc(j.title)}</span>${isNew ? '<span class="badge-new">NEW</span>' : ""}${j.passes_filter ? "" : ' <span class="excl">excluded: ' + esc(j.exclusion_reasons.join("; ")) + '</span>'}<div class="inst">${esc(j.department || "")}</div></td>
+        <td class="hide-m">${esc(j.institution)}</td>
+        <td>${esc(j.geo.primary)}<div class="inst">${esc(j.geo.regions.join(", "))}</div></td>
+        <td class="hide-m">${j.fields.map(f => `<span class="tag${j.ag_env && /Agri|Envir|Resource|Energy/.test(f) ? " ag" : ""}">${esc(f)}</span>`).join("")}</td>
+        <td class="hide-m">${esc(j.type)}</td>
+        <td class="src">${j.sources.map(s => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.source.toUpperCase())}</a>`).join("")}</td>`;
+      tr.onclick = (e) => { if (e.target.tagName === "A") return; toggle(tr, j); };
+      tb.appendChild(tr);
+    }
+  }
+
+  function toggle(tr, j) {
+    const next = tr.nextElementSibling;
+    if (next && next.classList.contains("detail")) { next.remove(); return; }
+    const d = document.createElement("tr"); d.className = "detail";
+    const reqs = (j.requirements || []).length ? j.requirements.map(esc).join(", ") : "not listed";
+    d.innerHTML = `<td colspan="7"><div class="detail-grid">
+      <div><b>Location</b>${esc(j.location_text || j.geo.primary)}</div>
+      <div><b>Start</b>${esc(j.start_date_text || (j.start_year ? String(j.start_year) : "not stated"))}</div>
+      <div><b>Degree</b>${esc(j.degree_required || (j.phd_required ? "PhD (inferred from text)" : "not stated"))}</div>
+      <div><b>Posted / first seen</b>${esc(j.posted || "—")} / ${esc(j.first_seen)}</div>
+      <div><b>Application requirements</b>${reqs}</div>
+      <div><b>JEL / keywords</b>${esc([...(j.jel_codes || []), ...(j.categories || [])].slice(0, 12).join(", ") || "—")}</div>
+      ${j.salary ? `<div><b>Salary</b>${esc(j.salary)}</div>` : ""}
+      <div class="summary">${esc(j.summary || "")}${j.summary && j.summary.length >= 600 ? "…" : ""}</div>
+    </div></td>`;
+    tr.after(d);
+  }
+})();
+</script>
+</body>
+</html>
