@@ -103,6 +103,16 @@ class StoreTests(unittest.TestCase):
         self.assertEqual(a["status"], "active")
         self.assertEqual(b["status"], "gone")
 
+    def test_failed_source_keeps_records(self):
+        old = {"updated": "2026-10-03", "jobs": [
+            {"source_keys": ["substack:a"], "institution": "A", "deadline": None, "first_seen": "2026-10-01",
+             "last_seen": "2026-10-03", "status": "active"},
+        ]}
+        out = store.merge(old, [], date(2026, 10, 4), failed_sources=["substack"])
+        self.assertEqual(out["jobs"][0]["status"], "active")
+        out = store.merge(old, [], date(2026, 10, 4))
+        self.assertEqual(out["jobs"][0]["status"], "missing")
+
 
 if __name__ == "__main__":
     unittest.main()

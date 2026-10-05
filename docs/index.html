@@ -144,7 +144,7 @@
 
   function counts(key, pick) {
     const m = new Map();
-    for (const j of DATA.jobs) if (j.status === "active" && j.passes_filter) for (const v of pick(j)) m.set(v, (m.get(v) || 0) + 1);
+    for (const j of DATA.jobs) if (j.status !== "gone" && j.passes_filter) for (const v of pick(j)) m.set(v, (m.get(v) || 0) + 1);
     return [...m.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
   }
   function chips(el, items, set) {
@@ -179,7 +179,7 @@
   }
 
   function matches(j) {
-    if (j.status !== "active") return false;
+    if (j.status === "gone") return false;   // "missing" = not seen for a few days, still shown
     if (!state.showexcl && !j.passes_filter) return false;
     if (!state.pastdl && j.deadline && j.deadline < todayISO) return false;
     if (state.window !== "all") { if (!j.deadline) return false; const d = daysBetween(j.deadline, todayISO); if (d < 0 || d > +state.window) return false; }

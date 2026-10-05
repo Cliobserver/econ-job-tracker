@@ -174,7 +174,8 @@ def main(argv=None) -> int:
         return 1
     clusters = dedup(jobs)
     fresh = [canonical(c) for c in clusters]
-    merged = store.merge(store.load(), fresh, today)
+    failed = [name for name, h in health.items() if h["status"] != "ok"]
+    merged = store.merge(store.load(), fresh, today, failed_sources=failed)
     store.save(merged)
     render.write_data_json(merged, health, today)
     render.write_readme(merged, health, today)

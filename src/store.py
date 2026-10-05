@@ -22,12 +22,14 @@ def save(data: dict) -> None:
         json.dump(data, f, ensure_ascii=False, indent=1, sort_keys=False)
 
 
-def merge(existing: dict, fresh: list[dict], today: date) -> dict:
+def merge(existing: dict, fresh: list[dict], today: date, failed_sources=()) -> dict:
     """Merge today's canonical records into the store.
 
     Records match when they share any source key (e.g. "joe:123"). Matched records
-    take today's content but keep their original first_seen date.
+    take today's content but keep their original first_seen date. Records that live only
+    on a board that failed to fetch today are carried over unchanged (still active).
     """
+    failed = set(failed_sources)
     today_s = today.isoformat()
     by_key: dict[str, dict] = {}
     for rec in existing.get("jobs", []):
@@ -49,6 +51,9 @@ def merge(existing: dict, fresh: list[dict], today: date) -> dict:
     # Carry over records not seen today.
     for rec in existing.get("jobs", []):
         if id(rec) in seen_ids:
+            continue
+        if failed and all(k.split(":", 1)[0] in failed for k in rec.get("source_keys", [])):
+            merged.append(rec)          # board was down today; keep yesterday's status
             continue
         last = date.fromisoformat(rec["last_seen"])
         rec["status"] = "gone" if (today - last).days > EXPIRE_AFTER_DAYS else "missing"

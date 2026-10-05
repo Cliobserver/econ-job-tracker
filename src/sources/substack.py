@@ -7,7 +7,10 @@ deadline / start / salary / degree are extracted from text.
 from __future__ import annotations
 
 import re
+import sys
 from datetime import datetime
+from pathlib import Path
+from urllib.parse import quote
 from xml.etree import ElementTree as ET
 
 import requests
@@ -17,16 +20,51 @@ from ..extract import regex_extract
 from ..models import Job, Location
 
 FEED_URL = "https://appliedeconjobs.substack.com/feed"
-HEADERS = {"User-Agent": "Mozilla/5.0 (econ-job-tracker; personal job search)"}
 NS = {"content": "http://purl.org/rss/1.0/modules/content/"}
+CACHE_FILE = Path(__file__).resolve().parent.parent.parent / "data" / "cache" / "substack_feed.xml"
+
+# Substack fronts its feed with Cloudflare, which rejects datacenter IPs (GitHub runners)
+# unless the request looks like a browser. Try a browser-shaped request, then a public
+# read-through proxy, then the last copy we saved.
+BROWSER_HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) "
+                  "Chrome/128.0.0.0 Safari/537.36",
+    "Accept": "application/rss+xml, application/xml;q=0.9, text/xml;q=0.8, */*;q=0.5",
+    "Accept-Language": "en-US,en;q=0.9",
+    "Referer": "https://appliedeconjobs.substack.com/",
+}
+PROXIES = [
+    "https://api.allorigins.win/raw?url=" + quote(FEED_URL, safe=""),
+    "https://r.jina.ai/" + FEED_URL,
+]
+
+
+def _looks_like_feed(raw: bytes) -> bool:
+    return b"<rss" in raw[:2000] or b"<feed" in raw[:2000]
+
+
+def download(session) -> bytes:
+    attempts = [(FEED_URL, BROWSER_HEADERS)] + [(p, {"User-Agent": BROWSER_HEADERS["User-Agent"]}) for p in PROXIES]
+    errors = []
+    for url, headers in attempts:
+        try:
+            r = session.get(url, headers=headers, timeout=60)
+            if r.ok and _looks_like_feed(r.content):
+                CACHE_FILE.parent.mkdir(parents=True, exist_ok=True)
+                CACHE_FILE.write_bytes(r.content)
+                return r.content
+            errors.append(f"{url.split('?')[0]} -> HTTP {r.status_code}")
+        except requests.RequestException as e:
+            errors.append(f"{url.split('?')[0]} -> {type(e).__name__}")
+    if CACHE_FILE.exists():
+        print(f"[substack] live fetch failed ({'; '.join(errors)}); using cached feed", file=sys.stderr)
+        return CACHE_FILE.read_bytes()
+    raise RuntimeError("Substack feed unavailable: " + "; ".join(errors))
 
 
 def fetch(session=None, raw: bytes | None = None) -> list[Job]:
     if raw is None:
-        s = session or requests.Session()
-        r = s.get(FEED_URL, headers=HEADERS, timeout=60)
-        r.raise_for_status()
-        raw = r.content
+        raw = download(session or requests.Session())
     return parse(raw)
 
 

@@ -3643,7 +3643,7 @@
    ],
    "first_seen": "2026-10-04",
    "last_seen": "2026-10-04",
-   "status": "missing"
+   "status": "active"
   },
   {
    "title": "Tenure Track Scientist in Global-Local Interactions in Agriculture Systems",
@@ -3699,7 +3699,7 @@
    ],
    "first_seen": "2026-10-04",
    "last_seen": "2026-10-04",
-   "status": "missing"
+   "status": "active"
   },
   {
    "title": "Assistant Professor in Economics (Macroeconomics)",
@@ -3917,7 +3917,7 @@
    ],
    "first_seen": "2026-10-04",
    "last_seen": "2026-10-04",
-   "status": "missing"
+   "status": "active"
   },
   {
    "title": "Assistant Professor",
@@ -4146,7 +4146,7 @@
    ],
    "first_seen": "2026-10-04",
    "last_seen": "2026-10-04",
-   "status": "missing"
+   "status": "active"
   },
   {
    "title": "State Energy Strategy Project Lead",
@@ -4204,7 +4204,7 @@
    ],
    "first_seen": "2026-10-04",
    "last_seen": "2026-10-04",
-   "status": "missing"
+   "status": "active"
   },
   {
    "title": "Policy Analyst & Communications Coordinator",
@@ -4258,7 +4258,7 @@
    ],
    "first_seen": "2026-10-04",
    "last_seen": "2026-10-04",
-   "status": "missing"
+   "status": "active"
   },
   {
    "title": "Community Development Research Fellow",
@@ -6379,7 +6379,7 @@
    ],
    "first_seen": "2026-10-04",
    "last_seen": "2026-10-04",
-   "status": "missing"
+   "status": "active"
   },
   {
    "title": "Assistant Professor",
@@ -21054,58 +21054,6 @@
    "status": "active"
   },
   {
-   "title": "Assistant or Associate Professor of Professional Practice",
-   "institution": "Rutgers Business School at Newark and New Brunswick",
-   "department": "",
-   "type": "Visiting/Teaching",
-   "section": "Other Academic (Visiting or Temporary)",
-   "fields": [
-    "Finance"
-   ],
-   "ag_env": false,
-   "geo": {
-    "countries": [
-     "United States"
-    ],
-    "regions": [
-     "US-Northeast"
-    ],
-    "us_states": [
-     "New Jersey"
-    ],
-    "primary": "New Jersey"
-   },
-   "location_text": "Newark, New Jersey, United States",
-   "jel_codes": [],
-   "categories": [
-    "Finance"
-   ],
-   "deadline": "2026-11-18",
-   "posted": "2026-09-18",
-   "start_date_text": "",
-   "start_year": null,
-   "degree_required": "",
-   "phd_required": true,
-   "requirements": [],
-   "salary": "$110,000 - $120,000 commensurate with experience",
-   "summary": "The Department of Finance and Economics at Rutgers Business School–Newark and New Brunswick, Rutgers University, is seeking a full-time, non-tenure-track faculty member at the rank of Assistant Professor or Associate Professor, subject to funding availability. Candidates must possess a master’s degree or higher in Finance, Economics. \r\n\r\nThe Finance & Economics Department at Rutgers Business School–Newark and New Brunswick comprises a large faculty of scholars and professional faculty whose teaching and research span finance, economics, and related fields. The department supports a range of ac",
-   "passes_filter": true,
-   "exclusion_reasons": [],
-   "sources": [
-    {
-     "source": "chronicle",
-     "url": "https://jobs.chronicle.com/job/38040897/assistant-or-associate-professor-of-professional-practice/",
-     "id": "38040897"
-    }
-   ],
-   "source_keys": [
-    "chronicle:38040897"
-   ],
-   "first_seen": "2026-10-04",
-   "last_seen": "2026-10-04",
-   "status": "active"
-  },
-  {
    "title": "Assistant / Associate Professor Position in Finance",
    "institution": "Rutgers Business School at Newark and New Brunswick",
    "department": "",
@@ -21154,6 +21102,58 @@
    ],
    "source_keys": [
     "chronicle:38040952"
+   ],
+   "first_seen": "2026-10-04",
+   "last_seen": "2026-10-04",
+   "status": "active"
+  },
+  {
+   "title": "Assistant or Associate Professor of Professional Practice",
+   "institution": "Rutgers Business School at Newark and New Brunswick",
+   "department": "",
+   "type": "Visiting/Teaching",
+   "section": "Other Academic (Visiting or Temporary)",
+   "fields": [
+    "Finance"
+   ],
+   "ag_env": false,
+   "geo": {
+    "countries": [
+     "United States"
+    ],
+    "regions": [
+     "US-Northeast"
+    ],
+    "us_states": [
+     "New Jersey"
+    ],
+    "primary": "New Jersey"
+   },
+   "location_text": "Newark, New Jersey, United States",
+   "jel_codes": [],
+   "categories": [
+    "Finance"
+   ],
+   "deadline": "2026-11-18",
+   "posted": "2026-09-18",
+   "start_date_text": "",
+   "start_year": null,
+   "degree_required": "",
+   "phd_required": true,
+   "requirements": [],
+   "salary": "$110,000 - $120,000 commensurate with experience",
+   "summary": "The Department of Finance and Economics at Rutgers Business School–Newark and New Brunswick, Rutgers University, is seeking a full-time, non-tenure-track faculty member at the rank of Assistant Professor or Associate Professor, subject to funding availability. Candidates must possess a master’s degree or higher in Finance, Economics. \r\n\r\nThe Finance & Economics Department at Rutgers Business School–Newark and New Brunswick comprises a large faculty of scholars and professional faculty whose teaching and research span finance, economics, and related fields. The department supports a range of ac",
+   "passes_filter": true,
+   "exclusion_reasons": [],
+   "sources": [
+    {
+     "source": "chronicle",
+     "url": "https://jobs.chronicle.com/job/38040897/assistant-or-associate-professor-of-professional-practice/",
+     "id": "38040897"
+    }
+   ],
+   "source_keys": [
+    "chronicle:38040897"
    ],
    "first_seen": "2026-10-04",
    "last_seen": "2026-10-04",
@@ -45099,7 +45099,7 @@
    ],
    "first_seen": "2026-10-04",
    "last_seen": "2026-10-04",
-   "status": "missing"
+   "status": "active"
   },
   {
    "title": "Assistant Professor (Economic Theory)",
@@ -45210,7 +45210,7 @@
    ],
    "first_seen": "2026-10-04",
    "last_seen": "2026-10-04",
-   "status": "missing"
+   "status": "active"
   },
   {
    "title": "Behavioral Economics",
@@ -45386,7 +45386,7 @@
    ],
    "first_seen": "2026-10-04",
    "last_seen": "2026-10-04",
-   "status": "missing"
+   "status": "active"
   },
   {
    "title": "Assistant/Associate/Full Professor of Economics",
@@ -45503,7 +45503,7 @@
    ],
    "first_seen": "2026-10-04",
    "last_seen": "2026-10-04",
-   "status": "missing"
+   "status": "active"
   },
   {
    "title": "Quantitative Researcher/Senior Researcher for State and Local Government Services",
@@ -45559,7 +45559,7 @@
    ],
    "first_seen": "2026-10-04",
    "last_seen": "2026-10-04",
-   "status": "missing"
+   "status": "active"
   },
   {
    "title": "Assistant Professor",
@@ -45741,7 +45741,7 @@
    ],
    "first_seen": "2026-10-04",
    "last_seen": "2026-10-04",
-   "status": "missing"
+   "status": "active"
   },
   {
    "title": "Research Fellow (Mid-Career and Senior)",
@@ -45851,7 +45851,7 @@
    ],
    "first_seen": "2026-10-04",
    "last_seen": "2026-10-04",
-   "status": "missing"
+   "status": "active"
   },
   {
    "title": "Economic Analyst",
@@ -45907,7 +45907,7 @@
    ],
    "first_seen": "2026-10-04",
    "last_seen": "2026-10-04",
-   "status": "missing"
+   "status": "active"
   },
   {
    "title": "Assistant Professor",
@@ -46018,7 +46018,7 @@
    ],
    "first_seen": "2026-10-04",
    "last_seen": "2026-10-04",
-   "status": "missing"
+   "status": "active"
   },
   {
    "title": "Assistant Director for Land Use and Natural Resources",
@@ -46078,7 +46078,7 @@
    ],
    "first_seen": "2026-10-04",
    "last_seen": "2026-10-04",
-   "status": "missing"
+   "status": "active"
   },
   {
    "title": "Agricultural Economist (two positions)",
@@ -46138,7 +46138,7 @@
    ],
    "first_seen": "2026-10-04",
    "last_seen": "2026-10-04",
-   "status": "missing"
+   "status": "active"
   },
   {
    "title": "Associate/Assistant Professor in Microeconometrics",
@@ -46314,7 +46314,7 @@
    ],
    "first_seen": "2026-10-04",
    "last_seen": "2026-10-04",
-   "status": "missing"
+   "status": "active"
   }
  ]
 }

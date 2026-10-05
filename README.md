@@ -9,14 +9,14 @@ Sources: AEA JOE (official XML export), EconJobMarket.org (public listings), Chr
 Runs every day at 12:00 America/Los_Angeles via GitHub Actions.
 
 
-_Last run: 2026-10-04. Active postings passing the filter: 631 (631 new today)._
+_Last run: 2026-10-04. Active postings passing the filter: 638 (638 new today)._
 
 | Source | Fetched | Status |
 |---|---|---|
 | joe | 418 | ok |
 | ejm | 170 | ok |
 | chronicle | 277 | ok |
-| substack | 0 | error: HTTPError: 403 Client Error: Forbidden for url: https://appliedeconjobs.substack.com/feed |
+| substack | 19 | ok |
 
 ## Next 60 deadlines
 
@@ -24,9 +24,12 @@ _Last run: 2026-10-04. Active postings passing the filter: 631 (631 new today)._
 |---|---|---|---|---|---|---|
 | 2026-10-04 | Bank of Finland Research Unit Visiting Scholars Programme [EJM](https://econjobmarket.org/positions/12631) | Bank of Finland | Finland | International/Trade, Finance, Macro | Government/IO | 🆕 |
 | 2026-10-04 | Assistant Professor; Strategy & Innovation [CHRONICLE](https://jobs.chronicle.com/job/38035171/assistant-professor-strategy-and-innovation/) | Boston University Questrom School of Business | Massachusetts | International/Trade | Tenure-track | 🆕 |
+| 2026-10-04 | Postdoctoral Scientist/Agricultural Economist [SUBSTACK](https://appliedeconjobs.substack.com/p/postdoctoral-scientistagricultural) | International Livestock Research Institute | Kenya | Agricultural, Environmental, Development | Postdoc | 🆕 |
+| 2026-10-04 | Tenure Track Scientist in Global-Local Interactions in Agriculture Systems [SUBSTACK](https://appliedeconjobs.substack.com/p/tenure-track-scientist-in-global) | Leibniz Centre for Agricultural Landscape Research | Germany | Agricultural, Environmental | Tenure-track | 🆕 |
 | 2026-10-04 | Assistant Professor in Economics (Macroeconomics) [JOE](https://www.aeaweb.org/joe/listing.php?JOE_ID=2026-02_111477724) | Maynooth University (Ireland) | Ireland | Macro | Tenure-track | 🆕 |
 | 2026-10-05 | Two Assistant Professor Positions in Economics [JOE](https://www.aeaweb.org/joe/listing.php?JOE_ID=2026-02_111477571) [EJM](https://econjobmarket.org/positions/12715) | Bocconi University | Italy | Any Field | Tenure-track | 🆕 |
 | 2026-10-05 | Two Assistant Professor Positions in Economics for Experienced Candidates [EJM](https://econjobmarket.org/positions/12561) | Economics Bocconi University | Italy | Any Field | Tenure-track | 🆕 |
+| 2026-10-05 | Dean of College of Agriculture and Life Sciences [SUBSTACK](https://appliedeconjobs.substack.com/p/dean-of-college-of-agriculture-and) | Iowa State University | Iowa | Agricultural | Industry/Nonprofit | 🆕 |
 | 2026-10-06 | Assistant Professor [JOE](https://www.aeaweb.org/joe/listing.php?JOE_ID=2026-02_111477958) | New York University Arts and Science | New York | International/Trade, Public, Political Economy | Tenure-track | 🆕 |
 | 2026-10-07 | Assistant Professor (Tenure-Track) [CHRONICLE](https://jobs.chronicle.com/job/38023234/assistant-professor-tenure-track-/) | The Ohio State University | Ohio | Unspecified | Tenure-track | 🆕 |
 | 2026-10-07 | Economist [JOE](https://www.aeaweb.org/joe/listing.php?JOE_ID=2026-02_111477699) | U.S. Equal Employment Opportunity Commission | United States | Micro, Labor | Government/IO | 🆕 |
@@ -62,6 +65,7 @@ _Last run: 2026-10-04. Active postings passing the filter: 631 (631 new today)._
 | 2026-10-15 | Assistant Professor, Economics (Peter J Tobin College of Business) [CHRONICLE](https://jobs.chronicle.com/job/38032749/assistant-professor-economics-peter-j-tobin-college-of-business-/) | St. John | New York | Health, Finance, Industrial Organization | Tenure-track | 🆕 |
 | 2026-10-15 | Faculty Positions in Political Economy [JOE](https://www.aeaweb.org/joe/listing.php?JOE_ID=2026-02_111477795) | Stanford Graduate School of Business | California | Political Economy | Tenure-track | 🆕 |
 | 2026-10-15 | Faculty Positions [JOE](https://www.aeaweb.org/joe/listing.php?JOE_ID=2026-02_111477610) | Stanford Graduate School of Business | California | Any Field | Tenure-track | 🆕 |
+| 2026-10-15 | Postdoctoral Researcher in Climate, Resources and Economic Policy [SUBSTACK](https://appliedeconjobs.substack.com/p/postdoctoral-researcher-in-climate-7f2) | Technical University of Munich | Germany | Agricultural, Environmental, Natural Resources | Postdoc | 🆕 |
 | 2026-10-15 | Assistant Professor [JOE](https://www.aeaweb.org/joe/listing.php?JOE_ID=2026-02_111477732) | Texas A&M University | Texas | Development, Behavioral/Experimental | Tenure-track | 🆕 |
 | 2026-10-15 | WCEE Postdoctoral Fellowship [JOE](https://www.aeaweb.org/joe/listing.php?JOE_ID=2026-02_111477526) | University of Michigan | Michigan | Political Economy, International/Trade | Postdoc | 🆕 |
 | 2026-10-15 | Tenured Position in Empirical Microeconomics [JOE](https://www.aeaweb.org/joe/listing.php?JOE_ID=2026-02_111477611) | Waseda University | Japan | Micro, Econometrics | Tenure-track | 🆕 |
@@ -78,9 +82,5 @@ _Last run: 2026-10-04. Active postings passing the filter: 631 (631 new today)._
 | 2026-10-18 | Assistant Professor of Public Policy (Market-Based Solutions to Societal Challenges) [JOE](https://www.aeaweb.org/joe/listing.php?JOE_ID=2026-02_111477692) [CHRONICLE](https://jobs.chronicle.com/job/38008254/assistant-professor-of-public-policy-market-based-solutions-to-societal-challenges-/) | University of Wisconsin-Madison | Wisconsin | Public, Finance, Health | Tenure-track | 🆕 |
 | 2026-10-20 | The Paul Merage School of Business Faculty Openings [CHRONICLE](https://jobs.chronicle.com/job/38028336/the-paul-merage-school-of-business-faculty-openings/) | University of California, Irvine | California | Unspecified | Tenure-track | 🆕 |
 | 2026-10-20 | TENURE TRACK POSITIONS Fall 2027 [CHRONICLE](https://jobs.chronicle.com/job/38027873/tenure-track-positions-fall-2027/) | West Chester University | Pennsylvania | Finance | Tenure-track | 🆕 |
-| 2026-10-23 | Economist [JOE](https://www.aeaweb.org/joe/listing.php?JOE_ID=2026-02_111477854) | Central Bank of the Republic of Türkiye | Turkey | Econometrics, Macro, International/Trade | Government/IO | 🆕 |
-| 2026-10-23 | Assistant Professor in International Business [JOE](https://www.aeaweb.org/joe/listing.php?JOE_ID=2026-02_111478007) | HEC Montreal | Canada | International/Trade, Environmental, Development | Tenure-track | 🆕 |
-| 2026-10-24 | Postdoctoral Fellowship in Philosophy, Politics and Economics [EJM](https://econjobmarket.org/positions/12708) [CHRONICLE](https://jobs.chronicle.com/job/38043941/postdoctoral-fellowship-in-philosophy-politics-and-economics-university-of-pennsylvania/) | Philosophy, Politics and Economics Program University of Pennsylvania | Pennsylvania | Any Field, Behavioral/Experimental | Postdoc | 🆕 |
-| 2026-10-25 | Assistant / Associate / Full Professor [JOE](https://www.aeaweb.org/joe/listing.php?JOE_ID=2026-02_111478027) [CHRONICLE](https://jobs.chronicle.com/job/38041061/associate-full-professor/) | Johns Hopkins University | District of Columbia | Law & Economics, Labor | Tenure-track | 🆕 |
 
 _Table shows the next deadlines only; use the dashboard for filtering by field, region, type, and source._
