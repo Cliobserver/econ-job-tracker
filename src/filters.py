@@ -27,7 +27,11 @@ def position_type(job) -> str:
     blob = title + " " + sec
     if re.search(r"post-?doc", blob, re.I):
         return "Postdoc"
-    if "nonacademic" in sec or "non-academic" in sec or re.search(r"consultant|economist\b", sec):
+    if re.search(r"\bintern(ship)?\b|traineeship|phd (?:student|candidate|scholarship)|\bstudent\b|scholarship", blob, re.I):
+        return "Student/Intern"
+    if ("nonacademic" in sec or "non-academic" in sec or re.search(r"consultant|economist\b", sec)
+            or (re.search(r"full time|full-time|fixed term|consulting|part time", sec)
+                and not re.search(r"professor|lecturer|faculty|academic|tenure", blob, re.I))):
         inst_blob = " ".join([job.institution, job.department, job.title])
         return "Government/IO" if GOV_RE.search(inst_blob) else "Industry/Nonprofit"
     if re.search(r"visiting|temporary|adjunct|lecturer|instructor|teaching|clinical", blob, re.I):
@@ -86,8 +90,10 @@ def start_year(job):
 def screen(job, ptype: str):
     """Return (passes, reasons_for_exclusion)."""
     reasons = []
+    if ptype == "Student/Intern":
+        reasons.append("student/intern role")
     phd = phd_required(job, ptype)
-    if phd is False:
+    if phd is False and ptype != "Student/Intern":
         reasons.append("PhD not required")
     sy = start_year(job)
     if sy is not None and sy != 2027:

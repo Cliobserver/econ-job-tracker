@@ -124,8 +124,8 @@
                   newonly: false, agonly: false, showexcl: false, pastdl: false, sort: "deadline", window: "all" };
   let DATA = null;
   const todayISO = new Date().toISOString().slice(0, 10);
-  const SRC_LABEL = { joe: "JOE", ejm: "EJM", chronicle: "CHE", substack: "AEJ" };
-  const SRC_TITLE = { joe: "AEA Job Openings for Economists", ejm: "EconJobMarket", chronicle: "Chronicle of Higher Education", substack: "Applied Econ Jobs (Substack)" };
+  const SRC_LABEL = { joe: "JOE", ejm: "EJM", chronicle: "CHE", substack: "AEJ", aere: "AERE", gmail: "MAIL", aaea: "AAEA", inomics: "INOMICS", econjobs: "EJOBS" };
+  const SRC_TITLE = { joe: "AEA Job Openings for Economists", ejm: "EconJobMarket", chronicle: "Chronicle of Higher Education", substack: "Applied Econ Jobs (Substack)", aere: "AERE Career Center", gmail: "Mailing list e-mail (RESECON / CWAE / AAEA / ARE Grads)", aaea: "AAEA Job Board", inomics: "INOMICS", econjobs: "Econ-Jobs.com" };
   const daysBetween = (a, b) => Math.round((new Date(a) - new Date(b)) / 86400000);
 
   try {

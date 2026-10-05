@@ -22,10 +22,10 @@ from .fields import field_tags, is_ag_env, tags_from_body
 from .filters import position_type, screen, phd_required, start_year
 from .geo import geo_tags
 from .models import Location
-from .sources import joe, ejm, chronicle, substack, gmail, aere
+from .sources import joe, ejm, chronicle, substack, gmail, aere, aaea, inomics, econjobs
 
 # Sources whose postings are free text: run the optional Claude extraction on them.
-UNSTRUCTURED = {"chronicle", "substack", "gmail"}
+UNSTRUCTURED = {"chronicle", "substack", "gmail", "aaea", "inomics", "econjobs"}
 
 try:
     TZ = ZoneInfo("America/Los_Angeles")
@@ -101,7 +101,7 @@ def enrich(job) -> dict:
 
 def canonical(cluster) -> dict:
     """Merge a cluster of the same posting into one record; structured boards win on fields."""
-    rank = {"joe": 0, "ejm": 1, "chronicle": 2, "substack": 3, "aere": 4, "gmail": 5}
+    rank = {"joe": 0, "ejm": 1, "chronicle": 2, "inomics": 3, "aaea": 4, "econjobs": 5, "substack": 6, "aere": 7, "gmail": 8}
     cluster = sorted(cluster, key=lambda j: rank.get(j.source, 9))
     recs = [enrich(j) for j in cluster]
     base = recs[0]
@@ -152,6 +152,14 @@ def fetch_all(offline_dir: Path | None):
          else aere.fetch(raw=(offline_dir / "aere.html").read_bytes())),
         ("gmail", lambda: gmail.fetch(session) if offline_dir is None
          else gmail.fetch(raw_messages=[p.read_bytes() for p in sorted(offline_dir.glob("gmail_*.eml"))])),
+        ("aaea", lambda: aaea.fetch(session) if offline_dir is None
+         else aaea.fetch(raw_board=(offline_dir / "aaea_board.html").read_bytes(),
+                         raw_postings={p.stem.split("_")[-1]: p.read_bytes() for p in offline_dir.glob("aaea_post_*.html")})),
+        ("inomics", lambda: inomics.fetch(session) if offline_dir is None
+         else inomics.fetch(raw_pages=[p.read_bytes() for p in sorted(offline_dir.glob("inomics_list*.html"))],
+                            raw_details={p.stem.split("_")[-1]: p.read_bytes() for p in offline_dir.glob("inomics_job_*.html")})),
+        ("econjobs", lambda: econjobs.fetch(session) if offline_dir is None
+         else econjobs.fetch(raw_feed=(offline_dir / "econjobs_feed.xml").read_bytes(), raw_details={})),
     ]
     for name, fn in sources:
         try:
