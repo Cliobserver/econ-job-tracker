@@ -98,6 +98,22 @@ def us_state(text: str) -> str:
     return ""
 
 
+COUNTRY_DISPLAY = {"UK": "United Kingdom", "U.K.": "United Kingdom", "UAE": "United Arab Emirates",
+                   "PRC": "China", "ROK": "South Korea", "KOREA": "South Korea", "HONG KONG SAR": "Hong Kong",
+                   "VIET NAM": "Vietnam", "RUSSIAN FEDERATION": "Russia", "TÜRKIYE": "Turkey", "TURKIYE": "Turkey",
+                   "KOREA, REPUBLIC OF": "South Korea", "REPUBLIC OF KOREA": "South Korea"}
+_SMALL = {"of", "and", "the", "da", "de", "del", "la"}
+
+
+def display_country(country: str) -> str:
+    c = country.strip()
+    if c.upper() in COUNTRY_DISPLAY:
+        return COUNTRY_DISPLAY[c.upper()]
+    if c.isupper() and len(c) > 3:
+        return " ".join(w if w.lower() in _SMALL and i else w.capitalize() for i, w in enumerate(c.lower().split()))
+    return c
+
+
 def _uniq(seq):
     out = []
     for s in seq:
@@ -123,7 +139,7 @@ def geo_tags(locations) -> dict:
             else:
                 regions.append("US-Other")
         elif country:
-            countries.append(country.title() if country.isupper() else country)
+            countries.append(display_country(country))
             regions.append(continent_of(country))
     countries, regions, states = _uniq(countries), _uniq(regions), _uniq(states)
     if "United States" in countries:

@@ -16,7 +16,7 @@ PhD-required positions starting in 2027, tagged by field and location.
 
 **Dashboard:** https://cliobserver.github.io/econ-job-tracker/
 
-Sources: AEA JOE (official XML export), EconJobMarket.org (public listings).
+Sources: AEA JOE (official XML export), EconJobMarket.org (public listings), Chronicle of Higher Education (RSS + job pages), Applied Econ Jobs Substack (RSS).
 Runs every day at 12:00 America/Los_Angeles via GitHub Actions.
 
 """

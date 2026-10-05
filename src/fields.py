@@ -63,6 +63,42 @@ def tags_from_text(text: str) -> list[str]:
     return out
 
 
+# Strong phrases for mining free text (job-board descriptions mention "environment" and
+# "development" constantly in unrelated senses, so only "<field> economics/economist" counts).
+BODY_RULES = [
+    (r"agricultural (?:and |& )?(?:applied |resource |food )?econom|agri-?food econom|farm management|agribusiness|food polic|food system", "Agricultural"),
+    (r"environmental (?:and |& )?(?:resource |natural resource )?econom|climate (?:change )?econom|climate polic|environmental polic|ecosystem service", "Environmental"),
+    (r"natural resource econom|resource econom|water (?:resource|polic|econom)|fisheries econom|forest econom|land (?:use|econom)", "Natural Resources"),
+    (r"energy econom|energy polic|energy market|electricity market", "Energy"),
+    (r"development econom|economic development(?! (?:office|authority|corporation))|poverty|global south|low[- ]income countr", "Development"),
+    (r"urban econom|regional econom|regional science|housing econom|real estate econom|transportation econom|spatial econom", "Urban/Regional"),
+    (r"health econom|health polic|health services research", "Health"),
+    (r"econom(?:ics|y) of education|education econom|education polic", "Education"),
+    (r"labor econom|labour econom|labor market|demograph", "Labor"),
+    (r"public econom|public finance|public polic|tax polic|fiscal polic", "Public"),
+    (r"international econom|international trade|trade polic|trade econom", "International/Trade"),
+    (r"financial econom|finance\b|asset pricing|banking", "Finance"),
+    (r"macroeconom|monetary (?:polic|econom)", "Macro"),
+    (r"microeconomic theory|game theory|mechanism design|decision theory", "Micro"),
+    (r"econometric|causal inference|machine learning|data science|statistical (?:analysis|model)", "Econometrics"),
+    (r"industrial organi[sz]ation|antitrust|competition polic", "Industrial Organization"),
+    (r"behavio(?:u)?ral econom|experimental econom", "Behavioral/Experimental"),
+    (r"law and econom|law & econom", "Law & Economics"),
+    (r"political econom", "Political Economy"),
+    (r"economic history", "Economic History"),
+]
+
+
+def tags_from_body(text: str, limit: int = 4) -> list[str]:
+    """Rank field tags by how often their strong phrases occur in the text."""
+    scores = {}
+    for pat, tag in BODY_RULES:
+        n = len(re.findall(pat, text, flags=re.I))
+        if n:
+            scores[tag] = scores.get(tag, 0) + n
+    return [t for t, _ in sorted(scores.items(), key=lambda kv: -kv[1])][:limit]
+
+
 def field_tags(job) -> list[str]:
     tags = tags_from_jel(job.jel_codes)
     text = " | ".join([job.title, job.department] + list(job.categories))

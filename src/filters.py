@@ -68,7 +68,7 @@ def phd_required(job, ptype: str = ""):
 def start_year(job):
     s = job.start_date_text or ""
     m = re.search(r"\b(20\d\d)\b", s)
-    if m:
+    if m and 2025 <= int(m.group(1)) <= 2030:
         return int(m.group(1))
     if re.search(r"flexible|negotiable|asap|as soon as", s, re.I):
         return None

@@ -46,6 +46,9 @@ jobs:
 
       - name: Fetch, tag, and render
         if: steps.gate.outputs.run == 'true'
+        env:
+          # Optional: enables Claude-based extraction for free-text postings (Chronicle, Substack).
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: python -m src.run
 
       - name: Commit results

@@ -124,6 +124,8 @@
                   newonly: false, agonly: false, showexcl: false, pastdl: false, sort: "deadline", window: "all" };
   let DATA = null;
   const todayISO = new Date().toISOString().slice(0, 10);
+  const SRC_LABEL = { joe: "JOE", ejm: "EJM", chronicle: "CHE", substack: "AEJ" };
+  const SRC_TITLE = { joe: "AEA Job Openings for Economists", ejm: "EconJobMarket", chronicle: "Chronicle of Higher Education", substack: "Applied Econ Jobs (Substack)" };
   const daysBetween = (a, b) => Math.round((new Date(a) - new Date(b)) / 86400000);
 
   try {
@@ -215,7 +217,7 @@
         <td>${esc(j.geo.primary)}<div class="inst">${esc(j.geo.regions.join(", "))}</div></td>
         <td class="hide-m">${j.fields.map(f => `<span class="tag${j.ag_env && /Agri|Envir|Resource|Energy/.test(f) ? " ag" : ""}">${esc(f)}</span>`).join("")}</td>
         <td class="hide-m">${esc(j.type)}</td>
-        <td class="src">${j.sources.map(s => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.source.toUpperCase())}</a>`).join("")}</td>`;
+        <td class="src">${j.sources.map(s => `<a href="${esc(s.url)}" target="_blank" rel="noopener" title="${esc(SRC_TITLE[s.source] || s.source)}">${esc(SRC_LABEL[s.source] || s.source.toUpperCase())}</a>`).join("")}</td>`;
       tr.onclick = (e) => { if (e.target.tagName === "A") return; toggle(tr, j); };
       tb.appendChild(tr);
     }
