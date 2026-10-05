@@ -1,3 +1,4 @@
+# Daily refresh of the job listings (see README).
 name: Update job listings
 
 on:
