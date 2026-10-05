@@ -3643,7 +3643,7 @@
    ],
    "first_seen": "2026-10-04",
    "last_seen": "2026-10-04",
-   "status": "active"
+   "status": "missing"
   },
   {
    "title": "Tenure Track Scientist in Global-Local Interactions in Agriculture Systems",
@@ -3699,7 +3699,7 @@
    ],
    "first_seen": "2026-10-04",
    "last_seen": "2026-10-04",
-   "status": "active"
+   "status": "missing"
   },
   {
    "title": "Assistant Professor in Economics (Macroeconomics)",
@@ -3917,7 +3917,7 @@
    ],
    "first_seen": "2026-10-04",
    "last_seen": "2026-10-04",
-   "status": "active"
+   "status": "missing"
   },
   {
    "title": "Assistant Professor",
@@ -4146,7 +4146,7 @@
    ],
    "first_seen": "2026-10-04",
    "last_seen": "2026-10-04",
-   "status": "active"
+   "status": "missing"
   },
   {
    "title": "State Energy Strategy Project Lead",
@@ -4204,7 +4204,7 @@
    ],
    "first_seen": "2026-10-04",
    "last_seen": "2026-10-04",
-   "status": "active"
+   "status": "missing"
   },
   {
    "title": "Policy Analyst & Communications Coordinator",
@@ -4258,7 +4258,7 @@
    ],
    "first_seen": "2026-10-04",
    "last_seen": "2026-10-04",
-   "status": "active"
+   "status": "missing"
   },
   {
    "title": "Community Development Research Fellow",
@@ -6379,7 +6379,7 @@
    ],
    "first_seen": "2026-10-04",
    "last_seen": "2026-10-04",
-   "status": "active"
+   "status": "missing"
   },
   {
    "title": "Assistant Professor",
@@ -16041,6 +16041,64 @@
    "status": "active"
   },
   {
+   "title": "Assistant Professor (Tenure Track) - Economics (27-28)",
+   "institution": "DePaul University",
+   "department": "",
+   "type": "Tenure-track",
+   "section": "Full-Time Academic (Permanent, Tenure Track or Tenured)",
+   "fields": [
+    "Urban/Regional",
+    "Finance",
+    "Macro",
+    "Behavioral/Experimental"
+   ],
+   "ag_env": false,
+   "geo": {
+    "countries": [
+     "United States"
+    ],
+    "regions": [
+     "US-Midwest"
+    ],
+    "us_states": [
+     "Illinois"
+    ],
+    "primary": "Illinois"
+   },
+   "location_text": "Chicago, Illinois, United States",
+   "jel_codes": [],
+   "categories": [
+    "Macro",
+    "Urban/Regional",
+    "Finance",
+    "Behavioral/Experimental"
+   ],
+   "deadline": "2026-11-15",
+   "posted": "2026-09-16",
+   "start_date_text": "",
+   "start_year": 2027,
+   "degree_required": "",
+   "phd_required": true,
+   "requirements": [],
+   "salary": "Commensurate with experience",
+   "summary": "The Department of Economics at DePaul University invites\napplications for two tenure-track positions at the Assistant\nProfessor level with an expected start date of July 1, 2027. \nWe are looking for empirically oriented candidates in three\ndistinct areas.  These include macroeconomics, urban\neconomics, and business economics, which we broadly think of as the\napplication of economics to business decision-making.  The\nbusiness economics position could span a range of fields, including\nbehavioral economics, and the right candidate will actively\ncontribute to our MBA program. Within macroeconomics",
+   "passes_filter": true,
+   "exclusion_reasons": [],
+   "sources": [
+    {
+     "source": "chronicle",
+     "url": "https://jobs.chronicle.com/job/38038133/assistant-professor-tenure-track-economics-27-28-/",
+     "id": "38038133"
+    }
+   ],
+   "source_keys": [
+    "chronicle:38038133"
+   ],
+   "first_seen": "2026-10-04",
+   "last_seen": "2026-10-04",
+   "status": "active"
+  },
+  {
    "title": "Assistant/Associate/Full Professor",
    "institution": "Department of Economics Hebrew University of Jerusalem",
    "department": "",
@@ -22103,6 +22161,58 @@
    "source_keys": [
     "joe:111477974",
     "ejm:12694"
+   ],
+   "first_seen": "2026-10-04",
+   "last_seen": "2026-10-04",
+   "status": "active"
+  },
+  {
+   "title": "HES - Assistant Professor/Associate Professor - Tenure/Tenure Track - 530583",
+   "institution": "University of Alabama",
+   "department": "",
+   "type": "Tenure-track",
+   "section": "Full-Time Academic (Permanent, Tenure Track or Tenured)",
+   "fields": [
+    "Finance"
+   ],
+   "ag_env": false,
+   "geo": {
+    "countries": [
+     "United States"
+    ],
+    "regions": [
+     "US-South"
+    ],
+    "us_states": [
+     "Alabama"
+    ],
+    "primary": "Alabama"
+   },
+   "location_text": "Tuscaloosa, Alabama, United States",
+   "jel_codes": [],
+   "categories": [
+    "Finance"
+   ],
+   "deadline": "2026-11-20",
+   "posted": "2026-09-20",
+   "start_date_text": "",
+   "start_year": null,
+   "degree_required": "",
+   "phd_required": true,
+   "requirements": [],
+   "salary": "",
+   "summary": "Search for Tenure-Track Assistant or Associate Professor\n\nThe Department of Consumer Sciences in the College of Human Environmental Sciences at the University of Alabama is seeking an Assistant or Associate Professor to collaborate with existing faculty to expand undergraduate and graduate programs in consumer sciences, family financial planning and counseling.\n\nThe successful candidate will have completed a doctoral degree in financial planning, consumer sciences, family resource management, consumer economics, applied economics, or a closely related field. The successful candidate will have ",
+   "passes_filter": true,
+   "exclusion_reasons": [],
+   "sources": [
+    {
+     "source": "chronicle",
+     "url": "https://jobs.chronicle.com/job/38041261/hes-assistant-professor-associate-professor-tenure-tenure-track-530583/",
+     "id": "38041261"
+    }
+   ],
+   "source_keys": [
+    "chronicle:38041261"
    ],
    "first_seen": "2026-10-04",
    "last_seen": "2026-10-04",
@@ -29241,6 +29351,60 @@
    "status": "active"
   },
   {
+   "title": "Part-time Faculty, College of Business and Economics",
+   "institution": "Lenoir-Rhyne University",
+   "department": "",
+   "type": "Tenure-track",
+   "section": "Full-Time Academic (Permanent, Tenure Track or Tenured)",
+   "fields": [
+    "Finance"
+   ],
+   "ag_env": false,
+   "geo": {
+    "countries": [
+     "United States"
+    ],
+    "regions": [
+     "US-South"
+    ],
+    "us_states": [
+     "North Carolina"
+    ],
+    "primary": "North Carolina"
+   },
+   "location_text": "Hickory, North Carolina, United States",
+   "jel_codes": [],
+   "categories": [
+    "Finance"
+   ],
+   "deadline": "2026-12-04",
+   "posted": "2025-07-24",
+   "start_date_text": "",
+   "start_year": null,
+   "degree_required": "",
+   "phd_required": true,
+   "requirements": [],
+   "salary": "",
+   "summary": "Location: Hickory, North Carolina\n\nPlease note: The College of Business and Economics includes:\naccounting, business administration (B.A./B.S. and MBA), economics,\nentrepreneurship, finance, international business, international\neconomics, management and marketing.\n\nTo meet ongoing needs for part-time instructors, Lenoir-Rhyne\nUniversity maintains part-time faculty candidate pools by areas of\nspecialty to meet varying semester-to-semester needs. We encourage\nyou to submit your application online (including attachments for\nyour cover letter and your curriculum vitae). Your cover letter\nshould f",
+   "passes_filter": false,
+   "exclusion_reasons": [
+    "adjunct/part-time"
+   ],
+   "sources": [
+    {
+     "source": "chronicle",
+     "url": "https://jobs.chronicle.com/job/37861923/part-time-faculty-college-of-business-and-economics/",
+     "id": "37861923"
+    }
+   ],
+   "source_keys": [
+    "chronicle:37861923"
+   ],
+   "first_seen": "2026-10-04",
+   "last_seen": "2026-10-04",
+   "status": "active"
+  },
+  {
    "title": "[POOL] PT Faculty, Economics",
    "institution": "Linn-Benton Community College",
    "department": "",
@@ -30831,6 +30995,59 @@
    ],
    "source_keys": [
     "chronicle:37992928"
+   ],
+   "first_seen": "2026-10-04",
+   "last_seen": "2026-10-04",
+   "status": "active"
+  },
+  {
+   "title": "Adjunct Faculty Talent Pool - Business",
+   "institution": "North Idaho College",
+   "department": "",
+   "type": "Visiting/Teaching",
+   "section": "Other Academic (Visiting or Temporary)",
+   "fields": [
+    "Unspecified"
+   ],
+   "ag_env": false,
+   "geo": {
+    "countries": [
+     "United States"
+    ],
+    "regions": [
+     "US-West"
+    ],
+    "us_states": [
+     "Idaho"
+    ],
+    "primary": "Idaho"
+   },
+   "location_text": "Coeur D'Alene, Idaho, United States",
+   "jel_codes": [],
+   "categories": [],
+   "deadline": "2026-12-04",
+   "posted": "2026-09-04",
+   "start_date_text": "",
+   "start_year": null,
+   "degree_required": "",
+   "phd_required": false,
+   "requirements": [],
+   "salary": "",
+   "summary": "The Faculty Talent Pools are for applicants who want to be\nconsidered for future adjunct faculty positions at NIC. While may\nnot currently have an immediate opening in this division, joining\nthe pool will allow the division chair to review your\nqualifications before a need arises.\n\nNIC does not allow for remote teaching. To be considered, you\nmust reside in Idaho, Eastern Washington or be willing to relocate\nto the area.\n\nRequired Degree: Master's degree in Business, Economics, or\nAccounting.\n\nApplication Deadline: Review of files happens when a need\narises.\n\nSubmission Requirements: Letter of",
+   "passes_filter": false,
+   "exclusion_reasons": [
+    "PhD not required",
+    "adjunct/part-time"
+   ],
+   "sources": [
+    {
+     "source": "chronicle",
+     "url": "https://jobs.chronicle.com/job/38033488/adjunct-faculty-talent-pool-business/",
+     "id": "38033488"
+    }
+   ],
+   "source_keys": [
+    "chronicle:38033488"
    ],
    "first_seen": "2026-10-04",
    "last_seen": "2026-10-04",
@@ -44882,7 +45099,7 @@
    ],
    "first_seen": "2026-10-04",
    "last_seen": "2026-10-04",
-   "status": "active"
+   "status": "missing"
   },
   {
    "title": "Assistant Professor (Economic Theory)",
@@ -44993,7 +45210,7 @@
    ],
    "first_seen": "2026-10-04",
    "last_seen": "2026-10-04",
-   "status": "active"
+   "status": "missing"
   },
   {
    "title": "Behavioral Economics",
@@ -45111,56 +45328,6 @@
    "status": "active"
   },
   {
-   "title": "Assistant Professor (Tenure Track) - Economics (27-28)",
-   "institution": "DePaul University",
-   "department": "",
-   "type": "Tenure-track",
-   "section": "Full-Time Academic (Permanent, Tenure Track or Tenured)",
-   "fields": [
-    "Unspecified"
-   ],
-   "ag_env": false,
-   "geo": {
-    "countries": [
-     "United States"
-    ],
-    "regions": [
-     "US-Midwest"
-    ],
-    "us_states": [
-     "Illinois"
-    ],
-    "primary": "Illinois"
-   },
-   "location_text": "Illinois, United States",
-   "jel_codes": [],
-   "categories": [],
-   "deadline": null,
-   "posted": "2026-09-16",
-   "start_date_text": "",
-   "start_year": null,
-   "degree_required": "",
-   "phd_required": true,
-   "requirements": [],
-   "salary": "Commensurate with experience",
-   "summary": "",
-   "passes_filter": true,
-   "exclusion_reasons": [],
-   "sources": [
-    {
-     "source": "chronicle",
-     "url": "https://jobs.chronicle.com/job/38038133/assistant-professor-tenure-track-economics-27-28-/",
-     "id": "38038133"
-    }
-   ],
-   "source_keys": [
-    "chronicle:38038133"
-   ],
-   "first_seen": "2026-10-04",
-   "last_seen": "2026-10-04",
-   "status": "active"
-  },
-  {
    "title": "Associate",
    "institution": "ECOnorthwest",
    "department": "",
@@ -45219,7 +45386,7 @@
    ],
    "first_seen": "2026-10-04",
    "last_seen": "2026-10-04",
-   "status": "active"
+   "status": "missing"
   },
   {
    "title": "Assistant/Associate/Full Professor of Economics",
@@ -45336,59 +45503,7 @@
    ],
    "first_seen": "2026-10-04",
    "last_seen": "2026-10-04",
-   "status": "active"
-  },
-  {
-   "title": "Part-time Faculty, College of Business and Economics",
-   "institution": "Lenoir-Rhyne University",
-   "department": "",
-   "type": "Tenure-track",
-   "section": "Full-Time Academic (Permanent, Tenure Track or Tenured)",
-   "fields": [
-    "Unspecified"
-   ],
-   "ag_env": false,
-   "geo": {
-    "countries": [
-     "United States"
-    ],
-    "regions": [
-     "US-South"
-    ],
-    "us_states": [
-     "North Carolina"
-    ],
-    "primary": "North Carolina"
-   },
-   "location_text": "North Carolina, United States",
-   "jel_codes": [],
-   "categories": [],
-   "deadline": null,
-   "posted": "2025-07-24",
-   "start_date_text": "",
-   "start_year": null,
-   "degree_required": "",
-   "phd_required": true,
-   "requirements": [],
-   "salary": "",
-   "summary": "",
-   "passes_filter": false,
-   "exclusion_reasons": [
-    "adjunct/part-time"
-   ],
-   "sources": [
-    {
-     "source": "chronicle",
-     "url": "https://jobs.chronicle.com/job/37861923/part-time-faculty-college-of-business-and-economics/",
-     "id": "37861923"
-    }
-   ],
-   "source_keys": [
-    "chronicle:37861923"
-   ],
-   "first_seen": "2026-10-04",
-   "last_seen": "2026-10-04",
-   "status": "active"
+   "status": "missing"
   },
   {
    "title": "Quantitative Researcher/Senior Researcher for State and Local Government Services",
@@ -45444,7 +45559,7 @@
    ],
    "first_seen": "2026-10-04",
    "last_seen": "2026-10-04",
-   "status": "active"
+   "status": "missing"
   },
   {
    "title": "Assistant Professor",
@@ -45567,58 +45682,6 @@
    "status": "active"
   },
   {
-   "title": "Adjunct Faculty Talent Pool - Business",
-   "institution": "North Idaho College",
-   "department": "",
-   "type": "Visiting/Teaching",
-   "section": "Other Academic (Visiting or Temporary)",
-   "fields": [
-    "Unspecified"
-   ],
-   "ag_env": false,
-   "geo": {
-    "countries": [
-     "United States"
-    ],
-    "regions": [
-     "US-West"
-    ],
-    "us_states": [
-     "Idaho"
-    ],
-    "primary": "Idaho"
-   },
-   "location_text": "Idaho, United States",
-   "jel_codes": [],
-   "categories": [],
-   "deadline": null,
-   "posted": "2026-09-04",
-   "start_date_text": "",
-   "start_year": null,
-   "degree_required": "",
-   "phd_required": null,
-   "requirements": [],
-   "salary": "",
-   "summary": "",
-   "passes_filter": false,
-   "exclusion_reasons": [
-    "adjunct/part-time"
-   ],
-   "sources": [
-    {
-     "source": "chronicle",
-     "url": "https://jobs.chronicle.com/job/38033488/adjunct-faculty-talent-pool-business/",
-     "id": "38033488"
-    }
-   ],
-   "source_keys": [
-    "chronicle:38033488"
-   ],
-   "first_seen": "2026-10-04",
-   "last_seen": "2026-10-04",
-   "status": "active"
-  },
-  {
    "title": "Farm Management Extension Educator",
    "institution": "Penn State University",
    "department": "",
@@ -45678,7 +45741,7 @@
    ],
    "first_seen": "2026-10-04",
    "last_seen": "2026-10-04",
-   "status": "active"
+   "status": "missing"
   },
   {
    "title": "Research Fellow (Mid-Career and Senior)",
@@ -45788,7 +45851,7 @@
    ],
    "first_seen": "2026-10-04",
    "last_seen": "2026-10-04",
-   "status": "active"
+   "status": "missing"
   },
   {
    "title": "Economic Analyst",
@@ -45844,7 +45907,7 @@
    ],
    "first_seen": "2026-10-04",
    "last_seen": "2026-10-04",
-   "status": "active"
+   "status": "missing"
   },
   {
    "title": "Assistant Professor",
@@ -45955,7 +46018,7 @@
    ],
    "first_seen": "2026-10-04",
    "last_seen": "2026-10-04",
-   "status": "active"
+   "status": "missing"
   },
   {
    "title": "Assistant Director for Land Use and Natural Resources",
@@ -46015,7 +46078,7 @@
    ],
    "first_seen": "2026-10-04",
    "last_seen": "2026-10-04",
-   "status": "active"
+   "status": "missing"
   },
   {
    "title": "Agricultural Economist (two positions)",
@@ -46075,55 +46138,7 @@
    ],
    "first_seen": "2026-10-04",
    "last_seen": "2026-10-04",
-   "status": "active"
-  },
-  {
-   "title": "HES - Assistant Professor/Associate Professor - Tenure/Tenure Track - 530583",
-   "institution": "University of Alabama",
-   "department": "",
-   "type": "Tenure-track",
-   "section": "Full-Time Academic (Permanent, Tenure Track or Tenured)",
-   "fields": [
-    "Unspecified"
-   ],
-   "ag_env": false,
-   "geo": {
-    "countries": [
-     "Alabama"
-    ],
-    "regions": [
-     "Other"
-    ],
-    "us_states": [],
-    "primary": "Alabama"
-   },
-   "location_text": "Tuscaloosa, Alabama",
-   "jel_codes": [],
-   "categories": [],
-   "deadline": null,
-   "posted": "2026-09-20",
-   "start_date_text": "",
-   "start_year": null,
-   "degree_required": "",
-   "phd_required": true,
-   "requirements": [],
-   "salary": "",
-   "summary": "",
-   "passes_filter": true,
-   "exclusion_reasons": [],
-   "sources": [
-    {
-     "source": "chronicle",
-     "url": "https://jobs.chronicle.com/job/38041261/hes-assistant-professor-associate-professor-tenure-tenure-track-530583/",
-     "id": "38041261"
-    }
-   ],
-   "source_keys": [
-    "chronicle:38041261"
-   ],
-   "first_seen": "2026-10-04",
-   "last_seen": "2026-10-04",
-   "status": "active"
+   "status": "missing"
   },
   {
    "title": "Associate/Assistant Professor in Microeconometrics",
@@ -46299,7 +46314,7 @@
    ],
    "first_seen": "2026-10-04",
    "last_seen": "2026-10-04",
-   "status": "active"
+   "status": "missing"
   }
  ]
 }
