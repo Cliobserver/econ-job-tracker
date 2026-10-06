@@ -5,7 +5,7 @@ import re
 
 PHD_RE = re.compile(r"\b(ph\.?\s?d\.?|doctora(?:l|te)|d\.?phil|doctoral degree)\b", re.I)
 NOT_PHD_TITLE_RE = re.compile(
-    r"pre-?doc|predoctoral|research assistant|undergraduate|\bRA\b|\bintern(ship)?\b|"
+    r"pre-?doc|predoctoral|research assistant(?!\s+professor)|undergraduate|\bRA\b|\bintern(ship)?\b|"
     r"master'?s? (student|program)|teaching assistant", re.I)
 GOV_RE = re.compile(
     r"federal reserve|\bfed\b|\bbank of\b|central bank|reserve bank|\bUSDA\b|department of|"
