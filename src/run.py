@@ -17,6 +17,7 @@ import requests
 
 from . import store, render
 from .dedup import dedup
+from .health import NOTES
 from .extract import claude_extract, claude_enabled
 from .fields import field_tags, is_ag_env, tags_from_body
 from .filters import position_type, screen, phd_required, start_year
@@ -165,7 +166,8 @@ def fetch_all(offline_dir: Path | None):
         try:
             got = fn()
             jobs += got
-            health[name] = {"count": len(got), "status": "ok"}
+            status = "ok" + (f" ({NOTES[name]})" if name in NOTES else "")
+            health[name] = {"count": len(got), "status": status}
             print(f"[{name}] {len(got)} postings", file=sys.stderr)
         except Exception as e:  # one broken board must not sink the run
             health[name] = {"count": 0, "status": f"error: {type(e).__name__}: {e}"[:200]}

@@ -17,6 +17,7 @@ import requests
 from lxml import html as lxml_html
 
 from ..extract import regex_extract
+from ..health import note
 from ..models import Job, Location
 
 FEED_URL = "https://appliedeconjobs.substack.com/feed"
@@ -58,6 +59,7 @@ def download(session) -> bytes:
             errors.append(f"{url.split('?')[0]} -> {type(e).__name__}")
     if CACHE_FILE.exists():
         print(f"[substack] live fetch failed ({'; '.join(errors)}); using cached feed", file=sys.stderr)
+        note("substack", "live fetch failed; cached feed")
         return CACHE_FILE.read_bytes()
     raise RuntimeError("Substack feed unavailable: " + "; ".join(errors))
 

@@ -30,6 +30,7 @@ import requests
 from lxml import html as lxml_html
 
 from ..extract import regex_extract
+from ..health import note
 from ..models import Job, Location
 
 CACHE_DIR = Path(__file__).resolve().parent.parent.parent / "data" / "cache"
@@ -300,6 +301,7 @@ def fetch(session=None, raw_messages: list[bytes] | None = None, today: date | N
         if not configured():
             print("[gmail] not configured (GMAIL_USER / GMAIL_APP_PASSWORD or OAuth vars); "
                   f"using {len(stored)} stored postings", file=sys.stderr)
+            note("gmail", "not configured; stored postings only")
             return [to_job(r) for r in stored]
         conn = connect()
         try:
@@ -330,4 +332,6 @@ def fetch(session=None, raw_messages: list[bytes] | None = None, today: date | N
     SEEN_FILE.write_text(json.dumps(sorted(seen)), encoding="utf-8")
     JOBS_FILE.write_text(json.dumps(stored, ensure_ascii=False, indent=0), encoding="utf-8")
     print(f"[gmail] {new} new list e-mails parsed as postings; {len(stored)} kept", file=sys.stderr)
+    if raw_messages is not None and configured():
+        note("gmail", f"imap login ok; {len(raw_messages)} list e-mails scanned, {new} new postings")
     return [to_job(r) for r in stored]

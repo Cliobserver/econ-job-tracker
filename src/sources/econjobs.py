@@ -17,6 +17,7 @@ XML_PARSER = ET.XMLParser(recover=True, huge_tree=True)
 from ..cache import cached_detail
 from ..extract import deadline_from_text
 from ..geo import us_state
+from ..health import note
 from ..models import Job, Location
 
 FEED_URL = "https://www.econ-jobs.com/?feed=job_feed&posts_per_page=100"
@@ -111,6 +112,7 @@ def _download_feed(s) -> bytes:
         err = type(e).__name__
     if CACHE_FILE.exists():
         print(f"[econjobs] live feed unavailable ({err}); using cached feed", file=sys.stderr)
+        note("econjobs", f"live feed unavailable ({err}); cached feed")
         return CACHE_FILE.read_bytes()
     raise RuntimeError(f"Econ-Jobs feed unavailable: {err}")
 
