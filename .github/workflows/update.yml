@@ -3,10 +3,12 @@ name: Update job listings
 
 on:
   schedule:
-    # 12:00 America/Los_Angeles is 19:00 UTC during PDT and 20:00 UTC during PST.
-    # Both fire; the gate step runs the pipeline only when it is actually noon in LA.
-    - cron: "0 19 * * *"
-    - cron: "0 20 * * *"
+    # Every third day at 12:00 America/Los_Angeles (19:00 UTC during PDT, 20:00 UTC during PST).
+    # Both hours fire; the gate step runs the pipeline only when it is actually noon in LA.
+    # "*/3" on day-of-month runs on the 1st, 4th, 7th, ... so the gap at a month boundary can be
+    # one day shorter or longer than three days.
+    - cron: "0 19 */3 * *"
+    - cron: "0 20 */3 * *"
   workflow_dispatch:
 
 permissions:
