@@ -2,16 +2,16 @@
 
 Prerequisite (done once in Google Cloud Console while signed in as the mailbox owner):
   1. Create a project (any name), enable the "Gmail API".
-  2. OAuth consent screen -> User type "Internal" (works for Google Workspace accounts such as
-     ucdavis.edu and needs no Google verification). Add scope https://mail.google.com/ .
-  3. Credentials -> Create credentials -> OAuth client ID -> Application type "Desktop app".
-     Copy the client ID and client secret.
+  2. Google Auth Platform -> configure the consent screen, audience "Internal" (works for Google
+     Workspace accounts such as ucdavis.edu and needs no Google verification).
+  3. Clients -> Create client -> Application type "Desktop app". Copy the client ID and secret.
 
 Then run:
-    python scripts/gmail_oauth_setup.py --client-id ... --client-secret ...
-A browser window opens; sign in with the mailbox account and approve. The script prints the
-three values to store as GitHub Actions secrets: GMAIL_CLIENT_ID, GMAIL_CLIENT_SECRET,
-GMAIL_REFRESH_TOKEN (plus GMAIL_USER = the mailbox address). Nothing is written to disk.
+    python scripts/gmail_oauth_setup.py --client-id ... --client-secret ... --out secrets.txt
+A sign-in URL is printed (and opened in the default browser unless --no-browser). Sign in with the
+mailbox account and approve. The four values to store as GitHub Actions secrets (GMAIL_USER,
+GMAIL_CLIENT_ID, GMAIL_CLIENT_SECRET, GMAIL_REFRESH_TOKEN) are written to --out (or printed when
+--out is omitted). Keep that file out of git.
 """
 from __future__ import annotations
 
@@ -21,6 +21,7 @@ import secrets
 import threading
 import urllib.parse
 import webbrowser
+from pathlib import Path
 
 import requests
 
@@ -33,12 +34,17 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--client-id", required=True)
     ap.add_argument("--client-secret", required=True)
+    ap.add_argument("--user", default="", help="mailbox address (written to the output as GMAIL_USER)")
     ap.add_argument("--port", type=int, default=8765)
+    ap.add_argument("--out", type=Path, default=None, help="write the secrets here instead of printing them")
+    ap.add_argument("--no-browser", action="store_true")
+    ap.add_argument("--login-hint", default="", help="pre-select this Google account on the sign-in page")
     args = ap.parse_args()
 
     redirect = f"http://localhost:{args.port}/"
     state = secrets.token_urlsafe(16)
     got: dict = {}
+    done = threading.Event()
 
     class Handler(http.server.BaseHTTPRequestHandler):
         def do_GET(self):  # noqa: N802
@@ -47,19 +53,21 @@ def main() -> None:
                 got["code"] = q["code"][0]
                 body = b"Authorized. You can close this window."
             else:
-                body = b"Missing or invalid code."
+                got["error"] = q.get("error", ["missing code"])[0]
+                body = b"Authorization failed: " + got["error"].encode()
             self.send_response(200)
             self.send_header("Content-Type", "text/plain")
             self.end_headers()
             self.wfile.write(body)
+            done.set()
 
         def log_message(self, *a):  # silence
             pass
 
     srv = http.server.HTTPServer(("localhost", args.port), Handler)
-    threading.Thread(target=srv.handle_request, daemon=True).start()
+    threading.Thread(target=srv.serve_forever, daemon=True).start()
 
-    url = AUTH_URL + "?" + urllib.parse.urlencode({
+    params = {
         "client_id": args.client_id,
         "redirect_uri": redirect,
         "response_type": "code",
@@ -67,12 +75,20 @@ def main() -> None:
         "access_type": "offline",
         "prompt": "consent",
         "state": state,
-    })
-    print("Opening browser for Google sign-in. If it does not open, visit:\n", url)
-    webbrowser.open(url)
-    srv.server_close() if False else None
-    while "code" not in got:
-        pass
+    }
+    if args.login_hint:
+        params["login_hint"] = args.login_hint
+    url = AUTH_URL + "?" + urllib.parse.urlencode(params)
+    print("Sign-in URL:\n" + url + "\n", flush=True)
+    if not args.no_browser:
+        webbrowser.open(url)
+    print("Waiting for the browser to return to localhost ...", flush=True)
+    if not done.wait(timeout=600):
+        raise SystemExit("Timed out waiting for authorization.")
+    srv.shutdown()
+    if "error" in got:
+        raise SystemExit("Authorization failed: " + got["error"])
+
     r = requests.post(TOKEN_URL, data={
         "code": got["code"],
         "client_id": args.client_id,
@@ -84,11 +100,20 @@ def main() -> None:
     tok = r.json()
     if "refresh_token" not in tok:
         raise SystemExit("No refresh token returned; remove the app under myaccount.google.com/permissions and rerun.")
-    print("\nAdd these as repository secrets (Settings -> Secrets and variables -> Actions):")
-    print("  GMAIL_USER           = <the mailbox address>")
-    print(f"  GMAIL_CLIENT_ID      = {args.client_id}")
-    print(f"  GMAIL_CLIENT_SECRET  = {args.client_secret}")
-    print(f"  GMAIL_REFRESH_TOKEN  = {tok['refresh_token']}")
+
+    lines = [
+        f"GMAIL_USER={args.user or '<the mailbox address>'}",
+        f"GMAIL_CLIENT_ID={args.client_id}",
+        f"GMAIL_CLIENT_SECRET={args.client_secret}",
+        f"GMAIL_REFRESH_TOKEN={tok['refresh_token']}",
+    ]
+    if args.out:
+        args.out.write_text("\n".join(lines) + "\n", encoding="utf-8")
+        print(f"Refresh token obtained. Secrets written to {args.out} - add them as repository secrets "
+              "(Settings -> Secrets and variables -> Actions), then delete the file.")
+    else:
+        print("\nAdd these as repository secrets (Settings -> Secrets and variables -> Actions):")
+        print("\n".join("  " + l for l in lines))
 
 
 if __name__ == "__main__":

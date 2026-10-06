@@ -55,8 +55,23 @@ JOB_SUBJECT = re.compile(
 NOT_JOB_SUBJECT = re.compile(
     r"\b(webinar|seminar|conference|call for (?:papers|abstracts|proposals)|cfp|workshop|newsletter|minutes|"
     r"business meeting|reminder: (?:webinar|seminar)|survey|election|nominations?|award|special issue|"
-    r"registration|deadline extended: (?:call|cfp)|table of contents)\b", re.I)
+    r"registration|deadline extended: (?:call|cfp)|table of contents|panel|scheduling|mentorship|"
+    r"scholars'? circle|nobel|summer school|short course|symposium|annual meeting|office hours|softball|"
+    r"mentoring|learning experience|field trip|student travel|travel grant|"
+    r"\bgame\b|party|potluck|happy hour|picnic|retreat|orientation|town hall|social|lunch|coffee)\b", re.I)
+# When a subject also contains one of the words above, only these phrasings still count as a job.
+STRONG_JOB_SUBJECT = re.compile(
+    r"position announcement|job (?:opening|posting|announcement)|\bhiring\b|vacanc|openings? (?:in|at|for) [A-Z]|"
+    r"\b(?:assistant|associate|full) professor|postdoc(?:toral)? (?:position|opening)|economist (?:position|opening|job)", re.I)
 JOB_BODY = re.compile(r"\b(apply|application|applicants|candidates?|qualifications|salary|appointment)\b", re.I)
+# The subscriber's own institution shows up in every forwarded message's signature; never
+# treat it as the hiring institution unless it is in the subject line.
+OWN_INSTITUTION = re.compile(os.environ.get("GMAIL_OWN_INSTITUTION", r"University of California|UC Davis"), re.I)
+INST_RE = re.compile(
+    r"\b(?:The )?((?:[A-Z][\w&.'-]+\s){0,4}(?:University|College|Institute|Bank|Laboratory|School|Council|Foundation|Centre|Center)"
+    r"(?:\s(?:of|at|for)\s(?:the\s)?[A-Z][\w&.'-]+(?:\s[A-Z][\w&.'-]+){0,3})?|"
+    r"USDA(?:['’]s)?[\w\s-]{0,40}?(?:Service|Office of (?:the )?Chief Economist|Office|Agency)|"
+    r"Federal Reserve Bank of [A-Z][a-z]+(?: [A-Z][a-z]+)?)")
 
 
 # --------------------------------------------------------------------------- auth / fetch
@@ -156,6 +171,10 @@ def _body_text(msg: EmailMessage) -> str:
     elif plain is not None:
         text = plain.get_content()
     text = text.replace("\r\n", "\n")
+    # Forwarded mail: drop the forwarder's note and signature, keep the original announcement.
+    fwd = re.search(r"\n\s*(?:-+\s*(?:Original Message|Forwarded message)\s*-+|Begin forwarded message:|From:\s.+\n\s*(?:Sent|Date):)", text)
+    if fwd and len(text) - fwd.start() > 300:
+        text = text[fwd.start():]
     # Drop list footers / unsubscribe boilerplate.
     text = re.split(r"\n_{10,}|\nTo unsubscribe|\nYou are receiving this|\n-- ?\n|\nThis message was sent to", text)[0]
     text = re.sub(r"[ \t]+", " ", text)
@@ -164,7 +183,7 @@ def _body_text(msg: EmailMessage) -> str:
 
 
 def _clean_subject(s: str) -> str:
-    s = re.sub(r"\s+", " ", s or "").strip()
+    s = re.sub(r"\s+", " ", s or "").strip().replace("’", "'").replace("‘", "'")
     s = re.sub(r"^((re|fwd?|fw|aw)\s*:\s*|\[[^\]]+\]\s*)+", "", s, flags=re.I)
     s = re.sub(r"^((re|fwd?|fw)\s*:\s*|\[[^\]]+\]\s*)+", "", s, flags=re.I)
     return s.strip(" -:")
@@ -177,17 +196,32 @@ def _split_title(subject: str, text: str) -> tuple[str, str]:
     if m and re.search(r"universit|college|school|institute|bank|department|lab|center|centre|foundation|"
                        r"agency|usda|epa|noaa|service|council|corporation|inc\b|llc|group", m.group(2), re.I):
         return m.group(1).strip(), m.group(2).strip()
-    m = re.search(r"\b(?:the )?((?:[A-Z][\w&.'-]+\s){0,5}(?:University|College|Institute|Bank|Laboratory|School)"
-                  r"(?:\s(?:of|at|for)\s[A-Z][\w&.'-]+(?:\s[A-Z][\w&.'-]+){0,3})?)", text[:1500])
-    return s, (m.group(1).strip() if m else "")
+    # "... Job At Iowa State", "openings at USDA" - only "at"; "in X" names a field, not an employer.
+    m = re.search(r"\b(?:jobs?|positions?|openings?|postdoc\w*|professor\w*|economists?|fellow\w*)\s+at\s+((?:[A-Z][\w&.'-]+\s?){1,5})", s, re.I)
+    if m and m.group(1)[0].isupper():
+        return s, m.group(1).strip()
+    m = re.match(r"^([A-Z][\w&.' -]{2,40}?):\s", s)       # "Monash: recruiting ..."
+    if m and not re.search(r"fw|fwd|^re$|job|position|reminder|announcement|opening|opportunit|urgent|deadline|"
+                           r"postdoc|professor|economist|hiring|vacanc|call", m.group(1), re.I):
+        return s[m.end():].strip(), m.group(1).strip()
+    # Otherwise the most-mentioned institution in the body, ignoring the subscriber's own.
+    counts: dict[str, int] = {}
+    for mm in INST_RE.finditer(text[:4000]):
+        name = mm.group(1).strip(" .,")
+        if OWN_INSTITUTION.search(name) or len(name) < 8:
+            continue
+        counts[name] = counts.get(name, 0) + 1
+    if counts:
+        return s, max(counts, key=lambda k: (counts[k], -text.find(k)))
+    return s, ""
 
 
 def is_job(subject: str, text: str) -> bool:
-    if NOT_JOB_SUBJECT.search(subject) and not re.search(r"position|postdoc|professor|hiring|job", subject, re.I):
-        return False
+    if NOT_JOB_SUBJECT.search(subject):
+        return bool(STRONG_JOB_SUBJECT.search(subject))
     if JOB_SUBJECT.search(subject):
         return True
-    return bool(JOB_BODY.search(text[:3000])) and bool(JOB_SUBJECT.search(text[:600]))
+    return bool(JOB_BODY.search(text[:3000])) and bool(STRONG_JOB_SUBJECT.search(text[:800]))
 
 
 def parse_message(raw: bytes) -> dict | None:
@@ -276,11 +310,18 @@ def fetch(session=None, raw_messages: list[bytes] | None = None, today: date | N
             except Exception:
                 pass
     new = 0
+    def _sig(r):   # same subject = same announcement, however many times it is forwarded
+        return re.sub(r"\W+", " ", r["subject"]).lower().strip()
+    known = {_sig(r) for r in stored}
     for raw in raw_messages:
         rec = parse_message(raw)
         if not rec or rec["message_id"] in seen:
             continue
         seen.add(rec["message_id"])
+        sig = _sig(rec)
+        if sig in known:
+            continue
+        known.add(sig)
         stored.append(rec)
         new += 1
     cutoff = (today - timedelta(days=KEEP_DAYS)).isoformat()

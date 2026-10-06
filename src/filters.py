@@ -37,7 +37,8 @@ def position_type(job) -> str:
     if re.search(r"visiting|temporary|adjunct|lecturer|instructor|teaching|clinical", blob, re.I):
         return "Visiting/Teaching"
     if "tenure" in sec or "permanent" in sec or re.search(
-            r"assistant professor|associate professor|full professor|\bprofessor\b|tenure|\bchair\b", blob, re.I):
+            r"assistant professor|associate professor|full professor|\bprofessor\b|tenure|\bchair\b|"
+            r"\basst\.? prof|\bassoc\.? prof|\bfaculty position", blob, re.I):
         return "Tenure-track"
     if not sec or "other" in sec:
         inst_blob = " ".join([job.institution, job.department, job.title])
