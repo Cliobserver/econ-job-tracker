@@ -343,7 +343,7 @@
    "title": "Summer Intern, Economics",
    "institution": "European Bank for Reconstruction and Development (EBRD)",
    "department": "",
-   "type": "Student/Intern",
+   "type": "PhD Internship",
    "section": "Student",
    "fields": [
     "Any Field"
@@ -372,14 +372,12 @@
    "start_date_text": "",
    "start_year": null,
    "degree_required": "Masters",
-   "phd_required": false,
+   "phd_required": true,
    "requirements": [],
    "salary": "",
    "summary": "Role Overview\nThe Office of the Chief Economist (“OCE”) consists of a team of around 20 economists, economic analysts, and support staff. It contributes to the operational, policy and strategy work of the Bank and provides intellectual leadership on the development of well-functioning market economies in the EBRD’s region of operation, which comprises countries in Emerging Europe and Central Asia, Mongolia, as well as some economies in Africa. OCE also supports the Bank’s operations by monitoring macroeconomic developments and risks. In addition, OCE undertakes economic research, and publishes",
-   "passes_filter": false,
-   "exclusion_reasons": [
-    "student/intern role"
-   ],
+   "passes_filter": true,
+   "exclusion_reasons": [],
    "sources": [
     {
      "source": "inomics",
@@ -5900,7 +5898,7 @@
    "start_date_text": "",
    "start_year": 2027,
    "degree_required": "",
-   "phd_required": false,
+   "phd_required": true,
    "requirements": [],
    "salary": "Competitive",
    "summary": "The https://arts-sciences.buffalo.edu/economics.html at the University at Buffalo, The State University of New York, seeks to fill one Assistant Teaching Professor (Non-Tenure-Track) position for an economist committed to achieving excellence in instruction.\n\nThe position requires teaching 3 undergraduate courses each semester, including large-enrollment introductory courses, and some departmental service. We are seeking candidates committed to developing careers in economics education.\n\nThis is a full-time, non-tenure-track qualified rank faculty position (10-month obligation) ideally beginni",
@@ -9061,6 +9059,168 @@
    ],
    "source_keys": [
     "chronicle:38027873"
+   ],
+   "first_seen": "2026-10-04",
+   "last_seen": "2026-10-06",
+   "status": "active"
+  },
+  {
+   "title": "Health Economics and Outcomes Research Intern",
+   "institution": "BD",
+   "department": "",
+   "type": "PhD Internship",
+   "section": "Internship & Fellowship",
+   "fields": [
+    "Health",
+    "Econometrics"
+   ],
+   "ag_env": false,
+   "geo": {
+    "countries": [
+     "United States"
+    ],
+    "regions": [
+     "US-South"
+    ],
+    "us_states": [
+     "Georgia"
+    ],
+    "primary": "Georgia"
+   },
+   "location_text": "Covington, Georgia, United States",
+   "jel_codes": [],
+   "categories": [
+    "Data Scientist & Statistician",
+    "Economic Researcher"
+   ],
+   "deadline": "2026-10-21",
+   "posted": "2026-09-01",
+   "start_date_text": "",
+   "start_year": null,
+   "degree_required": "",
+   "phd_required": true,
+   "requirements": [],
+   "salary": "",
+   "summary": "Now\n\n\n\n\nJob ID\nR-553760\n\n\nCategory\nHealth Economics & Outcomes Research\n\n\nLocation\nCovington, Georgia\n\n\n\n\n\n\nWe are the people who give possibilities purpose\n\n\n\nBD is one of the largest global medical technology companies in the world. Advancing the world of health™ is our Purpose, and it’s no small feat. It takes the imagination and passion of all of us—from design and engineering to the manufacturing and marketing of our billions of MedTech products per year—to look at the impossible and find transformative solutions that turn dreams into possibilities.\n\n\nJob Description\n\n\n\nJob Summary:\n\nThe ",
+   "passes_filter": true,
+   "exclusion_reasons": [],
+   "sources": [
+    {
+     "source": "econjobs",
+     "url": "https://econ-jobs.com/job-offer/health-economics-and-outcomes-research-intern/",
+     "id": "973"
+    }
+   ],
+   "source_keys": [
+    "econjobs:973"
+   ],
+   "first_seen": "2026-10-04",
+   "last_seen": "2026-10-06",
+   "status": "active"
+  },
+  {
+   "title": "2027 SF Fed Research Associate",
+   "institution": "Federal Reserve Bank of San Francisco",
+   "department": "",
+   "type": "Government/IO",
+   "section": "Full Time",
+   "fields": [
+    "Unspecified"
+   ],
+   "ag_env": false,
+   "geo": {
+    "countries": [
+     "United States"
+    ],
+    "regions": [
+     "US-West"
+    ],
+    "us_states": [
+     "California"
+    ],
+    "primary": "California"
+   },
+   "location_text": "San Francisco, California, United States",
+   "jel_codes": [],
+   "categories": [
+    "Economic Researcher",
+    "Policy Analyst"
+   ],
+   "deadline": "2026-10-21",
+   "posted": "2026-09-01",
+   "start_date_text": "",
+   "start_year": 2027,
+   "degree_required": "",
+   "phd_required": true,
+   "requirements": [],
+   "salary": "",
+   "summary": "Company\n\nFederal Reserve Bank of San Francisco\n\nAre you a motivated college graduate looking for a chance to make a difference? The Federal Reserve Bank of San Francisco is hiring Research Associates to join our Economic Research team. We welcome applications for multiple positions that start in the Summer of 2027.\n\nWe are the Federal Reserve Bank of San Francisco — public servants with a mission to advance the nation’s monetary, financial, and payment systems to build a stronger economy for all Americans. As part of the nation’s central bank, we are committed to understanding and serving the ",
+   "passes_filter": true,
+   "exclusion_reasons": [],
+   "sources": [
+    {
+     "source": "econjobs",
+     "url": "https://econ-jobs.com/job-offer/2027-sf-fed-research-associate/",
+     "id": "975"
+    }
+   ],
+   "source_keys": [
+    "econjobs:975"
+   ],
+   "first_seen": "2026-10-04",
+   "last_seen": "2026-10-06",
+   "status": "active"
+  },
+  {
+   "title": "Associate Quantitative Analyst",
+   "institution": "Pacific Gas and Electric",
+   "department": "",
+   "type": "Industry/Nonprofit",
+   "section": "Full Time",
+   "fields": [
+    "Econometrics"
+   ],
+   "ag_env": false,
+   "geo": {
+    "countries": [
+     "United States"
+    ],
+    "regions": [
+     "US-West"
+    ],
+    "us_states": [
+     "California"
+    ],
+    "primary": "California"
+   },
+   "location_text": "Oakland, California, United States",
+   "jel_codes": [],
+   "categories": [
+    "Data Scientist & Statistician",
+    "Policy Analyst"
+   ],
+   "deadline": "2026-10-21",
+   "posted": "2026-09-01",
+   "start_date_text": "",
+   "start_year": null,
+   "degree_required": "",
+   "phd_required": false,
+   "requirements": [],
+   "salary": "",
+   "summary": "Requisition ID # 174369\n\nJob Category: Business Operations / Strategy\n\n\nJob Level: Individual Contributor\n\n\nBusiness Unit: Strategy & Growth\n\n\nWork Type: Hybrid\n\n\nJob Location: Oakland\n\nDepartment Overview\n\n\nEnergy Policy & Procurement (EPP) secures electricity and natural gas from wholesale markets for PG&E customers to ensure system reliability. In addition, EPP is responsible for long-term planning, risk management, and compliance functions related to PG&E’s energy portfolio. EPP also actively participates in regulatory and legislative proceedings that shape the design and implementation of",
+   "passes_filter": false,
+   "exclusion_reasons": [
+    "PhD not required"
+   ],
+   "sources": [
+    {
+     "source": "econjobs",
+     "url": "https://econ-jobs.com/job-offer/associate-quantitative-analyst/",
+     "id": "971"
+    }
+   ],
+   "source_keys": [
+    "econjobs:971"
    ],
    "first_seen": "2026-10-04",
    "last_seen": "2026-10-06",
@@ -14380,7 +14540,7 @@
    "institution": "University of Fribourg (Switzerland)",
    "department": "",
    "type": "Tenure-track",
-   "section": "Faculty",
+   "section": "",
    "fields": [
     "Public",
     "Environmental",
@@ -14388,16 +14548,14 @@
    ],
    "ag_env": true,
    "geo": {
-    "countries": [
-     "Switzerland"
-    ],
+    "countries": [],
     "regions": [
-     "Europe"
+     "Unknown"
     ],
     "us_states": [],
-    "primary": "Switzerland"
+    "primary": "Unknown"
    },
-   "location_text": "Fribourg, Switzerland",
+   "location_text": "Fribourg",
    "jel_codes": [
     "H",
     "Q",
@@ -14705,7 +14863,7 @@
    ],
    "first_seen": "2026-10-04",
    "last_seen": "2026-10-06",
-   "status": "active"
+   "status": "missing"
   },
   {
    "title": "Assistant Professor in Economics",
@@ -14972,7 +15130,7 @@
    "title": "PhD Internship, Economics and Finance",
    "institution": "Norges Bank",
    "department": "",
-   "type": "Student/Intern",
+   "type": "PhD Internship",
    "section": "Other nonacademic • Research Assistant",
    "fields": [
     "International/Trade",
@@ -15005,14 +15163,12 @@
    "start_date_text": "Flexible",
    "start_year": null,
    "degree_required": "Masters",
-   "phd_required": false,
+   "phd_required": true,
    "requirements": [],
    "salary": "",
    "summary": "PhD-Internship Research Unit, Norges Bank Norges Bank Research is hiring PhD-students for research internships in Oslo, Norway. Interns will collaborate closely with researchers at Norges Bank, with the aim of pursuing a co-authored project until publication in a peer-reviewed academic journal. The duration of the internships will be three months in 2027, and we expect interns to be in Oslo for the entire duration of the internship. The Norges Bank’s PhD internship program seeks PhD-students who are specializing in macroeconomics, econometrics, banking or finance. This is an opportunity to exp",
-   "passes_filter": false,
-   "exclusion_reasons": [
-    "student/intern role"
-   ],
+   "passes_filter": true,
+   "exclusion_reasons": [],
    "sources": [
     {
      "source": "ejm",
@@ -15114,7 +15270,7 @@
    "start_date_text": "",
    "start_year": 2027,
    "degree_required": "",
-   "phd_required": false,
+   "phd_required": true,
    "requirements": [],
    "salary": "$111,400–163,200",
    "summary": "Assistant Teaching Professor of Economics \nDepartment of Economics, College of Letters & Science \nUniversity of California, Berkeley \n\nThe Department of Economics at the University of California, Berkeley, invites applications for a teaching-track position at the level of Assistant Teaching Professor, 100%-time, open fields. Assistant Teaching Professors are full members of the academic senate and are eligible for Security of Employment, equivalent to tenure. \n\nFor more information about the position, including required qualifications and application materials, go to: https://apptrkr.com/98505",
@@ -17276,7 +17432,7 @@
    "title": "2027 Summer Intern – PhD Quant Research Analyst",
    "institution": "Financial Institutions & Services",
    "department": "Asset Management / Client Solutions & Analytics",
-   "type": "Student/Intern",
+   "type": "PhD Internship",
    "section": "Full-Time Nonacademic",
    "fields": [
     "Finance",
@@ -17321,14 +17477,12 @@
    "start_date_text": "",
    "start_year": 2027,
    "degree_required": "",
-   "phd_required": false,
+   "phd_required": true,
    "requirements": [],
    "salary": "205,000",
    "summary": "The client analytics team produces innovative thought leadership and quantitative research for PIMCO’s clients. Candidates can expect to publish research pieces on relevant market themes, construct bespoke investment solutions, and develop platforms and applications to better analyze client portfolios. The team’s research topics are broad-ranging, adapting to market trends and client interest. Recent publications include: views on inflation, the role of fixed income in a low-yielding environment, private asset risk and performance, smart beta emerging market portfolios, and retirement planning",
-   "passes_filter": false,
-   "exclusion_reasons": [
-    "student/intern role"
-   ],
+   "passes_filter": true,
+   "exclusion_reasons": [],
    "sources": [
     {
      "source": "joe",
@@ -17347,7 +17501,7 @@
    "title": "2027 PhD Summer Intern – Portfolio Management, Quantitative Research Analyst",
    "institution": "Financial Institutions & Services",
    "department": "Portfolio Management / Analytics",
-   "type": "Student/Intern",
+   "type": "PhD Internship",
    "section": "Full-Time Nonacademic",
    "fields": [
     "Finance",
@@ -17405,14 +17559,12 @@
    "start_date_text": "",
    "start_year": 2027,
    "degree_required": "",
-   "phd_required": false,
+   "phd_required": true,
    "requirements": [],
    "salary": "205,000",
    "summary": "The PM Analytics team collaborates closely with Portfolio Management to provide quantitative inputs to PIMCO’s investment process. This includes developing models for alpha generation and risk management. Team members may specialize in specific markets (e.g., credit, rates, mortgages) or take on cross-market roles such as asset allocation, portfolio construction, or execution. Key responsibilities involve conducting econometric analyses of historical returns, building empirical and risk-neutral valuation models, applying macroeconomic research, and analyzing extensive transaction data to enhan",
-   "passes_filter": false,
-   "exclusion_reasons": [
-    "student/intern role"
-   ],
+   "passes_filter": true,
+   "exclusion_reasons": [],
    "sources": [
     {
      "source": "joe",
@@ -17431,7 +17583,7 @@
    "title": "MFE/2027 PhD Summer Intern – Quantitative Portfolio Management",
    "institution": "Financial Institutions & Services",
    "department": "Portfolio Management / PM Public - Quantitative",
-   "type": "Student/Intern",
+   "type": "PhD Internship",
    "section": "Full-Time Nonacademic",
    "fields": [
     "Finance",
@@ -17485,14 +17637,12 @@
    "start_date_text": "",
    "start_year": 2027,
    "degree_required": "",
-   "phd_required": false,
+   "phd_required": true,
    "requirements": [],
    "salary": "165,000 - 205,000",
    "summary": "The Quant PM team develops and manages systematic investment strategies spanning managed futures, alternative risk premia, and quantitative alpha. Covering varied asset classes including Rates, FX, Equities, Commodities, and Vol, Quant PMs are involved in the entire life cycle of the investment process: starting from idea generation, signal testing, portfolio construction, all the way through to deployment and portfolio management. Candidates can expect to work on projects which include alpha research on new signals, enhancement and extension of existing signals, transaction cost analysis, por",
-   "passes_filter": false,
-   "exclusion_reasons": [
-    "student/intern role"
-   ],
+   "passes_filter": true,
+   "exclusion_reasons": [],
    "sources": [
     {
      "source": "joe",
@@ -23794,6 +23944,58 @@
    "status": "active"
   },
   {
+   "title": "Assistant or Associate Professor of Professional Practice",
+   "institution": "Rutgers Business School at Newark and New Brunswick",
+   "department": "",
+   "type": "Visiting/Teaching",
+   "section": "Other Academic (Visiting or Temporary)",
+   "fields": [
+    "Finance"
+   ],
+   "ag_env": false,
+   "geo": {
+    "countries": [
+     "United States"
+    ],
+    "regions": [
+     "US-Northeast"
+    ],
+    "us_states": [
+     "New Jersey"
+    ],
+    "primary": "New Jersey"
+   },
+   "location_text": "Newark, New Jersey, United States",
+   "jel_codes": [],
+   "categories": [
+    "Finance"
+   ],
+   "deadline": "2026-11-18",
+   "posted": "2026-09-18",
+   "start_date_text": "",
+   "start_year": null,
+   "degree_required": "",
+   "phd_required": true,
+   "requirements": [],
+   "salary": "$110,000 - $120,000 commensurate with experience",
+   "summary": "The Department of Finance and Economics at Rutgers Business School–Newark and New Brunswick, Rutgers University, is seeking a full-time, non-tenure-track faculty member at the rank of Assistant Professor or Associate Professor, subject to funding availability. Candidates must possess a master’s degree or higher in Finance, Economics. \r\n\r\nThe Finance & Economics Department at Rutgers Business School–Newark and New Brunswick comprises a large faculty of scholars and professional faculty whose teaching and research span finance, economics, and related fields. The department supports a range of ac",
+   "passes_filter": true,
+   "exclusion_reasons": [],
+   "sources": [
+    {
+     "source": "chronicle",
+     "url": "https://jobs.chronicle.com/job/38040897/assistant-or-associate-professor-of-professional-practice/",
+     "id": "38040897"
+    }
+   ],
+   "source_keys": [
+    "chronicle:38040897"
+   ],
+   "first_seen": "2026-10-04",
+   "last_seen": "2026-10-06",
+   "status": "active"
+  },
+  {
    "title": "Assistant / Associate Professor Position in Finance",
    "institution": "Rutgers Business School at Newark and New Brunswick",
    "department": "",
@@ -23842,58 +24044,6 @@
    ],
    "source_keys": [
     "chronicle:38040952"
-   ],
-   "first_seen": "2026-10-04",
-   "last_seen": "2026-10-06",
-   "status": "active"
-  },
-  {
-   "title": "Assistant or Associate Professor of Professional Practice",
-   "institution": "Rutgers Business School at Newark and New Brunswick",
-   "department": "",
-   "type": "Visiting/Teaching",
-   "section": "Other Academic (Visiting or Temporary)",
-   "fields": [
-    "Finance"
-   ],
-   "ag_env": false,
-   "geo": {
-    "countries": [
-     "United States"
-    ],
-    "regions": [
-     "US-Northeast"
-    ],
-    "us_states": [
-     "New Jersey"
-    ],
-    "primary": "New Jersey"
-   },
-   "location_text": "Newark, New Jersey, United States",
-   "jel_codes": [],
-   "categories": [
-    "Finance"
-   ],
-   "deadline": "2026-11-18",
-   "posted": "2026-09-18",
-   "start_date_text": "",
-   "start_year": null,
-   "degree_required": "",
-   "phd_required": true,
-   "requirements": [],
-   "salary": "$110,000 - $120,000 commensurate with experience",
-   "summary": "The Department of Finance and Economics at Rutgers Business School–Newark and New Brunswick, Rutgers University, is seeking a full-time, non-tenure-track faculty member at the rank of Assistant Professor or Associate Professor, subject to funding availability. Candidates must possess a master’s degree or higher in Finance, Economics. \r\n\r\nThe Finance & Economics Department at Rutgers Business School–Newark and New Brunswick comprises a large faculty of scholars and professional faculty whose teaching and research span finance, economics, and related fields. The department supports a range of ac",
-   "passes_filter": true,
-   "exclusion_reasons": [],
-   "sources": [
-    {
-     "source": "chronicle",
-     "url": "https://jobs.chronicle.com/job/38040897/assistant-or-associate-professor-of-professional-practice/",
-     "id": "38040897"
-    }
-   ],
-   "source_keys": [
-    "chronicle:38040897"
    ],
    "first_seen": "2026-10-04",
    "last_seen": "2026-10-06",
@@ -24028,6 +24178,163 @@
    "status": "active"
   },
   {
+   "title": "PhD Economics Intern – Structural IO, Summer 2027",
+   "institution": "Amazon.com",
+   "department": "",
+   "type": "PhD Internship",
+   "section": "Internship & Fellowship",
+   "fields": [
+    "Industrial Organization"
+   ],
+   "ag_env": false,
+   "geo": {
+    "countries": [
+     "United States"
+    ],
+    "regions": [
+     "US-West"
+    ],
+    "us_states": [
+     "Washington"
+    ],
+    "primary": "Washington"
+   },
+   "location_text": "Bellevue, Washington, United States",
+   "jel_codes": [],
+   "categories": [
+    "Economic Researcher",
+    "Market Economist"
+   ],
+   "deadline": "2026-11-19",
+   "posted": "2026-09-30",
+   "start_date_text": "",
+   "start_year": 2027,
+   "degree_required": "",
+   "phd_required": true,
+   "requirements": [],
+   "salary": "",
+   "summary": "DESCRIPTION\n\n\nAmazon Economics is seeking Structural IO Economist (STRUC) Interns who are passionate about applying structural econometric methods to solve real-world business challenges. STRUC economists specialize in the econometric analysis of models that involve the estimation of fundamental preferences and strategic effects. In this full-time internship (40 hours per week, with hourly compensation), you’ll work with large-scale datasets to model strategic decision-making and inform business optimization, gaining hands-on experience that’s directly applicable to dissertation writing and fu",
+   "passes_filter": true,
+   "exclusion_reasons": [],
+   "sources": [
+    {
+     "source": "econjobs",
+     "url": "https://econ-jobs.com/job-offer/phd-economics-intern-structural-io-summer-2027/",
+     "id": "992"
+    }
+   ],
+   "source_keys": [
+    "econjobs:992"
+   ],
+   "first_seen": "2026-10-04",
+   "last_seen": "2026-10-06",
+   "status": "active"
+  },
+  {
+   "title": "PhD Economics Intern – Reduced Form Causal Inference, Summer 2027",
+   "institution": "Amazon.com",
+   "department": "",
+   "type": "PhD Internship",
+   "section": "Internship & Fellowship",
+   "fields": [
+    "Econometrics"
+   ],
+   "ag_env": false,
+   "geo": {
+    "countries": [
+     "United States"
+    ],
+    "regions": [
+     "US-West"
+    ],
+    "us_states": [
+     "Washington"
+    ],
+    "primary": "Washington"
+   },
+   "location_text": "Seattle, Washington, United States",
+   "jel_codes": [],
+   "categories": [
+    "Data Scientist & Statistician",
+    "Economic Researcher"
+   ],
+   "deadline": "2026-11-19",
+   "posted": "2026-09-30",
+   "start_date_text": "",
+   "start_year": 2027,
+   "degree_required": "",
+   "phd_required": true,
+   "requirements": [],
+   "salary": "",
+   "summary": "DESCRIPTION\n\n\nAmazon Economics is seeking Reduced Form Causal Analysis (RFCA) Economist Interns who are passionate about applying econometric methods to solve real-world business challenges. RFCA represents the largest group of economists at Amazon, and these core econometric methods are fundamental to economic analysis across the company. In this a full-time internship (40 hours per week, with hourly compensation). You’ll work with large-scale datasets to analyze causal relationships and inform strategic business decisions, gaining hands-on experience that’s directly applicable to dissertatio",
+   "passes_filter": true,
+   "exclusion_reasons": [],
+   "sources": [
+    {
+     "source": "econjobs",
+     "url": "https://econ-jobs.com/job-offer/phd-economics-intern-reduced-form-causal-inference-summer-2027/",
+     "id": "994"
+    }
+   ],
+   "source_keys": [
+    "econjobs:994"
+   ],
+   "first_seen": "2026-10-04",
+   "last_seen": "2026-10-06",
+   "status": "active"
+  },
+  {
+   "title": "Health Economic & Outcomes Research Strategy Lead (UK)",
+   "institution": "UCB",
+   "department": "",
+   "type": "Industry/Nonprofit",
+   "section": "Full Time",
+   "fields": [
+    "Health"
+   ],
+   "ag_env": false,
+   "geo": {
+    "countries": [
+     "United Kingdom"
+    ],
+    "regions": [
+     "Europe"
+    ],
+    "us_states": [],
+    "primary": "United Kingdom"
+   },
+   "location_text": "Slough, England, UK",
+   "jel_codes": [],
+   "categories": [
+    "Economic Researcher",
+    "Economist Consultant"
+   ],
+   "deadline": "2026-11-19",
+   "posted": "2026-09-30",
+   "start_date_text": "",
+   "start_year": null,
+   "degree_required": "",
+   "phd_required": true,
+   "requirements": [],
+   "salary": "",
+   "summary": "Make your mark for patients\n\n\nWe are looking for a Health Economics & Outcomes Research Strategy Lead who is strategic, analytical, and influential to join our Patient Evidence team, helping shape global evidence strategies that support successful payer, HTA, and reimbursement outcomes for UCB’s portfolio based in Brussels, Belgium; Slough, UK or Monheim, Germany.\n\n\n\n\n\nAbout the Role\n\n\nAs HEOR Strategy Lead, you will be responsible for developing and executing global Health Economics & Outcomes Research (HEOR) strategies aligned with HTA and payer evidence requirements across the product lifec",
+   "passes_filter": true,
+   "exclusion_reasons": [],
+   "sources": [
+    {
+     "source": "econjobs",
+     "url": "https://econ-jobs.com/job-offer/health-economic-outcomes-research-strategy-lead-uk/",
+     "id": "996"
+    }
+   ],
+   "source_keys": [
+    "econjobs:996"
+   ],
+   "first_seen": "2026-10-04",
+   "last_seen": "2026-10-06",
+   "status": "active"
+  },
+  {
    "title": "Assistant or Associate Professor (Industrial Organization or Regulatory Economics)",
    "institution": "University of Calgary",
    "department": "Faculty of Arts / Economics",
@@ -24089,6 +24396,57 @@
    "source_keys": [
     "joe:111477781",
     "ejm:12623"
+   ],
+   "first_seen": "2026-10-04",
+   "last_seen": "2026-10-06",
+   "status": "active"
+  },
+  {
+   "title": "Research Associate In Health Economics",
+   "institution": "University of Manchester",
+   "department": "",
+   "type": "Other",
+   "section": "Academic",
+   "fields": [
+    "Health"
+   ],
+   "ag_env": false,
+   "geo": {
+    "countries": [
+     "United Kingdom"
+    ],
+    "regions": [
+     "Europe"
+    ],
+    "us_states": [],
+    "primary": "United Kingdom"
+   },
+   "location_text": "Manchester, England, UK",
+   "jel_codes": [],
+   "categories": [
+    "Economic Researcher",
+    "Policy Analyst"
+   ],
+   "deadline": "2026-11-19",
+   "posted": "2026-09-30",
+   "start_date_text": "",
+   "start_year": null,
+   "degree_required": "",
+   "phd_required": true,
+   "requirements": [],
+   "salary": "",
+   "summary": "We wish to appoint a Research Associate with expertise in economics and/or health economics to join the Health Organisation, Policy and Economics (HOPE) research group at The University of Manchester. The successful candidate will join the National Institute for Health and Care Research (NIHR) Policy Research Unit in Health and Care Systems and Commissioning (PRUComm).\n\n\n\nYou will be responsible for:\n\n\n\nContribute to the design, conduct and analysis of novel research as part of a multi-disciplinary team\n\n\nIdentify and critically appraise relevant academic and policy literature\n\n\nSource, collat",
+   "passes_filter": true,
+   "exclusion_reasons": [],
+   "sources": [
+    {
+     "source": "econjobs",
+     "url": "https://econ-jobs.com/job-offer/research-associate-in-health-economics/",
+     "id": "998"
+    }
+   ],
+   "source_keys": [
+    "econjobs:998"
    ],
    "first_seen": "2026-10-04",
    "last_seen": "2026-10-06",
@@ -24889,7 +25247,7 @@
    "start_date_text": "2027-09-01",
    "start_year": 2027,
    "degree_required": "Doctorate",
-   "phd_required": false,
+   "phd_required": true,
    "requirements": [],
    "salary": "Salary: 95 Lecturer/Asst Professor Above The Bar €66,055 - €104,600 per annum. Appointment will be made on scale and in accordance with the Department of Finance guidelines.",
    "summary": "Temporary (5 year) Lecturer/Assistant Professor within UCD School of Economics\n\nApplications are invited for position as Lecturer/Assistant Professor in the UCD School of Economics. Applicants must have an active research track record and be an effective communicator capable of excellence in teaching at undergraduate and postgraduate levels. Applications from all fields of Economics are welcomed.\n\nUCD is Ireland's largest university. UCD School of Economics is the nation's leading group of academic researchers (https://www.ucd.ie/economics/). Our vibrant, international staff are committed to p",
@@ -26672,14 +27030,12 @@
    "start_date_text": "",
    "start_year": null,
    "degree_required": "",
-   "phd_required": false,
+   "phd_required": true,
    "requirements": [],
    "salary": "",
    "summary": "The Department of Economics at Ben-Gurion University invites applications for tenure-track junior and senior faculty positions in all fields of economics. We are looking for candidates with a strong research potential. Senior candidates should have an established publication record as well. Knowledge of Hebrew is not required, yet successful candidates are expected to learn the language within two years of appointment. \n\nYou are welcome to contact Ity Shurtz at shurtz@bgu.ac.il if you have any questions.",
-   "passes_filter": false,
-   "exclusion_reasons": [
-    "PhD not required"
-   ],
+   "passes_filter": true,
+   "exclusion_reasons": [],
    "sources": [
     {
      "source": "joe",
@@ -29639,14 +29995,12 @@
    "start_date_text": "",
    "start_year": 2027,
    "degree_required": "",
-   "phd_required": false,
+   "phd_required": true,
    "requirements": [],
    "salary": "",
    "summary": "The Economics Department of the University of North Carolina at Chapel Hill invites applications for a position as Teaching Assistant Professor to teach in our undergraduate program, with appointment beginning July 1, 2027. This is a nine-month position with the responsibility to teach six courses per academic year. Candidates will be considered for a three year contract term with the possibility of renewal. We welcome applications from all fields of economics, and we are especially interested in candidates with teaching expertise in macroeconomics. Duties will include undergraduate teaching, ",
-   "passes_filter": false,
-   "exclusion_reasons": [
-    "PhD not required"
-   ],
+   "passes_filter": true,
+   "exclusion_reasons": [],
    "sources": [
     {
      "source": "joe",
@@ -36783,14 +37137,12 @@
    "start_date_text": "",
    "start_year": 2027,
    "degree_required": "",
-   "phd_required": false,
+   "phd_required": true,
    "requirements": [],
    "salary": "",
    "summary": "The Department of General Business in the John Chambers College of\nBusiness and Economics at West Virginia University (located in\nMorgantown, WV) invites applications for a Teaching Assistant\nProfessor – Business Law. This position is expected to begin in\nJanuary 2027. The position will involve teaching under the\nDepartment of General Business, with a research and service\naffiliation to the Knee Regulatory Research Center (KRRC), focusing\non topics related to business law, regulation, and healthcare\npolicy.\n\nThe primary teaching responsibility for this position is business\nlaw, with courses dr",
-   "passes_filter": false,
-   "exclusion_reasons": [
-    "PhD not required"
-   ],
+   "passes_filter": true,
+   "exclusion_reasons": [],
    "sources": [
     {
      "source": "chronicle",
@@ -45526,14 +45878,12 @@
    "start_date_text": "",
    "start_year": null,
    "degree_required": "",
-   "phd_required": false,
+   "phd_required": true,
    "requirements": [],
    "salary": "115,000-190,000",
    "summary": "The USC Sol Price School of Public Policy and the USC Schaeffer Institute for Public Policy & Government Service is seeking a dedicated and innovative Research Assistant Professor of Health Policy & Management who will enhance our scholarly mission and advance health care policy. The successful candidate will work within a dynamic team at the USC Schaeffer Center, leveraging resources to increase research capacity in studying health care policy through both new and existing research efforts.\n\nThe position is primarily funded through contracts and grants, with partial research support provided ",
-   "passes_filter": false,
-   "exclusion_reasons": [
-    "PhD not required"
-   ],
+   "passes_filter": true,
+   "exclusion_reasons": [],
    "sources": [
     {
      "source": "joe",
@@ -47604,14 +47954,12 @@
    "start_date_text": "",
    "start_year": null,
    "degree_required": "",
-   "phd_required": false,
+   "phd_required": true,
    "requirements": [],
    "salary": "$65,000 - $75,000",
    "summary": "The Visiting Assistant Professor in Behavioral Science, Environmental and Water Resources at Delaware State University, College of Agriculture, Science and Technology, is a full-time, non-tenured annual position with a 75% focus on research and 25% devoted to teaching, student engagement, and student experiential learning efforts. The professor will develop an active research program focused on Water Resources, collaborate with the University of Delaware’s Center for Experimental and Applied Economics and other partner institutions. This position will have opportunities to co-author peer-revie",
-   "passes_filter": false,
-   "exclusion_reasons": [
-    "PhD not required"
-   ],
+   "passes_filter": true,
+   "exclusion_reasons": [],
    "sources": [
     {
      "source": "joe",
@@ -49539,116 +49887,6 @@
    "status": "active"
   },
   {
-   "title": "PhD Economics Intern – Structural IO, Summer 2027",
-   "institution": "Amazon.com",
-   "department": "",
-   "type": "Student/Intern",
-   "section": "Internship & Fellowship",
-   "fields": [
-    "Industrial Organization"
-   ],
-   "ag_env": false,
-   "geo": {
-    "countries": [
-     "United States"
-    ],
-    "regions": [
-     "US-West"
-    ],
-    "us_states": [
-     "Washington"
-    ],
-    "primary": "Washington"
-   },
-   "location_text": "Bellevue, Washington, United States",
-   "jel_codes": [],
-   "categories": [
-    "Economic Researcher",
-    "Market Economist"
-   ],
-   "deadline": null,
-   "posted": "2026-09-30",
-   "start_date_text": "",
-   "start_year": 2027,
-   "degree_required": "",
-   "phd_required": false,
-   "requirements": [],
-   "salary": "",
-   "summary": "DESCRIPTION\n\n\nAmazon Economics is seeking Structural IO Economist (STRUC) Interns who are passionate about applying structural econometric methods to solve real-world business challenges. STRUC economists specialize in the econometric analysis of models that involve the estimation of fundamental preferences and strategic effects. In this full-time internship (40 hours per week, with hourly compensation), you’ll work with large-scale datasets to model strategic decision-making and inform business optimization, gaining hands-on experience that’s directly applicable to dissertation writing and fu",
-   "passes_filter": false,
-   "exclusion_reasons": [
-    "student/intern role"
-   ],
-   "sources": [
-    {
-     "source": "econjobs",
-     "url": "https://econ-jobs.com/job-offer/phd-economics-intern-structural-io-summer-2027/",
-     "id": "992"
-    }
-   ],
-   "source_keys": [
-    "econjobs:992"
-   ],
-   "first_seen": "2026-10-04",
-   "last_seen": "2026-10-06",
-   "status": "active"
-  },
-  {
-   "title": "PhD Economics Intern – Reduced Form Causal Inference, Summer 2027",
-   "institution": "Amazon.com",
-   "department": "",
-   "type": "Student/Intern",
-   "section": "Internship & Fellowship",
-   "fields": [
-    "Econometrics"
-   ],
-   "ag_env": false,
-   "geo": {
-    "countries": [
-     "United States"
-    ],
-    "regions": [
-     "US-West"
-    ],
-    "us_states": [
-     "Washington"
-    ],
-    "primary": "Washington"
-   },
-   "location_text": "Seattle, Washington, United States",
-   "jel_codes": [],
-   "categories": [
-    "Data Scientist & Statistician",
-    "Economic Researcher"
-   ],
-   "deadline": null,
-   "posted": "2026-09-30",
-   "start_date_text": "",
-   "start_year": 2027,
-   "degree_required": "",
-   "phd_required": false,
-   "requirements": [],
-   "salary": "",
-   "summary": "DESCRIPTION\n\n\nAmazon Economics is seeking Reduced Form Causal Analysis (RFCA) Economist Interns who are passionate about applying econometric methods to solve real-world business challenges. RFCA represents the largest group of economists at Amazon, and these core econometric methods are fundamental to economic analysis across the company. In this a full-time internship (40 hours per week, with hourly compensation). You’ll work with large-scale datasets to analyze causal relationships and inform strategic business decisions, gaining hands-on experience that’s directly applicable to dissertatio",
-   "passes_filter": false,
-   "exclusion_reasons": [
-    "student/intern role"
-   ],
-   "sources": [
-    {
-     "source": "econjobs",
-     "url": "https://econ-jobs.com/job-offer/phd-economics-intern-reduced-form-causal-inference-summer-2027/",
-     "id": "994"
-    }
-   ],
-   "source_keys": [
-    "econjobs:994"
-   ],
-   "first_seen": "2026-10-04",
-   "last_seen": "2026-10-06",
-   "status": "active"
-  },
-  {
    "title": "Research Assistant: Foreign and Defense Policy; Demographics and Political Economy",
    "institution": "American Enterprise Institute",
    "department": "",
@@ -49920,62 +50158,6 @@
    ],
    "source_keys": [
     "aaea:2675"
-   ],
-   "first_seen": "2026-10-04",
-   "last_seen": "2026-10-06",
-   "status": "active"
-  },
-  {
-   "title": "Health Economics and Outcomes Research Intern",
-   "institution": "BD",
-   "department": "",
-   "type": "Student/Intern",
-   "section": "Internship & Fellowship",
-   "fields": [
-    "Health",
-    "Econometrics"
-   ],
-   "ag_env": false,
-   "geo": {
-    "countries": [
-     "United States"
-    ],
-    "regions": [
-     "US-South"
-    ],
-    "us_states": [
-     "Georgia"
-    ],
-    "primary": "Georgia"
-   },
-   "location_text": "Covington, Georgia, United States",
-   "jel_codes": [],
-   "categories": [
-    "Data Scientist & Statistician",
-    "Economic Researcher"
-   ],
-   "deadline": null,
-   "posted": "2026-09-01",
-   "start_date_text": "",
-   "start_year": null,
-   "degree_required": "",
-   "phd_required": false,
-   "requirements": [],
-   "salary": "",
-   "summary": "Now\n\n\n\n\nJob ID\nR-553760\n\n\nCategory\nHealth Economics & Outcomes Research\n\n\nLocation\nCovington, Georgia\n\n\n\n\n\n\nWe are the people who give possibilities purpose\n\n\n\nBD is one of the largest global medical technology companies in the world. Advancing the world of health™ is our Purpose, and it’s no small feat. It takes the imagination and passion of all of us—from design and engineering to the manufacturing and marketing of our billions of MedTech products per year—to look at the impossible and find transformative solutions that turn dreams into possibilities.\n\n\nJob Description\n\n\n\nJob Summary:\n\nThe ",
-   "passes_filter": false,
-   "exclusion_reasons": [
-    "student/intern role"
-   ],
-   "sources": [
-    {
-     "source": "econjobs",
-     "url": "https://econ-jobs.com/job-offer/health-economics-and-outcomes-research-intern/",
-     "id": "973"
-    }
-   ],
-   "source_keys": [
-    "econjobs:973"
    ],
    "first_seen": "2026-10-04",
    "last_seen": "2026-10-06",
@@ -50511,7 +50693,7 @@
    "institution": "Commonwealth Secretariat",
    "department": "",
    "type": "Industry/Nonprofit",
-   "section": "",
+   "section": "Full-Time Nonacademic",
    "fields": [
     "Any Field"
    ],
@@ -50892,59 +51074,6 @@
     "substack:senior-consultant-at-energy-environmental"
    ],
    "first_seen": "2026-10-05",
-   "last_seen": "2026-10-06",
-   "status": "active"
-  },
-  {
-   "title": "2027 SF Fed Research Associate",
-   "institution": "Federal Reserve Bank of San Francisco",
-   "department": "",
-   "type": "Government/IO",
-   "section": "Full Time",
-   "fields": [
-    "Unspecified"
-   ],
-   "ag_env": false,
-   "geo": {
-    "countries": [
-     "United States"
-    ],
-    "regions": [
-     "US-West"
-    ],
-    "us_states": [
-     "California"
-    ],
-    "primary": "California"
-   },
-   "location_text": "San Francisco, California, United States",
-   "jel_codes": [],
-   "categories": [
-    "Economic Researcher",
-    "Policy Analyst"
-   ],
-   "deadline": null,
-   "posted": "2026-09-01",
-   "start_date_text": "",
-   "start_year": 2027,
-   "degree_required": "",
-   "phd_required": true,
-   "requirements": [],
-   "salary": "",
-   "summary": "Company\n\nFederal Reserve Bank of San Francisco\n\nAre you a motivated college graduate looking for a chance to make a difference? The Federal Reserve Bank of San Francisco is hiring Research Associates to join our Economic Research team. We welcome applications for multiple positions that start in the Summer of 2027.\n\nWe are the Federal Reserve Bank of San Francisco — public servants with a mission to advance the nation’s monetary, financial, and payment systems to build a stronger economy for all Americans. As part of the nation’s central bank, we are committed to understanding and serving the ",
-   "passes_filter": true,
-   "exclusion_reasons": [],
-   "sources": [
-    {
-     "source": "econjobs",
-     "url": "https://econ-jobs.com/job-offer/2027-sf-fed-research-associate/",
-     "id": "975"
-    }
-   ],
-   "source_keys": [
-    "econjobs:975"
-   ],
-   "first_seen": "2026-10-04",
    "last_seen": "2026-10-06",
    "status": "active"
   },
@@ -51562,7 +51691,7 @@
    "institution": "Los Angeles Community College District",
    "department": "",
    "type": "Visiting/Teaching",
-   "section": "Faculty",
+   "section": "",
    "fields": [
     "Political Economy"
    ],
@@ -51994,61 +52123,6 @@
    ],
    "source_keys": [
     "aere:https-www-npfmc-org-vacancy-announcement-fishery-analyst-and-or-economist-"
-   ],
-   "first_seen": "2026-10-04",
-   "last_seen": "2026-10-06",
-   "status": "active"
-  },
-  {
-   "title": "Associate Quantitative Analyst",
-   "institution": "Pacific Gas and Electric",
-   "department": "",
-   "type": "Industry/Nonprofit",
-   "section": "Full Time",
-   "fields": [
-    "Econometrics"
-   ],
-   "ag_env": false,
-   "geo": {
-    "countries": [
-     "United States"
-    ],
-    "regions": [
-     "US-West"
-    ],
-    "us_states": [
-     "California"
-    ],
-    "primary": "California"
-   },
-   "location_text": "Oakland, California, United States",
-   "jel_codes": [],
-   "categories": [
-    "Data Scientist & Statistician",
-    "Policy Analyst"
-   ],
-   "deadline": null,
-   "posted": "2026-09-01",
-   "start_date_text": "",
-   "start_year": null,
-   "degree_required": "",
-   "phd_required": false,
-   "requirements": [],
-   "salary": "",
-   "summary": "Requisition ID # 174369\n\nJob Category: Business Operations / Strategy\n\n\nJob Level: Individual Contributor\n\n\nBusiness Unit: Strategy & Growth\n\n\nWork Type: Hybrid\n\n\nJob Location: Oakland\n\nDepartment Overview\n\n\nEnergy Policy & Procurement (EPP) secures electricity and natural gas from wholesale markets for PG&E customers to ensure system reliability. In addition, EPP is responsible for long-term planning, risk management, and compliance functions related to PG&E’s energy portfolio. EPP also actively participates in regulatory and legislative proceedings that shape the design and implementation of",
-   "passes_filter": false,
-   "exclusion_reasons": [
-    "PhD not required"
-   ],
-   "sources": [
-    {
-     "source": "econjobs",
-     "url": "https://econ-jobs.com/job-offer/associate-quantitative-analyst/",
-     "id": "971"
-    }
-   ],
-   "source_keys": [
-    "econjobs:971"
    ],
    "first_seen": "2026-10-04",
    "last_seen": "2026-10-06",
@@ -53077,57 +53151,6 @@
    "status": "active"
   },
   {
-   "title": "Health Economic & Outcomes Research Strategy Lead (UK)",
-   "institution": "UCB",
-   "department": "",
-   "type": "Industry/Nonprofit",
-   "section": "Full Time",
-   "fields": [
-    "Health"
-   ],
-   "ag_env": false,
-   "geo": {
-    "countries": [
-     "United Kingdom"
-    ],
-    "regions": [
-     "Europe"
-    ],
-    "us_states": [],
-    "primary": "United Kingdom"
-   },
-   "location_text": "Slough, England, UK",
-   "jel_codes": [],
-   "categories": [
-    "Economic Researcher",
-    "Economist Consultant"
-   ],
-   "deadline": null,
-   "posted": "2026-09-30",
-   "start_date_text": "",
-   "start_year": null,
-   "degree_required": "",
-   "phd_required": true,
-   "requirements": [],
-   "salary": "",
-   "summary": "Make your mark for patients\n\n\nWe are looking for a Health Economics & Outcomes Research Strategy Lead who is strategic, analytical, and influential to join our Patient Evidence team, helping shape global evidence strategies that support successful payer, HTA, and reimbursement outcomes for UCB’s portfolio based in Brussels, Belgium; Slough, UK or Monheim, Germany.\n\n\n\n\n\nAbout the Role\n\n\nAs HEOR Strategy Lead, you will be responsible for developing and executing global Health Economics & Outcomes Research (HEOR) strategies aligned with HTA and payer evidence requirements across the product lifec",
-   "passes_filter": true,
-   "exclusion_reasons": [],
-   "sources": [
-    {
-     "source": "econjobs",
-     "url": "https://econ-jobs.com/job-offer/health-economic-outcomes-research-strategy-lead-uk/",
-     "id": "996"
-    }
-   ],
-   "source_keys": [
-    "econjobs:996"
-   ],
-   "first_seen": "2026-10-04",
-   "last_seen": "2026-10-06",
-   "status": "active"
-  },
-  {
    "title": "Economics Adjunct Faculty (DAY COURSES) -Spring 2027",
    "institution": "UCNJ Union College of Union County",
    "department": "",
@@ -53626,57 +53649,6 @@
    ],
    "source_keys": [
     "inomics:1554546"
-   ],
-   "first_seen": "2026-10-04",
-   "last_seen": "2026-10-06",
-   "status": "active"
-  },
-  {
-   "title": "Research Associate In Health Economics",
-   "institution": "University of Manchester",
-   "department": "",
-   "type": "Other",
-   "section": "Academic",
-   "fields": [
-    "Health"
-   ],
-   "ag_env": false,
-   "geo": {
-    "countries": [
-     "United Kingdom"
-    ],
-    "regions": [
-     "Europe"
-    ],
-    "us_states": [],
-    "primary": "United Kingdom"
-   },
-   "location_text": "Manchester, England, UK",
-   "jel_codes": [],
-   "categories": [
-    "Economic Researcher",
-    "Policy Analyst"
-   ],
-   "deadline": null,
-   "posted": "2026-09-30",
-   "start_date_text": "",
-   "start_year": null,
-   "degree_required": "",
-   "phd_required": true,
-   "requirements": [],
-   "salary": "",
-   "summary": "We wish to appoint a Research Associate with expertise in economics and/or health economics to join the Health Organisation, Policy and Economics (HOPE) research group at The University of Manchester. The successful candidate will join the National Institute for Health and Care Research (NIHR) Policy Research Unit in Health and Care Systems and Commissioning (PRUComm).\n\n\n\nYou will be responsible for:\n\n\n\nContribute to the design, conduct and analysis of novel research as part of a multi-disciplinary team\n\n\nIdentify and critically appraise relevant academic and policy literature\n\n\nSource, collat",
-   "passes_filter": true,
-   "exclusion_reasons": [],
-   "sources": [
-    {
-     "source": "econjobs",
-     "url": "https://econ-jobs.com/job-offer/research-associate-in-health-economics/",
-     "id": "998"
-    }
-   ],
-   "source_keys": [
-    "econjobs:998"
    ],
    "first_seen": "2026-10-04",
    "last_seen": "2026-10-06",

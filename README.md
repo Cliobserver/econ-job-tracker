@@ -11,19 +11,19 @@ mailing-list e-mail (RESECON, CWAE, AAEA sections, ARE Grads) when Gmail credent
 Runs every third day at 12:00 America/Los_Angeles via GitHub Actions (manual runs any time from the Actions tab).
 
 
-_Last run: 2026-10-06. Active postings passing the filter: 710 (3 new today)._
+_Last run: 2026-10-06. Active postings passing the filter: 722 (3 new today)._
 
 | Source | Fetched | Status |
 |---|---|---|
 | joe | 428 | ok |
 | ejm | 176 | ok |
 | chronicle | 278 | ok |
-| substack | 19 | ok (live fetch failed; cached feed) |
+| substack | 19 | ok |
 | aere | 7 | ok |
 | gmail | 6 | ok (imap login ok; 78 list e-mails scanned, 0 new postings) |
 | aaea | 13 | ok |
-| inomics | 105 | ok |
-| econjobs | 13 | ok (live feed unavailable (HTTP 429, HTML page); cached feed) |
+| inomics | 104 | ok |
+| econjobs | 13 | ok (live feed unavailable (HTTP 200, HTML page); cached feed) |
 
 ## Next 60 deadlines
 
@@ -86,8 +86,8 @@ _Last run: 2026-10-06. Active postings passing the filter: 710 (3 new today)._
 | 2026-10-18 | Assistant Professor of Public Policy (Market-Based Solutions to Societal Challenges) [JOE](https://www.aeaweb.org/joe/listing.php?JOE_ID=2026-02_111477692) [CHRONICLE](https://jobs.chronicle.com/job/38008254/assistant-professor-of-public-policy-market-based-solutions-to-societal-challenges-/) | University of Wisconsin-Madison | Wisconsin | Public, Finance, Health | Tenure-track |  |
 | 2026-10-20 | The Paul Merage School of Business Faculty Openings [CHRONICLE](https://jobs.chronicle.com/job/38028336/the-paul-merage-school-of-business-faculty-openings/) | University of California, Irvine | California | Unspecified | Tenure-track |  |
 | 2026-10-20 | TENURE TRACK POSITIONS Fall 2027 [CHRONICLE](https://jobs.chronicle.com/job/38027873/tenure-track-positions-fall-2027/) | West Chester University | Pennsylvania | Finance | Tenure-track |  |
+| 2026-10-21 | Health Economics and Outcomes Research Intern [ECONJOBS](https://econ-jobs.com/job-offer/health-economics-and-outcomes-research-intern/) | BD | Georgia | Health, Econometrics | PhD Internship |  |
+| 2026-10-21 | 2027 SF Fed Research Associate [ECONJOBS](https://econ-jobs.com/job-offer/2027-sf-fed-research-associate/) | Federal Reserve Bank of San Francisco | California | Unspecified | Government/IO |  |
 | 2026-10-23 | Economist [JOE](https://www.aeaweb.org/joe/listing.php?JOE_ID=2026-02_111477854) | Central Bank of the Republic of Türkiye | Turkey | Econometrics, Macro, International/Trade | Government/IO |  |
-| 2026-10-23 | Assistant Professor in International Business [JOE](https://www.aeaweb.org/joe/listing.php?JOE_ID=2026-02_111478007) | HEC Montreal | Canada | International/Trade, Environmental, Development | Tenure-track |  |
-| 2026-10-24 | Postdoctoral Fellowship in Philosophy, Politics and Economics [EJM](https://econjobmarket.org/positions/12708) [CHRONICLE](https://jobs.chronicle.com/job/38043941/postdoctoral-fellowship-in-philosophy-politics-and-economics-university-of-pennsylvania/) | Philosophy, Politics and Economics Program University of Pennsylvania | Pennsylvania | Any Field, Behavioral/Experimental | Postdoc |  |
 
 _Table shows the next deadlines only; use the dashboard for filtering by field, region, type, and source._

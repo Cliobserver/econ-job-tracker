@@ -73,6 +73,25 @@ class FilterTests(unittest.TestCase):
         j = mk(title="Pre-doctoral Research Assistant", section="Full-Time Nonacademic", full_text="PhD economists supervise.")
         self.assertFalse(phd_required(j, position_type(j)))
 
+    def test_phd_internship_kept_other_interns_excluded(self):
+        j = mk(title="2027 PhD Summer Intern - Quant Research Analyst", section="Full-Time Nonacademic",
+               institution="PIMCO", full_text="Summer 2027 internship for PhD students in economics or finance.")
+        self.assertEqual(position_type(j), "PhD Internship")
+        self.assertTrue(screen(j, position_type(j))[0])
+        j = mk(title="2027 Summer Intern - Masters Quant Research Analyst", section="Full-Time Nonacademic",
+               institution="PIMCO", full_text="Summer 2027 internship for master's students.")
+        self.assertEqual(position_type(j), "Student/Intern")
+        self.assertFalse(screen(j, position_type(j))[0])
+
+    def test_teaching_professor_requires_phd_by_default(self):
+        j = mk(title="Teaching Assistant Professor", section="US: Other Academic (Visiting or Temporary)",
+               full_text="Teach four courses per semester beginning August 2027.")
+        self.assertEqual(position_type(j), "Visiting/Teaching")
+        self.assertTrue(screen(j, position_type(j))[0])
+        j = mk(title="Adjunct Assistant Professor of Economics", section="US: Other Academic (Part-time or Adjunct)",
+               full_text="Teach one course.")
+        self.assertFalse(screen(j, position_type(j))[0])
+
     def test_ejm_degree_field(self):
         j = mk(source="ejm", degree_required="Doctorate", start_date_text="2027-07-01", section="Assistant Professor")
         self.assertTrue(screen(j, position_type(j))[0])

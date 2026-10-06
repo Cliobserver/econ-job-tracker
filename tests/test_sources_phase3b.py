@@ -95,7 +95,8 @@ class EconJobsTests(unittest.TestCase):
         intern, pds = jobs
         self.assertEqual(intern.section, "Internship & Fellowship")
         self.assertEqual(intern.locations[0].state, "Washington")
-        self.assertEqual(position_type(intern), "Student/Intern")
+        self.assertEqual(position_type(intern), "PhD Internship")   # "PhD Economics Intern" for summer 2027 is kept
+        self.assertTrue(screen(intern, "PhD Internship")[0])
         self.assertEqual(pds.institution, "Reserve Bank of Australia")
         self.assertEqual(pds.deadline, "2026-10-27")
         self.assertEqual(pds.locations[0].country, "Australia")

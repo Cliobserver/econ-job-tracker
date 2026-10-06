@@ -6,7 +6,7 @@ import re
 PHD_RE = re.compile(r"\b(ph\.?\s?d\.?|doctora(?:l|te)|d\.?phil|doctoral degree)\b", re.I)
 NOT_PHD_TITLE_RE = re.compile(
     r"pre-?doc|predoctoral|research assistant(?!\s+professor)|undergraduate|\bRA\b|\bintern(ship)?\b|"
-    r"master'?s? (student|program)|teaching assistant", re.I)
+    r"master'?s? (student|program)|teaching assistant(?!\s+professor)", re.I)
 GOV_RE = re.compile(
     r"federal reserve|\bfed\b|\bbank of\b|central bank|reserve bank|\bUSDA\b|department of|"
     r"ministry|government|\bagency\b|commission|bureau|census|treasury|\bIMF\b|world bank|"
@@ -27,7 +27,14 @@ def position_type(job) -> str:
     blob = title + " " + sec
     if re.search(r"post-?doc", blob, re.I):
         return "Postdoc"
-    if re.search(r"\bintern(ship)?\b|traineeship|phd (?:student|candidate|scholarship)|\bstudent\b|scholarship", blob, re.I):
+    if re.search(r"\bintern(ship)?s?\b", blob, re.I):
+        # PhD-level internships (e.g. "2027 PhD Summer Intern") are kept; other internships are not.
+        head = (job.full_text or "")[:2000]
+        if re.search(r"ph\.?\s?d|doctoral", blob, re.I) or \
+                re.search(r"ph\.?\s?d\.?\s+(?:students?|candidates?|program)|doctoral (?:students?|candidates?)", head, re.I):
+            return "PhD Internship"
+        return "Student/Intern"
+    if re.search(r"traineeship|phd (?:student|candidate|scholarship)|\bstudent\b|scholarship", blob, re.I):
         return "Student/Intern"
     if ("nonacademic" in sec or "non-academic" in sec or re.search(r"consultant|economist\b", sec)
             or (re.search(r"full time|full-time|fixed term|consulting|part time", sec)
@@ -52,6 +59,8 @@ def phd_required(job, ptype: str = ""):
     Faculty and postdoc positions require a PhD by definition, so only
     non-academic and teaching postings are judged on their text.
     """
+    if ptype == "PhD Internship":
+        return True
     if NOT_PHD_TITLE_RE.search(job.title or ""):
         return False
     deg = (job.degree_required or "").strip().lower()
@@ -60,7 +69,12 @@ def phd_required(job, ptype: str = ""):
     if deg:
         # EJM states another degree explicitly (e.g. Masters) — not a PhD job.
         return False
-    if ptype in ("Tenure-track", "Postdoc"):
+    if ptype in ("Tenure-track", "Postdoc", "PhD Internship"):
+        return True
+    # Full-time teaching posts with a professorial title (Teaching/Visiting Assistant Professor)
+    # require a doctorate by convention even when the ad does not spell it out.
+    if ptype == "Visiting/Teaching" and re.search(r"professor", job.title or "", re.I) and \
+            not re.search(r"adjunct|part-time|part time", job.title or "", re.I):
         return True
     text = job.full_text or ""
     if PHD_RE.search(text) or re.search(r"terminal degree|post-?doctoral", text, re.I):
