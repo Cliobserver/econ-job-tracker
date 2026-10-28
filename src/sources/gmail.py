@@ -59,6 +59,8 @@ NOT_JOB_SUBJECT = re.compile(
     r"registration|deadline extended: (?:call|cfp)|table of contents|panel|scheduling|mentorship|"
     r"scholars'? circle|nobel|summer school|short course|symposium|annual meeting|office hours|softball|"
     r"mentoring|learning experience|field trip|student travel|travel grant|"
+    r"help (?:us|me|man|our)|signator|petition|sign-?on letter|elevator pitch|graduate student recruitment|"
+    r"recruitment (?:fair|event)|volunteer|participation opportunit|ai evaluation|paid study|research participant|"
     r"\bgame\b|party|potluck|happy hour|picnic|retreat|orientation|town hall|social|lunch|coffee)\b", re.I)
 # When a subject also contains one of the words above, only these phrasings still count as a job.
 STRONG_JOB_SUBJECT = re.compile(
