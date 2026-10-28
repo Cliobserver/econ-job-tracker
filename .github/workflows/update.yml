@@ -3,8 +3,10 @@ name: Update job listings
 
 on:
   schedule:
-    # Every third day at 12:00 America/Los_Angeles (19:00 UTC during PDT, 20:00 UTC during PST).
-    # Both hours fire; the gate step runs the pipeline only when it is actually noon in LA.
+    # Every third day, targeting 12:00 America/Los_Angeles (19:00 UTC during PDT, 20:00 UTC
+    # during PST). GitHub often starts scheduled runs one to three hours late, so the gate below
+    # does NOT require an exact hour: it runs whenever the data has not been refreshed yet today
+    # (Los Angeles date). The second cron is then skipped automatically.
     # "*/3" on day-of-month runs on the 1st, 4th, 7th, ... so the gap at a month boundary can be
     # one day shorter or longer than three days.
     - cron: "0 19 */3 * *"
@@ -22,19 +24,20 @@ jobs:
   update:
     runs-on: ubuntu-latest
     steps:
-      - name: Gate on local noon
+      - uses: actions/checkout@v4
+
+      - name: Gate (skip if already refreshed today; manual runs always proceed)
         id: gate
         run: |
-          H=$(TZ=America/Los_Angeles date +%H)
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ] || [ "$H" = "12" ]; then
+          TODAY=$(TZ=America/Los_Angeles date +%F)
+          LAST=$(python3 -c "import json,sys; print(json.load(open('data/jobs.json')).get('updated') or '')" 2>/dev/null || echo "")
+          echo "today=$TODAY last_update=$LAST event=${{ github.event_name }}"
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] || [ "$LAST" != "$TODAY" ]; then
             echo "run=true" >> "$GITHUB_OUTPUT"
           else
             echo "run=false" >> "$GITHUB_OUTPUT"
-            echo "Not noon in Los Angeles (hour=$H); skipping."
+            echo "Already refreshed today; skipping."
           fi
-
-      - uses: actions/checkout@v4
-        if: steps.gate.outputs.run == 'true'
 
       - uses: actions/setup-python@v5
         if: steps.gate.outputs.run == 'true'
