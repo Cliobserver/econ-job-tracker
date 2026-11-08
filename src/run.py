@@ -18,7 +18,7 @@ import requests
 from . import store, render
 from .dedup import dedup
 from .health import NOTES
-from .extract import claude_extract, claude_enabled
+from .extract import claude_extract, claude_enabled, priority_from_text, open_until_filled
 from .fields import field_tags, is_ag_env, tags_from_body
 from .filters import position_type, screen, phd_required, start_year
 from .geo import geo_tags
@@ -64,6 +64,13 @@ def llm_fill(job) -> None:
         job.section = data["position_type"]
 
 
+def effective_deadline(hard, priority):
+    """Earliest of the board's deadline and the full-consideration date (a later priority date is noise)."""
+    if priority and (not hard or priority < hard):
+        return priority
+    return hard
+
+
 def enrich(job) -> dict:
     llm_fill(job)
     if job.source in UNSTRUCTURED and not job.categories:
@@ -72,6 +79,8 @@ def enrich(job) -> dict:
     ptype = position_type(job)
     passes, reasons = screen(job, ptype)
     fields = field_tags(job)
+    priority = priority_from_text(job.full_text)
+    rolling = open_until_filled(job.full_text)
     return {
         "title": job.title,
         "institution": job.institution,
@@ -84,7 +93,10 @@ def enrich(job) -> dict:
         "location_text": "; ".join(l.text() for l in job.locations),
         "jel_codes": job.jel_codes,
         "categories": job.categories,
-        "deadline": job.deadline,
+        "deadline": effective_deadline(job.deadline, priority),
+        "deadline_hard": job.deadline,          # the board's own deadline field / closing date
+        "priority_date": priority,              # "for full consideration apply by" / "review begins"
+        "rolling": rolling,                     # text says applications accepted until filled
         "posted": job.posted,
         "start_date_text": job.start_date_text,
         "start_year": start_year(job),
@@ -113,9 +125,13 @@ def canonical(cluster) -> dict:
             for v in r[key]:
                 if v not in base[key]:
                     base[key].append(v)
-        for key in ("deadline", "posted", "start_date_text", "degree_required", "department", "salary"):
+        for key in ("deadline_hard", "posted", "start_date_text", "degree_required", "department", "salary"):
             if not base[key] and r[key]:
                 base[key] = r[key]
+        if r["priority_date"] and (not base["priority_date"] or r["priority_date"] < base["priority_date"]):
+            base["priority_date"] = r["priority_date"]
+        base["rolling"] = base["rolling"] or r["rolling"]
+        base["deadline"] = effective_deadline(base["deadline_hard"], base["priority_date"])
         if base["start_year"] is None:
             base["start_year"] = r["start_year"]
         if base["phd_required"] is None:

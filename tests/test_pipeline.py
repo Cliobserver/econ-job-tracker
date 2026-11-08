@@ -99,6 +99,28 @@ class FilterTests(unittest.TestCase):
         j = mk(title="Assistant Teaching Professor", section="US: Full-Time Academic (Permanent, Tenure Track or Tenured)")
         self.assertEqual(position_type(j), "Visiting/Teaching")
 
+    def test_priority_date_and_rolling(self):
+        from src.extract import priority_from_text, open_until_filled
+        from src.run import enrich
+        t = ("For full consideration, please submit your application by December 1, 2026; applications will be "
+             "accepted until the position is filled.")
+        self.assertEqual(priority_from_text(t), "2026-12-01")
+        self.assertTrue(open_until_filled(t))
+        self.assertEqual(priority_from_text("Review will begin on October 2, 2026. Open until filled."), "2026-10-02")
+        self.assertEqual(priority_from_text("For best consideration, apply by September 30, 2026."), "2026-09-30")
+        self.assertIsNone(priority_from_text("Application deadline: November 15, 2026."))
+        self.assertFalse(open_until_filled("Application deadline: November 15, 2026."))
+        # JOE's deadline field says March 1 but the text gives an earlier full-consideration date.
+        j = mk(title="Assistant Professor (Research & Extension)", deadline="2027-03-01", full_text=t + " Start August 2027.")
+        rec = enrich(j)
+        self.assertEqual(rec["deadline"], "2026-12-01")
+        self.assertEqual(rec["deadline_hard"], "2027-03-01")
+        self.assertEqual(rec["priority_date"], "2026-12-01")
+        self.assertTrue(rec["rolling"])
+        # A priority date later than the hard deadline is ignored.
+        j = mk(deadline="2026-11-01", full_text="Review of applications begins December 1, 2026.")
+        self.assertEqual(enrich(j)["deadline"], "2026-11-01")
+
     def test_ejm_degree_field(self):
         j = mk(source="ejm", degree_required="Doctorate", start_date_text="2027-07-01", section="Assistant Professor")
         self.assertTrue(screen(j, position_type(j))[0])

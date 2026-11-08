@@ -87,6 +87,37 @@ def deadline_from_text(text: str) -> str | None:
     return best
 
 
+PRIORITY_CUE = re.compile(
+    r"(?:for )?(?:full|best|priority|guaranteed|complete) consideration[^.;\n]{0,80}?(?:by|before|on|until|no later than)|"
+    r"review of (?:the )?(?:applications|candidates|materials) (?:will |shall )?(?:begin|commence|start)s?(?: on)?|"
+    r"(?:application |applicant )?review (?:will |shall )?(?:begin|commence|start)s?(?: on)?|"
+    r"screening (?:of applications )?(?:will )?(?:begin|commence|start)s?(?: on)?|"
+    r"priority (?:deadline|date|review date|consideration date)(?: is| of)?:?|"
+    r"preference (?:will be )?given to (?:applications|those|candidates) (?:received|submitted|completed) (?:by|before)|"
+    r"applications received (?:by|before|on or before)",
+    re.I)
+OPEN_UNTIL_FILLED_RE = re.compile(
+    r"until (?:the |a )?(?:position|search|post|vacancy|role)s? (?:is |are |has been |have been )?filled|"
+    r"open until filled|until filled|accepted until the position|rolling (?:basis|review|deadline|admission)|"
+    r"(?:reviewed|considered|accepted) on a rolling basis|(?:will |shall )?remain open|"
+    r"continue until (?:a |the )?(?:successful|suitable|qualified)|until (?:a |the )?(?:successful|suitable) (?:candidate|applicant)", re.I)
+
+
+def priority_from_text(text: str) -> str | None:
+    """Date by which applications get full / priority consideration (review-begins date)."""
+    if not text:
+        return None
+    for cue in PRIORITY_CUE.finditer(text):
+        m = DATE_RE.search(text[cue.end(): cue.end() + 60])
+        if m and _to_iso(m):
+            return _to_iso(m)
+    return None
+
+
+def open_until_filled(text: str) -> bool:
+    return bool(OPEN_UNTIL_FILLED_RE.search(text or ""))
+
+
 def start_from_text(text: str) -> str:
     if not text:
         return ""

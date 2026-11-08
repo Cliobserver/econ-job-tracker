@@ -48,6 +48,7 @@
   tr.job { cursor: pointer; }
   td.dl { white-space: nowrap; font-variant-numeric: tabular-nums; }
   td.dl.soon { color: var(--danger); font-weight: 600; }
+  .dlnote { font-size: 11px; font-weight: 400; color: var(--muted); white-space: nowrap; }
   .t { font-weight: 600; }
   .inst { color: var(--muted); font-size: 13px; }
   .tag { display: inline-block; font-size: 12px; padding: 1px 7px; border-radius: 6px; background: var(--chip); margin: 1px 3px 1px 0; }
@@ -181,7 +182,7 @@
   function matches(j) {
     if (j.status === "gone") return false;   // "missing" = not seen for a few days, still shown
     if (!state.showexcl && !j.passes_filter) return false;
-    if (!state.pastdl && j.deadline && j.deadline < todayISO) return false;
+    if (!state.pastdl && isClosed(j)) return false;
     if (state.window !== "all") { if (!j.deadline) return false; const d = daysBetween(j.deadline, todayISO); if (d < 0 || d > +state.window) return false; }
     if (state.newonly && daysBetween(todayISO, j.first_seen) > 7) return false;
     if (state.agonly && !j.ag_env) return false;
@@ -197,10 +198,34 @@
     return true;
   }
 
+  // A posting is closed when its deadline has passed, unless the ad says applications are accepted
+  // until the position is filled (then only a passed hard closing date closes it).
+  function isClosed(j) {
+    if (!j.deadline || j.deadline >= todayISO) return false;
+    if (j.rolling) return !!(j.deadline_hard && j.deadline_hard < todayISO);
+    return true;
+  }
+  // Sort key: upcoming deadline first; rolling postings whose priority date passed sort after dated ones.
+  function sortDl(j) {
+    if (j.deadline && j.deadline >= todayISO) return j.deadline;
+    if (j.rolling) return (j.deadline_hard && j.deadline_hard >= todayISO) ? j.deadline_hard : "9998";
+    return j.deadline || "9999";
+  }
+  function dlCell(j) {
+    const dl = j.deadline || "—";
+    const past = j.deadline && j.deadline < todayISO;
+    const isPriority = j.priority_date && j.deadline === j.priority_date && (j.rolling || (j.deadline_hard && j.deadline_hard > j.deadline));
+    let note = "";
+    if (j.rolling && past) note = '<div class="dlnote">rolling, priority date passed</div>';
+    else if (isPriority) note = '<div class="dlnote">priority' + (j.rolling ? ", then rolling" : "") + (j.deadline_hard && j.deadline_hard > j.deadline ? " (closes " + esc(j.deadline_hard) + ")" : "") + '</div>';
+    else if (j.rolling && !j.deadline) note = '<div class="dlnote">rolling</div>';
+    return dl + note;
+  }
+
   function render() {
     persist();
     const list = DATA.jobs.filter(matches);
-    const key = { deadline: j => (j.deadline || "9999") + j.institution, new: j => "", inst: j => j.institution + (j.deadline || "9999"), title: j => j.title, geo: j => j.geo.primary }[state.sort];
+    const key = { deadline: j => sortDl(j) + j.institution, new: j => "", inst: j => j.institution + sortDl(j), title: j => j.title, geo: j => j.geo.primary }[state.sort];
     if (state.sort === "new") list.sort((a, b) => (b.first_seen.localeCompare(a.first_seen)) || (a.deadline || "9999").localeCompare(b.deadline || "9999"));
     else list.sort((a, b) => key(a).localeCompare(key(b)));
     const newCount = list.filter(j => daysBetween(todayISO, j.first_seen) <= 7).length;
@@ -209,9 +234,9 @@
     $("#empty").hidden = list.length > 0;
     for (const j of list) {
       const tr = document.createElement("tr"); tr.className = "job";
-      const dl = j.deadline || "—"; const soon = j.deadline && daysBetween(j.deadline, todayISO) <= 10 && daysBetween(j.deadline, todayISO) >= 0;
+      const soon = j.deadline && daysBetween(j.deadline, todayISO) <= 10 && daysBetween(j.deadline, todayISO) >= 0;
       const isNew = daysBetween(todayISO, j.first_seen) <= 1;
-      tr.innerHTML = `<td class="dl${soon ? " soon" : ""}">${dl}</td>
+      tr.innerHTML = `<td class="dl${soon ? " soon" : ""}">${dlCell(j)}</td>
         <td><span class="t">${esc(j.title)}</span>${isNew ? '<span class="badge-new">NEW</span>' : ""}${j.passes_filter ? "" : ' <span class="excl">excluded: ' + esc(j.exclusion_reasons.join("; ")) + '</span>'}<div class="inst">${esc(j.department || "")}</div></td>
         <td class="hide-m">${esc(j.institution)}</td>
         <td>${esc(j.geo.primary)}<div class="inst">${esc(j.geo.regions.join(", "))}</div></td>
@@ -230,6 +255,7 @@
     const reqs = (j.requirements || []).length ? j.requirements.map(esc).join(", ") : "not listed";
     d.innerHTML = `<td colspan="7"><div class="detail-grid">
       <div><b>Location</b>${esc(j.location_text || j.geo.primary)}</div>
+      <div><b>Deadline</b>${esc(j.deadline || "not stated")}${j.priority_date ? ` · full consideration by ${esc(j.priority_date)}` : ""}${j.deadline_hard && j.deadline_hard !== j.deadline ? ` · closes ${esc(j.deadline_hard)}` : ""}${j.rolling ? " · open until filled" : ""}</div>
       <div><b>Start</b>${esc(j.start_date_text || (j.start_year ? String(j.start_year) : "not stated"))}</div>
       <div><b>Degree</b>${esc(j.degree_required || (j.phd_required ? "PhD (inferred from text)" : "not stated"))}</div>
       <div><b>Posted / first seen</b>${esc(j.posted || "—")} / ${esc(j.first_seen)}</div>
