@@ -41,7 +41,9 @@ def position_type(job) -> str:
                 and not re.search(r"professor|lecturer|faculty|academic|tenure", blob, re.I))):
         inst_blob = " ".join([job.institution, job.department, job.title])
         return "Government/IO" if GOV_RE.search(inst_blob) else "Industry/Nonprofit"
-    if re.search(r"visiting|temporary|adjunct|lecturer|instructor|teaching|clinical", blob, re.I):
+    # "Research & Teaching" describes a regular appointment's duties, not a teaching track.
+    blob_rt = re.sub(r"research\s*(?:&|and|/)\s*teaching|teaching\s*(?:&|and|/)\s*research", "", blob, flags=re.I)
+    if re.search(r"visiting|temporary|adjunct|lecturer|instructor|teaching|clinical", blob_rt, re.I):
         return "Visiting/Teaching"
     if "tenure" in sec or "permanent" in sec or re.search(
             r"assistant professor|associate professor|full professor|\bprofessor\b|tenure|\bchair\b|"

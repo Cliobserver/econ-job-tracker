@@ -92,6 +92,13 @@ class FilterTests(unittest.TestCase):
                full_text="Teach one course.")
         self.assertFalse(screen(j, position_type(j))[0])
 
+    def test_research_and_teaching_is_not_teaching_track(self):
+        j = mk(title="Assistant Professor in Agricultural Economics - Research & Teaching",
+               section="US: Full-Time Academic (Permanent, Tenure Track or Tenured)", full_text="Start August 2027.")
+        self.assertEqual(position_type(j), "Tenure-track")
+        j = mk(title="Assistant Teaching Professor", section="US: Full-Time Academic (Permanent, Tenure Track or Tenured)")
+        self.assertEqual(position_type(j), "Visiting/Teaching")
+
     def test_ejm_degree_field(self):
         j = mk(source="ejm", degree_required="Doctorate", start_date_text="2027-07-01", section="Assistant Professor")
         self.assertTrue(screen(j, position_type(j))[0])
