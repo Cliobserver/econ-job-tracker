@@ -129,6 +129,14 @@ class FilterTests(unittest.TestCase):
         self.assertEqual(rec["listing_expires"], "2026-11-15")
         self.assertEqual(priority_from_text("The committee will begin reviewing applications on November 1, 2026."), "2026-11-01")
         self.assertIsNone(priority_from_text("Duties include reviewing manuscripts. The term starts July 1, 2027."))
+        # Hard-wrapped ad text (Auburn on Chronicle) and "screening of applicants".
+        self.assertEqual(priority_from_text("Review of\napplications will begin on October 15, 2026, and may continue until\nthe position is filled."), "2026-10-15")
+        self.assertTrue(open_until_filled("may continue until\nthe position is filled."))
+        self.assertEqual(priority_from_text("Screening of applicants will begin on September 1, 2026."), "2026-09-01")
+        self.assertEqual(priority_from_text("Screening Date\n\n2026-11-09\n\nJob Description"), "2026-11-09")
+        # HR-system form label without a verb (Virginia Tech).
+        self.assertEqual(priority_from_text("Hours per week 40 Review Date 11/29/2026 Additional Information"), "2026-11-29")
+        self.assertIsNone(priority_from_text("Review Date Open Until Filled Posting Date 10/01/2026"))
         # A priority date later than the hard deadline is ignored.
         j = mk(deadline="2026-11-01", full_text="Review of applications begins December 1, 2026.")
         self.assertEqual(enrich(j)["deadline"], "2026-11-01")

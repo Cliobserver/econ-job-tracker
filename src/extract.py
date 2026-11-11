@@ -65,6 +65,12 @@ def _to_iso(m: re.Match) -> str | None:
     return None
 
 
+def _flat(text: str) -> str:
+    """Collapse line breaks and runs of spaces: ad text is often hard-wrapped mid-sentence
+    ("Review of\napplications will begin"), which would otherwise defeat the phrase patterns."""
+    return re.sub(r"\s+", " ", text or "")
+
+
 def find_dates(text: str):
     return [(_to_iso(m), m.start()) for m in DATE_RE.finditer(text) if _to_iso(m)]
 
@@ -73,6 +79,7 @@ def deadline_from_text(text: str) -> str | None:
     """Return the first date that appears within ~80 chars after a deadline cue."""
     if not text:
         return None
+    text = _flat(text)
     best = None
     for cue in DEADLINE_CUE.finditer(text):
         window = text[cue.end(): cue.end() + 90]
@@ -91,7 +98,7 @@ PRIORITY_CUE = re.compile(
     r"(?:for )?(?:full|best|priority|guaranteed|complete) consideration[^.;\n]{0,80}?(?:by|before|on|until|no later than)|"
     r"review of (?:the )?(?:applications|candidates|materials) (?:will |shall )?(?:begin|commence|start)s?(?: on)?|"
     r"(?:application |applicant )?review (?:will |shall )?(?:begin|commence|start)s?(?: on)?|"
-    r"screening (?:of applications )?(?:will )?(?:begin|commence|start)s?(?: on)?|"
+    r"screening (?:of (?:applications|applicants|candidates|files) )?(?:will )?(?:begin|commence|start)s?(?: on)?|"
     r"review(?:ed|ing)?\b[^.;\n]{0,40}?,? (?:beginning|starting|commencing)(?: on| from)?|"
     r"(?:begin|start|commence)s? (?:to )?review(?:ing)?(?: of)?(?: the)?(?: applications| candidates| files| materials)?(?: on)?|"
     r"priority (?:deadline|date|review date|consideration date)(?: is| of)?:?|"
@@ -105,19 +112,30 @@ OPEN_UNTIL_FILLED_RE = re.compile(
     r"continue until (?:a |the )?(?:successful|suitable|qualified)|until (?:a |the )?(?:successful|suitable) (?:candidate|applicant)", re.I)
 
 
+# HR-system form labels ("Review Date 11/29/2026"): the date must follow the label directly, because
+# the next form field often carries an unrelated date ("Review Date Open Until Filled Posting Date ...").
+PRIORITY_LABEL = re.compile(
+    r"\b(?:(?:initial|first|priority|application|applicant) )?(?:review|screening)(?: begin| begins| start| starts)? date\s*[:\-]?\s*", re.I)
+
+
 def priority_from_text(text: str) -> str | None:
     """Date by which applications get full / priority consideration (review-begins date)."""
     if not text:
         return None
+    text = _flat(text)
     for cue in PRIORITY_CUE.finditer(text):
         m = DATE_RE.search(text[cue.end(): cue.end() + 60])
+        if m and _to_iso(m):
+            return _to_iso(m)
+    for cue in PRIORITY_LABEL.finditer(text):
+        m = DATE_RE.match(text, cue.end())
         if m and _to_iso(m):
             return _to_iso(m)
     return None
 
 
 def open_until_filled(text: str) -> bool:
-    return bool(OPEN_UNTIL_FILLED_RE.search(text or ""))
+    return bool(OPEN_UNTIL_FILLED_RE.search(_flat(text)))
 
 
 def start_from_text(text: str) -> str:
