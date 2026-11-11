@@ -215,7 +215,7 @@
    "deadline_hard": "2024-12-31",
    "listing_expires": "2026-12-04",
    "priority_date": null,
-   "rolling": false,
+   "rolling": true,
    "posted": "2025-01-23",
    "start_date_text": "",
    "start_year": null,
@@ -237,6 +237,67 @@
    ],
    "source_keys": [
     "chronicle:37782043"
+   ],
+   "first_seen": "2026-10-04",
+   "last_seen": "2026-11-11",
+   "status": "active"
+  },
+  {
+   "title": "Visiting Assistant Professor/Instructor",
+   "institution": "Miami University",
+   "department": "",
+   "type": "Visiting/Teaching",
+   "section": "Faculty",
+   "fields": [
+    "Micro"
+   ],
+   "ag_env": false,
+   "geo": {
+    "countries": [
+     "United States"
+    ],
+    "regions": [
+     "US-South"
+    ],
+    "us_states": [
+     "Alabama"
+    ],
+    "primary": "Alabama"
+   },
+   "location_text": "Oxford, Alabama, United States",
+   "jel_codes": [
+    "D"
+   ],
+   "categories": [
+    "Economics",
+    "Economics and Social Sciences"
+   ],
+   "deadline": "2025-06-01",
+   "deadline_hard": "2025-08-18",
+   "listing_expires": null,
+   "priority_date": "2025-06-01",
+   "rolling": false,
+   "posted": "2025-06-05",
+   "start_date_text": "",
+   "start_year": 2025,
+   "degree_required": "",
+   "phd_required": true,
+   "requirements": [],
+   "salary": "",
+   "summary": "Miami University is a major public university with a small college feel. Creating environments for learning excellence and providing career opportunities in Oxford, Hamilton, Middletown, West Chester and Luxembourg, our faculty, staff, and student employees are the fuel that drives Miami!\nWe rank first nationally among public universities for best teaching by U.S. News & World Report. Our opportunities for growth and advancement are not limited to students in the classroom. Our faculty, staff, and student employees are highly valued for their contribution toward the Miami experience.\nMiami’s m",
+   "passes_filter": false,
+   "exclusion_reasons": [
+    "start year 2025"
+   ],
+   "sources": [
+    {
+     "source": "inomics",
+     "url": "https://inomics.com/job/visiting-assistant-professorinstructor-1549230",
+     "id": "1549230"
+    }
+   ],
+   "source_keys": [
+    "inomics:1549230"
    ],
    "first_seen": "2026-10-04",
    "last_seen": "2026-11-11",
@@ -355,67 +416,6 @@
    ],
    "source_keys": [
     "chronicle:37816553"
-   ],
-   "first_seen": "2026-10-04",
-   "last_seen": "2026-11-11",
-   "status": "active"
-  },
-  {
-   "title": "Visiting Assistant Professor/Instructor",
-   "institution": "Miami University",
-   "department": "",
-   "type": "Visiting/Teaching",
-   "section": "Faculty",
-   "fields": [
-    "Micro"
-   ],
-   "ag_env": false,
-   "geo": {
-    "countries": [
-     "United States"
-    ],
-    "regions": [
-     "US-South"
-    ],
-    "us_states": [
-     "Alabama"
-    ],
-    "primary": "Alabama"
-   },
-   "location_text": "Oxford, Alabama, United States",
-   "jel_codes": [
-    "D"
-   ],
-   "categories": [
-    "Economics",
-    "Economics and Social Sciences"
-   ],
-   "deadline": "2025-08-18",
-   "deadline_hard": "2025-08-18",
-   "listing_expires": null,
-   "priority_date": null,
-   "rolling": false,
-   "posted": "2025-06-05",
-   "start_date_text": "",
-   "start_year": 2025,
-   "degree_required": "",
-   "phd_required": true,
-   "requirements": [],
-   "salary": "",
-   "summary": "Miami University is a major public university with a small college feel. Creating environments for learning excellence and providing career opportunities in Oxford, Hamilton, Middletown, West Chester and Luxembourg, our faculty, staff, and student employees are the fuel that drives Miami!\nWe rank first nationally among public universities for best teaching by U.S. News & World Report. Our opportunities for growth and advancement are not limited to students in the classroom. Our faculty, staff, and student employees are highly valued for their contribution toward the Miami experience.\nMiami’s m",
-   "passes_filter": false,
-   "exclusion_reasons": [
-    "start year 2025"
-   ],
-   "sources": [
-    {
-     "source": "inomics",
-     "url": "https://inomics.com/job/visiting-assistant-professorinstructor-1549230",
-     "id": "1549230"
-    }
-   ],
-   "source_keys": [
-    "inomics:1549230"
    ],
    "first_seen": "2026-10-04",
    "last_seen": "2026-11-11",
@@ -608,6 +608,64 @@
    "status": "active"
   },
   {
+   "title": "Postdoctoral Associate",
+   "institution": "Virginia Tech",
+   "department": "",
+   "type": "Postdoc",
+   "section": "Postdoc",
+   "fields": [
+    "Finance"
+   ],
+   "ag_env": false,
+   "geo": {
+    "countries": [
+     "United States"
+    ],
+    "regions": [
+     "US-South"
+    ],
+    "us_states": [
+     "Virginia"
+    ],
+    "primary": "Virginia"
+   },
+   "location_text": "Blacksburg, Virginia, United States",
+   "jel_codes": [],
+   "categories": [
+    "Finance"
+   ],
+   "deadline": "2026-04-27",
+   "deadline_hard": null,
+   "listing_expires": "2026-12-04",
+   "priority_date": "2026-04-27",
+   "rolling": false,
+   "posted": "2026-04-10",
+   "start_date_text": "",
+   "start_year": 2026,
+   "degree_required": "",
+   "phd_required": true,
+   "requirements": [],
+   "salary": "",
+   "summary": "Job Description\n\nThe Department of Accounting and Information Systems seeks a\nPostdoctoral Associate to support and advance high-quality research\nin accounting. The Postdoctoral Associate will work closely with\nDr. Robert Davidson and other faculty members on active research\nprojects, with substantial opportunities for co-authorship. The\nposition is fully research-focused, with optional teaching\ndevelopment opportunities available by mutual agreement.\n\nThe department offers a collaborative and intellectually engaging\nresearch environment and maintains strong connections among faculty\nand docto",
+   "passes_filter": false,
+   "exclusion_reasons": [
+    "start year 2026"
+   ],
+   "sources": [
+    {
+     "source": "chronicle",
+     "url": "https://jobs.chronicle.com/job/37974835/postdoctoral-associate/",
+     "id": "37974835"
+    }
+   ],
+   "source_keys": [
+    "chronicle:37974835"
+   ],
+   "first_seen": "2026-10-04",
+   "last_seen": "2026-11-11",
+   "status": "active"
+  },
+  {
    "title": "Economic Education Specialist (Curriculum Development)",
    "institution": "National Bank of Slovakia",
    "department": "",
@@ -715,6 +773,62 @@
    ],
    "source_keys": [
     "chronicle:37974690"
+   ],
+   "first_seen": "2026-10-04",
+   "last_seen": "2026-11-11",
+   "status": "active"
+  },
+  {
+   "title": "Tenure-Track, Economics and Finance (Open Rank)",
+   "institution": "North Central College",
+   "department": "",
+   "type": "Tenure-track",
+   "section": "Full-Time Academic (Permanent, Tenure Track or Tenured)",
+   "fields": [
+    "Finance"
+   ],
+   "ag_env": false,
+   "geo": {
+    "countries": [
+     "United States"
+    ],
+    "regions": [
+     "US-Midwest"
+    ],
+    "us_states": [
+     "Illinois"
+    ],
+    "primary": "Illinois"
+   },
+   "location_text": "Naperville, Illinois, United States",
+   "jel_codes": [],
+   "categories": [
+    "Finance"
+   ],
+   "deadline": "2026-06-01",
+   "deadline_hard": null,
+   "listing_expires": "2026-12-04",
+   "priority_date": "2026-06-01",
+   "rolling": true,
+   "posted": "2026-05-26",
+   "start_date_text": "",
+   "start_year": null,
+   "degree_required": "",
+   "phd_required": true,
+   "requirements": [],
+   "salary": "",
+   "summary": "Posting Details\n\nPosition Information\n\nPosting Number\nF000483\n\nPosition Title\nTenure-Track, Economics and Finance (Open Rank)\n\nDepartment\nEconomics & Finance\n\nDivision\nAcademic Affairs\n\nFaculty Status\nTenure Track\n\nSupervisor Title\nChair Economics\n\nStatus\nFull-time Tenure-Track Faculty\n\nTenure Track\nYes\n\nSalary Range\n$90,000 - $115,000\n\nPosition Summary\n\nThe Department of Economics & Finance in the School of Business\nand Entrepreneurship at North Central College invites applications\nfor a tenure-track position in Economics and Finance to begin\nAugust 1, 2026.\n\nThe duties in this role include:\n",
+   "passes_filter": true,
+   "exclusion_reasons": [],
+   "sources": [
+    {
+     "source": "chronicle",
+     "url": "https://jobs.chronicle.com/job/37992928/tenure-track-economics-and-finance-open-rank-/",
+     "id": "37992928"
+    }
+   ],
+   "source_keys": [
+    "chronicle:37992928"
    ],
    "first_seen": "2026-10-04",
    "last_seen": "2026-11-11",
@@ -1848,6 +1962,63 @@
    "status": "active"
   },
   {
+   "title": "Institute of American Civics - Open Rank Tenure Track Professor in American Civics Fall 2027",
+   "institution": "University of Tennessee, Knoxville",
+   "department": "",
+   "type": "Tenure-track",
+   "section": "Full-Time Academic (Permanent, Tenure Track or Tenured)",
+   "fields": [
+    "Political Economy"
+   ],
+   "ag_env": false,
+   "geo": {
+    "countries": [
+     "United States"
+    ],
+    "regions": [
+     "US-South"
+    ],
+    "us_states": [
+     "Tennessee"
+    ],
+    "primary": "Tennessee"
+   },
+   "location_text": "Knoxville, Tennessee, United States",
+   "jel_codes": [],
+   "categories": [
+    "Public",
+    "Political Economy"
+   ],
+   "deadline": "2026-09-01",
+   "deadline_hard": null,
+   "listing_expires": "2026-12-04",
+   "priority_date": "2026-09-01",
+   "rolling": true,
+   "posted": "2026-08-01",
+   "start_date_text": "",
+   "start_year": 2027,
+   "degree_required": "",
+   "phd_required": true,
+   "requirements": [],
+   "salary": "",
+   "summary": "Description\n\nThe Institute of American Civics, located within the Howard H.\nBaker, Jr. School of Public Policy and Public Affairs at the\nUniversity of Tennessee, Knoxville, is seeking to fill a\ntenure-line 9-month faculty position at the assistant through full\nprofessor rank in American Civics to begin August 1, 2027.\n\nSuccessful candidates will be expected to teach undergraduate\nclasses on a 2-2 load and carry out a program of research and\nscholarship. They will also be expected to be actively engaged in\nthe Institute’s activities.\n\nWho We Are\n\nThe I nstitute of American Civics was created to",
+   "passes_filter": true,
+   "exclusion_reasons": [],
+   "sources": [
+    {
+     "source": "chronicle",
+     "url": "https://jobs.chronicle.com/job/38022439/institute-of-american-civics-open-rank-tenure-track-professor-in-american-civics-fall-2027/",
+     "id": "38022439"
+    }
+   ],
+   "source_keys": [
+    "chronicle:38022439"
+   ],
+   "first_seen": "2026-10-04",
+   "last_seen": "2026-11-11",
+   "status": "active"
+  },
+  {
    "title": "Assistant, Associate, or Full Professor Rank",
    "institution": "Brown University",
    "department": "Applied Microeconomics / Economics",
@@ -2681,7 +2852,7 @@
    "deadline_hard": "2026-09-15",
    "listing_expires": "2026-12-31",
    "priority_date": "2026-09-15",
-   "rolling": false,
+   "rolling": true,
    "posted": "2026-10-29",
    "start_date_text": "",
    "start_year": 2027,
@@ -2939,6 +3110,63 @@
    ],
    "source_keys": [
     "joe:111477738"
+   ],
+   "first_seen": "2026-10-04",
+   "last_seen": "2026-11-11",
+   "status": "active"
+  },
+  {
+   "title": "Assistant Professor of Finance",
+   "institution": "University of Kansas",
+   "department": "",
+   "type": "Tenure-track",
+   "section": "US: Full-Time Academic (Permanent, Tenure Track or Tenured)",
+   "fields": [
+    "Finance",
+    "Any Field"
+   ],
+   "ag_env": false,
+   "geo": {
+    "countries": [
+     "United States"
+    ],
+    "regions": [
+     "US-Midwest"
+    ],
+    "us_states": [
+     "Kansas"
+    ],
+    "primary": "Kansas"
+   },
+   "location_text": "Lawrence, Kansas, UNITED STATES",
+   "jel_codes": [
+    "00"
+   ],
+   "categories": [],
+   "deadline": "2026-09-15",
+   "deadline_hard": "2027-01-01",
+   "listing_expires": null,
+   "priority_date": "2026-09-15",
+   "rolling": false,
+   "posted": null,
+   "start_date_text": "",
+   "start_year": 2027,
+   "degree_required": "",
+   "phd_required": true,
+   "requirements": [],
+   "salary": "",
+   "summary": "The University of Kansas, School of Business invites applications for a full-time, academic-year tenure-track finance position at the assistant professor level.  This position starts in Fall 2027. Salary and benefit package are competitive.  \n\nCandidates should have a Ph.D. in finance or a closely related field by August 18, 2027; demonstrate, or show evidence of high potential for, scholarship excellence through publications and working papers; and demonstrate, or show evidence of high potential for, teaching excellence. Areas of particular interest include corporate finance, financial instit",
+   "passes_filter": true,
+   "exclusion_reasons": [],
+   "sources": [
+    {
+     "source": "joe",
+     "url": "https://www.aeaweb.org/joe/listing.php?JOE_ID=2026-02_111477747",
+     "id": "111477747"
+    }
+   ],
+   "source_keys": [
+    "joe:111477747"
    ],
    "first_seen": "2026-10-04",
    "last_seen": "2026-11-11",
@@ -3720,6 +3948,69 @@
    ],
    "source_keys": [
     "joe:111477748"
+   ],
+   "first_seen": "2026-10-04",
+   "last_seen": "2026-11-11",
+   "status": "active"
+  },
+  {
+   "title": "Project Scientist, Homelessness and Health Policy",
+   "institution": "University of California, Los Angeles",
+   "department": "Social Sciences / California Policy Lab",
+   "type": "Visiting/Teaching",
+   "section": "US: Other Academic (Visiting or Temporary)",
+   "fields": [
+    "Health",
+    "Micro"
+   ],
+   "ag_env": false,
+   "geo": {
+    "countries": [
+     "United States"
+    ],
+    "regions": [
+     "US-West"
+    ],
+    "us_states": [
+     "California"
+    ],
+    "primary": "California"
+   },
+   "location_text": "Los Angeles, California, UNITED STATES",
+   "jel_codes": [
+    "I",
+    "D0"
+   ],
+   "categories": [
+    "Public Policy",
+    "Economics",
+    "Homelessness Research",
+    "Health Policy"
+   ],
+   "deadline": "2026-09-25",
+   "deadline_hard": "2026-11-11",
+   "listing_expires": null,
+   "priority_date": "2026-09-25",
+   "rolling": false,
+   "posted": null,
+   "start_date_text": "",
+   "start_year": null,
+   "degree_required": "",
+   "phd_required": true,
+   "requirements": [],
+   "salary": "$120,000–$160,000",
+   "summary": "The California Policy Lab seeks a mid- or advanced-career researcher to design and conduct policy-relevant research on homelessness and health in partnership with state and local agencies. Our team works closely with policymakers and people with lived experience to develop research that informs solutions to homelessness.\n\nResponsibilities:\nConduct quantitative research using causal inference methods\nPublish reports and policy briefs for academic and policy audiences\nWrite grant proposals and manage grant reporting\nSupervise and mentor junior research staff\nPartner with government agencies to b",
+   "passes_filter": true,
+   "exclusion_reasons": [],
+   "sources": [
+    {
+     "source": "joe",
+     "url": "https://www.aeaweb.org/joe/listing.php?JOE_ID=2026-02_111477806",
+     "id": "111477806"
+    }
+   ],
+   "source_keys": [
+    "joe:111477806"
    ],
    "first_seen": "2026-10-04",
    "last_seen": "2026-11-11",
@@ -8176,6 +8467,64 @@
    "status": "active"
   },
   {
+   "title": "Assistant Professor - Production Econometrics",
+   "institution": "Auburn University",
+   "department": "",
+   "type": "Tenure-track",
+   "section": "Full-Time Academic (Permanent, Tenure Track or Tenured)",
+   "fields": [
+    "Agricultural",
+    "Econometrics"
+   ],
+   "ag_env": true,
+   "geo": {
+    "countries": [
+     "United States"
+    ],
+    "regions": [
+     "US-South"
+    ],
+    "us_states": [
+     "Alabama"
+    ],
+    "primary": "Alabama"
+   },
+   "location_text": "Auburn, Alabama, United States",
+   "jel_codes": [],
+   "categories": [
+    "Agricultural",
+    "Econometrics"
+   ],
+   "deadline": "2026-10-15",
+   "deadline_hard": "2026-10-15",
+   "listing_expires": "2026-12-04",
+   "priority_date": "2026-10-15",
+   "rolling": true,
+   "posted": "2026-08-17",
+   "start_date_text": "",
+   "start_year": 2027,
+   "degree_required": "",
+   "phd_required": true,
+   "requirements": [],
+   "salary": "",
+   "summary": "Job Description\n\nOverview\n\nAgricultural Economics and Rural Sociology \nAssistant Professor of Production Econometrics\n\nThe Department of Agricultural Economics and Rural Sociology\n(DAERS) in the College of Agriculture at Auburn University is\nseeking an Assistant Professor in Production Econometrics to join\nan environment of high-quality scholars dedicated to the discovery,\neducation, and application of research-based knowledge. This\nposition is a 9-month tenure-track, academic-year appointment with\nan allocation of 40% teaching and 60% research, as well as service\nto the Department, College, a",
+   "passes_filter": true,
+   "exclusion_reasons": [],
+   "sources": [
+    {
+     "source": "chronicle",
+     "url": "https://jobs.chronicle.com/job/38027151/assistant-professor-production-econometrics/",
+     "id": "38027151"
+    }
+   ],
+   "source_keys": [
+    "chronicle:38027151"
+   ],
+   "first_seen": "2026-10-04",
+   "last_seen": "2026-11-11",
+   "status": "active"
+  },
+  {
    "title": "Postdoctoral Fellow in Business and Administration",
    "institution": "Business School Norwegian University of Science and Technology",
    "department": "",
@@ -10943,7 +11292,7 @@
    "deadline": "2026-10-18",
    "deadline_hard": "2026-10-18",
    "listing_expires": "2026-12-04",
-   "priority_date": null,
+   "priority_date": "2026-10-18",
    "rolling": true,
    "posted": "2026-06-30",
    "start_date_text": "",
@@ -18498,6 +18847,64 @@
    "status": "active"
   },
   {
+   "title": "Associate or Full Professor",
+   "institution": "Virginia Tech",
+   "department": "",
+   "type": "Tenure-track",
+   "section": "Full-Time Academic (Permanent, Tenure Track or Tenured)",
+   "fields": [
+    "Urban/Regional",
+    "Finance"
+   ],
+   "ag_env": false,
+   "geo": {
+    "countries": [
+     "United States"
+    ],
+    "regions": [
+     "US-South"
+    ],
+    "us_states": [
+     "Virginia"
+    ],
+    "primary": "Virginia"
+   },
+   "location_text": "Blacksburg, Virginia, United States",
+   "jel_codes": [],
+   "categories": [
+    "Finance",
+    "Urban/Regional"
+   ],
+   "deadline": "2026-11-02",
+   "deadline_hard": null,
+   "listing_expires": "2026-12-28",
+   "priority_date": "2026-11-02",
+   "rolling": true,
+   "posted": "2026-10-19",
+   "start_date_text": "",
+   "start_year": 2027,
+   "degree_required": "",
+   "phd_required": true,
+   "requirements": [],
+   "salary": "",
+   "summary": "Job Description\n\nThe Blackwood Department of Real Estate within the R. B. Pamplin\nCollege of Business at Virginia Tech invites applications for an\nAssociate or Full Professor of Real Estate who will hold the\nBlackwood Endowed Chair. This is an exciting opportunity for an\nestablished scholar to join a growing department interested in\nexpanding its research, teaching, and service capacity while\ncontinuing to build its international reputation. The position is a\ntenured, academic-year appointment beginning August 10, 2027. The\nsuccessful candidate will conduct high-quality research regularly\nlead",
+   "passes_filter": true,
+   "exclusion_reasons": [],
+   "sources": [
+    {
+     "source": "chronicle",
+     "url": "https://jobs.chronicle.com/job/38054160/associate-or-full-professor/",
+     "id": "38054160"
+    }
+   ],
+   "source_keys": [
+    "chronicle:38054160"
+   ],
+   "first_seen": "2026-10-28",
+   "last_seen": "2026-11-11",
+   "status": "active"
+  },
+  {
    "title": "Economist",
    "institution": "Federal Trade Commission",
    "department": "Bureau of Economics",
@@ -20966,7 +21373,7 @@
    "deadline_hard": "2026-11-07",
    "listing_expires": "2026-12-14",
    "priority_date": null,
-   "rolling": false,
+   "rolling": true,
    "posted": "2026-10-15",
    "start_date_text": "",
    "start_year": 2027,
@@ -22385,6 +22792,118 @@
    "status": "active"
   },
   {
+   "title": "Assistant Professor - Economics",
+   "institution": "Miami University",
+   "department": "",
+   "type": "Tenure-track",
+   "section": "Full-Time Academic (Permanent, Tenure Track or Tenured)",
+   "fields": [
+    "Health"
+   ],
+   "ag_env": false,
+   "geo": {
+    "countries": [
+     "United States"
+    ],
+    "regions": [
+     "US-Midwest"
+    ],
+    "us_states": [
+     "Ohio"
+    ],
+    "primary": "Ohio"
+   },
+   "location_text": "Oxford, Ohio, United States",
+   "jel_codes": [],
+   "categories": [
+    "Health"
+   ],
+   "deadline": "2026-11-09",
+   "deadline_hard": null,
+   "listing_expires": "2026-12-14",
+   "priority_date": "2026-11-09",
+   "rolling": false,
+   "posted": "2026-10-15",
+   "start_date_text": "",
+   "start_year": null,
+   "degree_required": "",
+   "phd_required": true,
+   "requirements": [],
+   "salary": "Salary Not specified",
+   "summary": "Assistant Professor - Economics\n\nJob Title\n\nAssistant Professor - Economics\n\nDepartment\n\nEconomics Department\n\nWorker Type\n\nRegular\n\nPay Type\n\nSalary\n\nSalary will be commensurate with the level of the position,\neducation, and experience.\n\nBenefit Eligible\n\nYes\n\nScreening Date\n\n2026-11-09\n\nJob Description Summary\n\nAssistant Professor (tenure-track) in applied microeconomics, with\nparticular interest in candidates working in health economics; to\nteach courses at the undergraduate and Master's level; to publish\noriginal high-quality research; to advise students; and to engage\nin service. Multiple",
+   "passes_filter": true,
+   "exclusion_reasons": [],
+   "sources": [
+    {
+     "source": "chronicle",
+     "url": "https://jobs.chronicle.com/job/38052355/assistant-professor-economics/",
+     "id": "38052355"
+    }
+   ],
+   "source_keys": [
+    "chronicle:38052355"
+   ],
+   "first_seen": "2026-10-04",
+   "last_seen": "2026-11-11",
+   "status": "active"
+  },
+  {
+   "title": "Assistant Professor - Economics",
+   "institution": "Miami University (Ohio)",
+   "department": "",
+   "type": "Tenure-track",
+   "section": "Full-Time Academic (Permanent, Tenure Track or Tenured)",
+   "fields": [
+    "Health"
+   ],
+   "ag_env": false,
+   "geo": {
+    "countries": [
+     "United States"
+    ],
+    "regions": [
+     "US-Midwest"
+    ],
+    "us_states": [
+     "Ohio"
+    ],
+    "primary": "Ohio"
+   },
+   "location_text": "Oxford, Ohio, United States",
+   "jel_codes": [],
+   "categories": [
+    "Health"
+   ],
+   "deadline": "2026-11-09",
+   "deadline_hard": null,
+   "listing_expires": "2026-12-04",
+   "priority_date": "2026-11-09",
+   "rolling": false,
+   "posted": "2026-09-25",
+   "start_date_text": "",
+   "start_year": null,
+   "degree_required": "",
+   "phd_required": true,
+   "requirements": [],
+   "salary": "",
+   "summary": "Job Title\n\nAssistant Professor - Economics\n\nDepartment\n\nEconomics Department\n\nWorker Type\n\nRegular\n\nPay Type\n\nSalary\n\nSalary will be commensurate with the level of the position,\neducation, and experience.\n\nBenefit Eligible\n\nYes\n\nScreening Date\n\n2026-11-09\n\nJob Description Summary\n\nAssistant Professor (tenure-track) in applied microeconomics, with\nparticular interest in candidates working in health economics; to\nteach courses at the undergraduate and Master’s level; to publish\noriginal high-quality research; to advise students; and to engage\nin service. Multiple positions available.\n\nJob Descri",
+   "passes_filter": true,
+   "exclusion_reasons": [],
+   "sources": [
+    {
+     "source": "chronicle",
+     "url": "https://jobs.chronicle.com/job/38044313/assistant-professor-economics/",
+     "id": "38044313"
+    }
+   ],
+   "source_keys": [
+    "chronicle:38044313"
+   ],
+   "first_seen": "2026-10-04",
+   "last_seen": "2026-11-11",
+   "status": "active"
+  },
+  {
    "title": "Tenure Track Position in International Trade and/or Industrial Organization",
    "institution": "Strategy and Business Economics, Sauder School of Business University of British Columbia",
    "department": "",
@@ -23514,69 +24033,6 @@
    "first_seen": "2026-10-04",
    "last_seen": "2026-11-10",
    "status": "missing"
-  },
-  {
-   "title": "Project Scientist, Homelessness and Health Policy",
-   "institution": "University of California, Los Angeles",
-   "department": "Social Sciences / California Policy Lab",
-   "type": "Visiting/Teaching",
-   "section": "US: Other Academic (Visiting or Temporary)",
-   "fields": [
-    "Health",
-    "Micro"
-   ],
-   "ag_env": false,
-   "geo": {
-    "countries": [
-     "United States"
-    ],
-    "regions": [
-     "US-West"
-    ],
-    "us_states": [
-     "California"
-    ],
-    "primary": "California"
-   },
-   "location_text": "Los Angeles, California, UNITED STATES",
-   "jel_codes": [
-    "I",
-    "D0"
-   ],
-   "categories": [
-    "Public Policy",
-    "Economics",
-    "Homelessness Research",
-    "Health Policy"
-   ],
-   "deadline": "2026-11-11",
-   "deadline_hard": "2026-11-11",
-   "listing_expires": null,
-   "priority_date": null,
-   "rolling": false,
-   "posted": null,
-   "start_date_text": "",
-   "start_year": null,
-   "degree_required": "",
-   "phd_required": true,
-   "requirements": [],
-   "salary": "$120,000–$160,000",
-   "summary": "The California Policy Lab seeks a mid- or advanced-career researcher to design and conduct policy-relevant research on homelessness and health in partnership with state and local agencies. Our team works closely with policymakers and people with lived experience to develop research that informs solutions to homelessness.\n\nResponsibilities:\nConduct quantitative research using causal inference methods\nPublish reports and policy briefs for academic and policy audiences\nWrite grant proposals and manage grant reporting\nSupervise and mentor junior research staff\nPartner with government agencies to b",
-   "passes_filter": true,
-   "exclusion_reasons": [],
-   "sources": [
-    {
-     "source": "joe",
-     "url": "https://www.aeaweb.org/joe/listing.php?JOE_ID=2026-02_111477806",
-     "id": "111477806"
-    }
-   ],
-   "source_keys": [
-    "joe:111477806"
-   ],
-   "first_seen": "2026-10-04",
-   "last_seen": "2026-11-11",
-   "status": "active"
   },
   {
    "title": "Assistant Professor - AI and Policy",
@@ -30516,7 +30972,7 @@
    "deadline": "2026-11-15",
    "deadline_hard": "2026-11-15",
    "listing_expires": "2026-12-28",
-   "priority_date": null,
+   "priority_date": "2026-11-15",
    "rolling": false,
    "posted": "2026-10-12",
    "start_date_text": "",
@@ -35887,7 +36343,7 @@
    "deadline_hard": "2026-11-16",
    "listing_expires": "2026-12-04",
    "priority_date": null,
-   "rolling": false,
+   "rolling": true,
    "posted": "2026-08-21",
    "start_date_text": "",
    "start_year": 2027,
@@ -38826,7 +39282,7 @@
    "deadline_hard": "2026-11-20",
    "listing_expires": "2026-12-04",
    "priority_date": "2026-11-20",
-   "rolling": false,
+   "rolling": true,
    "posted": "2026-08-04",
    "start_date_text": "",
    "start_year": 2027,
@@ -40358,7 +40814,7 @@
    "institution": "Bank of England",
    "department": "",
    "type": "Government/IO",
-   "section": "",
+   "section": "Full-Time Nonacademic",
    "fields": [
     "International/Trade",
     "Macro",
@@ -40366,14 +40822,16 @@
    ],
    "ag_env": false,
    "geo": {
-    "countries": [],
+    "countries": [
+     "United Kingdom"
+    ],
     "regions": [
-     "Unknown"
+     "Europe"
     ],
     "us_states": [],
-    "primary": "Unknown"
+    "primary": "United Kingdom"
    },
-   "location_text": "London, England",
+   "location_text": "London, England, United Kingdom",
    "jel_codes": [
     "F",
     "E",
@@ -46302,7 +46760,7 @@
    "deadline": "2026-11-29",
    "deadline_hard": "2026-11-29",
    "listing_expires": "2026-12-28",
-   "priority_date": null,
+   "priority_date": "2026-12-12",
    "rolling": false,
    "posted": "2026-10-27",
    "start_date_text": "",
@@ -46329,6 +46787,75 @@
    "source_keys": [
     "joe:111478321",
     "chronicle:38057388"
+   ],
+   "first_seen": "2026-10-28",
+   "last_seen": "2026-11-11",
+   "status": "active"
+  },
+  {
+   "title": "Assistant Professor, Agricultural Markets, Trade, and Rural Development Policy",
+   "institution": "Virginia Tech",
+   "department": "",
+   "type": "Tenure-track",
+   "section": "Full-Time Academic (Permanent, Tenure Track or Tenured)",
+   "fields": [
+    "Agricultural",
+    "Development",
+    "Urban/Regional",
+    "International/Trade"
+   ],
+   "ag_env": true,
+   "geo": {
+    "countries": [
+     "United States"
+    ],
+    "regions": [
+     "US-South"
+    ],
+    "us_states": [
+     "Virginia"
+    ],
+    "primary": "Virginia"
+   },
+   "location_text": "Blacksburg, Virginia, United States",
+   "jel_codes": [],
+   "categories": [
+    "Agricultural",
+    "Urban/Regional",
+    "Public"
+   ],
+   "deadline": "2026-11-29",
+   "deadline_hard": null,
+   "listing_expires": "2026-12-28",
+   "priority_date": "2026-11-29",
+   "rolling": false,
+   "posted": "2026-10-15",
+   "start_date_text": "",
+   "start_year": null,
+   "degree_required": "",
+   "phd_required": true,
+   "requirements": [
+    "Apply: http://www.ext.vt.edu/offices"
+   ],
+   "salary": "",
+   "summary": "Job Description\n\nThe Department of Agricultural and Applied Economics (AAEC) in the\nCollege of Agriculture and Life Sciences (CALS) invites\napplications for a tenure-track position in agricultural markets,\ntrade, and rural development policy. This is a 9-month,\nacademic-year appointment, with expectations to fund summer\nactivities through external grants or other mechanisms. The\nspecific appointment is 50 percent research and 50 percent\nExtension.\n\nThe successful candidate will maintain a visible, nationally\nrecognized, externally funded applied research and Extension\nprogram in agricultural m",
+   "passes_filter": true,
+   "exclusion_reasons": [],
+   "sources": [
+    {
+     "source": "chronicle",
+     "url": "https://jobs.chronicle.com/job/38052923/assistant-professor-agricultural-markets-trade-and-rural-development-policy/",
+     "id": "38052923"
+    },
+    {
+     "source": "aaea",
+     "url": "https://aaea.execinc.com/edibo/JobBoard/ViewPosting/next?SubmissionId=2679",
+     "id": "2679"
+    }
+   ],
+   "source_keys": [
+    "chronicle:38052923",
+    "aaea:2679"
    ],
    "first_seen": "2026-10-28",
    "last_seen": "2026-11-11",
@@ -46657,7 +47184,7 @@
    "jel_codes": [],
    "categories": [],
    "deadline": "2026-11-30",
-   "deadline_hard": "2027-08-16",
+   "deadline_hard": "2026-11-30",
    "listing_expires": "2026-12-04",
    "priority_date": "2026-11-30",
    "rolling": true,
@@ -46954,7 +47481,7 @@
    "deadline": "2026-11-30",
    "deadline_hard": "2026-11-30",
    "listing_expires": "2026-12-04",
-   "priority_date": null,
+   "priority_date": "2026-11-30",
    "rolling": true,
    "posted": "2026-08-17",
    "start_date_text": "",
@@ -56178,7 +56705,7 @@
    "deadline": "2026-12-01",
    "deadline_hard": "2026-12-01",
    "listing_expires": "2026-12-28",
-   "priority_date": null,
+   "priority_date": "2026-12-01",
    "rolling": true,
    "posted": "2026-10-07",
    "start_date_text": "",
@@ -56794,7 +57321,7 @@
    "institution": "University of Barcelona",
    "department": "",
    "type": "Postdoc",
-   "section": "Postdoc",
+   "section": "",
    "fields": [
     "Finance",
     "Econometrics",
@@ -56802,16 +57329,14 @@
    ],
    "ag_env": false,
    "geo": {
-    "countries": [
-     "Spain"
-    ],
+    "countries": [],
     "regions": [
-     "Europe"
+     "Unknown"
     ],
     "us_states": [],
-    "primary": "Spain"
+    "primary": "Unknown"
    },
-   "location_text": "Barcelona, Catalonia, Spain",
+   "location_text": "Barcelona, Catalonia",
    "jel_codes": [
     "A"
    ],
@@ -64155,6 +64680,62 @@
    "status": "active"
   },
   {
+   "title": "Assistant Professor of Political Science (International Relations)",
+   "institution": "Washington & Jefferson College",
+   "department": "",
+   "type": "Tenure-track",
+   "section": "Full-Time Academic (Permanent, Tenure Track or Tenured)",
+   "fields": [
+    "International/Trade"
+   ],
+   "ag_env": false,
+   "geo": {
+    "countries": [
+     "United States"
+    ],
+    "regions": [
+     "US-Northeast"
+    ],
+    "us_states": [
+     "Pennsylvania"
+    ],
+    "primary": "Pennsylvania"
+   },
+   "location_text": "Washington, Pennsylvania, United States",
+   "jel_codes": [],
+   "categories": [],
+   "deadline": "2026-12-15",
+   "deadline_hard": "2026-12-15",
+   "listing_expires": "2027-01-07",
+   "priority_date": "2026-12-15",
+   "rolling": false,
+   "posted": "2026-11-05",
+   "start_date_text": "",
+   "start_year": 2026,
+   "degree_required": "",
+   "phd_required": true,
+   "requirements": [],
+   "salary": "",
+   "summary": "Title: Ass istant Professor of Political Science (International\nRelations) FLSA Status: Exempt Summary The\nDepartment of Political Science at Washington and Jefferson College\ninvites applications for a tenure-track position at the rank of\nAssistant Professor in International Relations (IR) . The preferred\ncandidate will have expertise in two areas, except for Middle\nEastern and African politics, with training in East Asian Politics\nas a plus. Candidates are expected to teach introductory and\nupper-level IR courses, Research/Quantitative Methods, as well as\nengage in scholarly research, service",
+   "passes_filter": false,
+   "exclusion_reasons": [
+    "start year 2026"
+   ],
+   "sources": [
+    {
+     "source": "chronicle",
+     "url": "https://jobs.chronicle.com/job/38062378/assistant-professor-of-political-science-international-relations-/",
+     "id": "38062378"
+    }
+   ],
+   "source_keys": [
+    "chronicle:38062378"
+   ],
+   "first_seen": "2026-11-07",
+   "last_seen": "2026-11-11",
+   "status": "active"
+  },
+  {
    "title": "Tenure-Track Faculty Position in Finance",
    "institution": "Washington University in St. Louis",
    "department": "Olin Business School / Finance",
@@ -64248,7 +64829,7 @@
    "deadline_hard": "2026-12-15",
    "listing_expires": "2026-12-04",
    "priority_date": null,
-   "rolling": false,
+   "rolling": true,
    "posted": "2026-09-16",
    "start_date_text": "",
    "start_year": 2027,
@@ -68255,63 +68836,6 @@
    "status": "active"
   },
   {
-   "title": "Assistant Professor of Finance",
-   "institution": "University of Kansas",
-   "department": "",
-   "type": "Tenure-track",
-   "section": "US: Full-Time Academic (Permanent, Tenure Track or Tenured)",
-   "fields": [
-    "Finance",
-    "Any Field"
-   ],
-   "ag_env": false,
-   "geo": {
-    "countries": [
-     "United States"
-    ],
-    "regions": [
-     "US-Midwest"
-    ],
-    "us_states": [
-     "Kansas"
-    ],
-    "primary": "Kansas"
-   },
-   "location_text": "Lawrence, Kansas, UNITED STATES",
-   "jel_codes": [
-    "00"
-   ],
-   "categories": [],
-   "deadline": "2027-01-01",
-   "deadline_hard": "2027-01-01",
-   "listing_expires": null,
-   "priority_date": null,
-   "rolling": false,
-   "posted": null,
-   "start_date_text": "",
-   "start_year": 2027,
-   "degree_required": "",
-   "phd_required": true,
-   "requirements": [],
-   "salary": "",
-   "summary": "The University of Kansas, School of Business invites applications for a full-time, academic-year tenure-track finance position at the assistant professor level.  This position starts in Fall 2027. Salary and benefit package are competitive.  \n\nCandidates should have a Ph.D. in finance or a closely related field by August 18, 2027; demonstrate, or show evidence of high potential for, scholarship excellence through publications and working papers; and demonstrate, or show evidence of high potential for, teaching excellence. Areas of particular interest include corporate finance, financial instit",
-   "passes_filter": true,
-   "exclusion_reasons": [],
-   "sources": [
-    {
-     "source": "joe",
-     "url": "https://www.aeaweb.org/joe/listing.php?JOE_ID=2026-02_111477747",
-     "id": "111477747"
-    }
-   ],
-   "source_keys": [
-    "joe:111477747"
-   ],
-   "first_seen": "2026-10-04",
-   "last_seen": "2026-11-11",
-   "status": "active"
-  },
-  {
    "title": "Assistant Teaching Professor",
    "institution": "Unversity of Tennessee",
    "department": "Haslam College of Business / Department of Economics",
@@ -68978,7 +69502,7 @@
    "deadline_hard": "2027-01-08",
    "listing_expires": "2026-12-28",
    "priority_date": "2027-01-08",
-   "rolling": false,
+   "rolling": true,
    "posted": "2026-10-12",
    "start_date_text": "",
    "start_year": 2027,
@@ -70471,7 +70995,7 @@
    "deadline_hard": "2027-01-24",
    "listing_expires": "2026-12-04",
    "priority_date": null,
-   "rolling": false,
+   "rolling": true,
    "posted": "2026-09-15",
    "start_date_text": "",
    "start_year": 2027,
@@ -70620,7 +71144,7 @@
    "deadline_hard": "2027-01-25",
    "listing_expires": "2027-01-10",
    "priority_date": "2027-01-25",
-   "rolling": false,
+   "rolling": true,
    "posted": "2026-11-06",
    "start_date_text": "",
    "start_year": 2027,
@@ -82405,7 +82929,7 @@
    "deadline_hard": "2027-12-01",
    "listing_expires": "2026-12-28",
    "priority_date": null,
-   "rolling": false,
+   "rolling": true,
    "posted": "2026-10-02",
    "start_date_text": "",
    "start_year": 2027,
@@ -83594,7 +84118,7 @@
    "deadline_hard": null,
    "listing_expires": "2026-12-28",
    "priority_date": null,
-   "rolling": false,
+   "rolling": true,
    "posted": "2024-04-03",
    "start_date_text": "",
    "start_year": null,
@@ -83965,87 +84489,25 @@
    "status": "gone"
   },
   {
-   "title": "Assistant Professor - Production Econometrics",
-   "institution": "Auburn University",
-   "department": "",
-   "type": "Tenure-track",
-   "section": "Full-Time Academic (Permanent, Tenure Track or Tenured)",
-   "fields": [
-    "Agricultural",
-    "Econometrics"
-   ],
-   "ag_env": true,
-   "geo": {
-    "countries": [
-     "United States"
-    ],
-    "regions": [
-     "US-South"
-    ],
-    "us_states": [
-     "Alabama"
-    ],
-    "primary": "Alabama"
-   },
-   "location_text": "Auburn, Alabama, United States",
-   "jel_codes": [],
-   "categories": [
-    "Agricultural",
-    "Econometrics"
-   ],
-   "deadline": null,
-   "deadline_hard": null,
-   "listing_expires": "2026-12-04",
-   "priority_date": null,
-   "rolling": false,
-   "posted": "2026-08-17",
-   "start_date_text": "",
-   "start_year": 2027,
-   "degree_required": "",
-   "phd_required": true,
-   "requirements": [],
-   "salary": "",
-   "summary": "Job Description\n\nOverview\n\nAgricultural Economics and Rural Sociology \nAssistant Professor of Production Econometrics\n\nThe Department of Agricultural Economics and Rural Sociology\n(DAERS) in the College of Agriculture at Auburn University is\nseeking an Assistant Professor in Production Econometrics to join\nan environment of high-quality scholars dedicated to the discovery,\neducation, and application of research-based knowledge. This\nposition is a 9-month tenure-track, academic-year appointment with\nan allocation of 40% teaching and 60% research, as well as service\nto the Department, College, a",
-   "passes_filter": true,
-   "exclusion_reasons": [],
-   "sources": [
-    {
-     "source": "chronicle",
-     "url": "https://jobs.chronicle.com/job/38027151/assistant-professor-production-econometrics/",
-     "id": "38027151"
-    }
-   ],
-   "source_keys": [
-    "chronicle:38027151"
-   ],
-   "first_seen": "2026-10-04",
-   "last_seen": "2026-11-11",
-   "status": "active"
-  },
-  {
    "title": "Assistant/Associate Professor in Economics/Finance",
    "institution": "Augusta University",
    "department": "",
    "type": "Tenure-track",
-   "section": "Faculty",
+   "section": "",
    "fields": [
     "Micro",
     "Finance"
    ],
    "ag_env": false,
    "geo": {
-    "countries": [
-     "United States"
-    ],
+    "countries": [],
     "regions": [
-     "US-South"
+     "Unknown"
     ],
-    "us_states": [
-     "Georgia"
-    ],
-    "primary": "Georgia"
+    "us_states": [],
+    "primary": "Unknown"
    },
-   "location_text": "Augusta, Georgia, United States",
+   "location_text": "Augusta, Georgia",
    "jel_codes": [
     "D"
    ],
@@ -85885,7 +86347,7 @@
    "deadline_hard": null,
    "listing_expires": "2026-12-28",
    "priority_date": null,
-   "rolling": false,
+   "rolling": true,
    "posted": "2026-10-21",
    "start_date_text": "",
    "start_year": 2027,
@@ -85941,7 +86403,7 @@
    "deadline_hard": null,
    "listing_expires": "2026-12-28",
    "priority_date": null,
-   "rolling": false,
+   "rolling": true,
    "posted": "2026-10-21",
    "start_date_text": "",
    "start_year": 2027,
@@ -85997,7 +86459,7 @@
    "deadline_hard": null,
    "listing_expires": "2026-12-04",
    "priority_date": null,
-   "rolling": false,
+   "rolling": true,
    "posted": "2026-09-25",
    "start_date_text": "",
    "start_year": 2027,
@@ -90660,118 +91122,6 @@
    "status": "active"
   },
   {
-   "title": "Assistant Professor - Economics",
-   "institution": "Miami University",
-   "department": "",
-   "type": "Tenure-track",
-   "section": "Full-Time Academic (Permanent, Tenure Track or Tenured)",
-   "fields": [
-    "Health"
-   ],
-   "ag_env": false,
-   "geo": {
-    "countries": [
-     "United States"
-    ],
-    "regions": [
-     "US-Midwest"
-    ],
-    "us_states": [
-     "Ohio"
-    ],
-    "primary": "Ohio"
-   },
-   "location_text": "Oxford, Ohio, United States",
-   "jel_codes": [],
-   "categories": [
-    "Health"
-   ],
-   "deadline": null,
-   "deadline_hard": null,
-   "listing_expires": "2026-12-14",
-   "priority_date": null,
-   "rolling": false,
-   "posted": "2026-10-15",
-   "start_date_text": "",
-   "start_year": null,
-   "degree_required": "",
-   "phd_required": true,
-   "requirements": [],
-   "salary": "Salary Not specified",
-   "summary": "Assistant Professor - Economics\n\nJob Title\n\nAssistant Professor - Economics\n\nDepartment\n\nEconomics Department\n\nWorker Type\n\nRegular\n\nPay Type\n\nSalary\n\nSalary will be commensurate with the level of the position,\neducation, and experience.\n\nBenefit Eligible\n\nYes\n\nScreening Date\n\n2026-11-09\n\nJob Description Summary\n\nAssistant Professor (tenure-track) in applied microeconomics, with\nparticular interest in candidates working in health economics; to\nteach courses at the undergraduate and Master's level; to publish\noriginal high-quality research; to advise students; and to engage\nin service. Multiple",
-   "passes_filter": true,
-   "exclusion_reasons": [],
-   "sources": [
-    {
-     "source": "chronicle",
-     "url": "https://jobs.chronicle.com/job/38052355/assistant-professor-economics/",
-     "id": "38052355"
-    }
-   ],
-   "source_keys": [
-    "chronicle:38052355"
-   ],
-   "first_seen": "2026-10-04",
-   "last_seen": "2026-11-11",
-   "status": "active"
-  },
-  {
-   "title": "Assistant Professor - Economics",
-   "institution": "Miami University (Ohio)",
-   "department": "",
-   "type": "Tenure-track",
-   "section": "Full-Time Academic (Permanent, Tenure Track or Tenured)",
-   "fields": [
-    "Health"
-   ],
-   "ag_env": false,
-   "geo": {
-    "countries": [
-     "United States"
-    ],
-    "regions": [
-     "US-Midwest"
-    ],
-    "us_states": [
-     "Ohio"
-    ],
-    "primary": "Ohio"
-   },
-   "location_text": "Oxford, Ohio, United States",
-   "jel_codes": [],
-   "categories": [
-    "Health"
-   ],
-   "deadline": null,
-   "deadline_hard": null,
-   "listing_expires": "2026-12-04",
-   "priority_date": null,
-   "rolling": false,
-   "posted": "2026-09-25",
-   "start_date_text": "",
-   "start_year": null,
-   "degree_required": "",
-   "phd_required": true,
-   "requirements": [],
-   "salary": "",
-   "summary": "Job Title\n\nAssistant Professor - Economics\n\nDepartment\n\nEconomics Department\n\nWorker Type\n\nRegular\n\nPay Type\n\nSalary\n\nSalary will be commensurate with the level of the position,\neducation, and experience.\n\nBenefit Eligible\n\nYes\n\nScreening Date\n\n2026-11-09\n\nJob Description Summary\n\nAssistant Professor (tenure-track) in applied microeconomics, with\nparticular interest in candidates working in health economics; to\nteach courses at the undergraduate and Master’s level; to publish\noriginal high-quality research; to advise students; and to engage\nin service. Multiple positions available.\n\nJob Descri",
-   "passes_filter": true,
-   "exclusion_reasons": [],
-   "sources": [
-    {
-     "source": "chronicle",
-     "url": "https://jobs.chronicle.com/job/38044313/assistant-professor-economics/",
-     "id": "38044313"
-    }
-   ],
-   "source_keys": [
-    "chronicle:38044313"
-   ],
-   "first_seen": "2026-10-04",
-   "last_seen": "2026-11-11",
-   "status": "active"
-  },
-  {
    "title": "recruiting postdoctoral research fellow",
    "institution": "Monash",
    "department": "",
@@ -91198,7 +91548,7 @@
    "deadline_hard": null,
    "listing_expires": "2026-12-04",
    "priority_date": null,
-   "rolling": false,
+   "rolling": true,
    "posted": "2026-05-22",
    "start_date_text": "",
    "start_year": 2027,
@@ -91675,62 +92025,6 @@
    ],
    "source_keys": [
     "chronicle:37958321"
-   ],
-   "first_seen": "2026-10-04",
-   "last_seen": "2026-11-11",
-   "status": "active"
-  },
-  {
-   "title": "Tenure-Track, Economics and Finance (Open Rank)",
-   "institution": "North Central College",
-   "department": "",
-   "type": "Tenure-track",
-   "section": "Full-Time Academic (Permanent, Tenure Track or Tenured)",
-   "fields": [
-    "Finance"
-   ],
-   "ag_env": false,
-   "geo": {
-    "countries": [
-     "United States"
-    ],
-    "regions": [
-     "US-Midwest"
-    ],
-    "us_states": [
-     "Illinois"
-    ],
-    "primary": "Illinois"
-   },
-   "location_text": "Naperville, Illinois, United States",
-   "jel_codes": [],
-   "categories": [
-    "Finance"
-   ],
-   "deadline": null,
-   "deadline_hard": null,
-   "listing_expires": "2026-12-04",
-   "priority_date": null,
-   "rolling": true,
-   "posted": "2026-05-26",
-   "start_date_text": "",
-   "start_year": null,
-   "degree_required": "",
-   "phd_required": true,
-   "requirements": [],
-   "salary": "",
-   "summary": "Posting Details\n\nPosition Information\n\nPosting Number\nF000483\n\nPosition Title\nTenure-Track, Economics and Finance (Open Rank)\n\nDepartment\nEconomics & Finance\n\nDivision\nAcademic Affairs\n\nFaculty Status\nTenure Track\n\nSupervisor Title\nChair Economics\n\nStatus\nFull-time Tenure-Track Faculty\n\nTenure Track\nYes\n\nSalary Range\n$90,000 - $115,000\n\nPosition Summary\n\nThe Department of Economics & Finance in the School of Business\nand Entrepreneurship at North Central College invites applications\nfor a tenure-track position in Economics and Finance to begin\nAugust 1, 2026.\n\nThe duties in this role include:\n",
-   "passes_filter": true,
-   "exclusion_reasons": [],
-   "sources": [
-    {
-     "source": "chronicle",
-     "url": "https://jobs.chronicle.com/job/37992928/tenure-track-economics-and-finance-open-rank-/",
-     "id": "37992928"
-    }
-   ],
-   "source_keys": [
-    "chronicle:37992928"
    ],
    "first_seen": "2026-10-04",
    "last_seen": "2026-11-11",
@@ -93484,7 +93778,7 @@
    "deadline_hard": null,
    "listing_expires": "2027-01-10",
    "priority_date": null,
-   "rolling": false,
+   "rolling": true,
    "posted": "2026-11-06",
    "start_date_text": "",
    "start_year": 2027,
@@ -94245,7 +94539,7 @@
    "deadline_hard": null,
    "listing_expires": "2026-12-04",
    "priority_date": null,
-   "rolling": false,
+   "rolling": true,
    "posted": "2026-09-03",
    "start_date_text": "",
    "start_year": 2027,
@@ -94302,7 +94596,7 @@
    "deadline_hard": null,
    "listing_expires": "2026-12-04",
    "priority_date": null,
-   "rolling": false,
+   "rolling": true,
    "posted": "2025-07-23",
    "start_date_text": "",
    "start_year": null,
@@ -94968,7 +95262,7 @@
    "deadline_hard": null,
    "listing_expires": "2026-11-15",
    "priority_date": null,
-   "rolling": false,
+   "rolling": true,
    "posted": "2026-09-16",
    "start_date_text": "",
    "start_year": 2027,
@@ -96305,7 +96599,7 @@
    "deadline_hard": null,
    "listing_expires": "2026-12-04",
    "priority_date": null,
-   "rolling": false,
+   "rolling": true,
    "posted": "2020-11-06",
    "start_date_text": "",
    "start_year": null,
@@ -96829,7 +97123,7 @@
    "deadline_hard": null,
    "listing_expires": "2027-01-04",
    "priority_date": null,
-   "rolling": false,
+   "rolling": true,
    "posted": "2026-10-30",
    "start_date_text": "",
    "start_year": 2027,
@@ -98000,7 +98294,7 @@
    "deadline_hard": null,
    "listing_expires": "2026-12-04",
    "priority_date": null,
-   "rolling": false,
+   "rolling": true,
    "posted": "2026-05-14",
    "start_date_text": "",
    "start_year": 2027,
@@ -98022,63 +98316,6 @@
    ],
    "source_keys": [
     "chronicle:37990890"
-   ],
-   "first_seen": "2026-10-04",
-   "last_seen": "2026-11-11",
-   "status": "active"
-  },
-  {
-   "title": "Institute of American Civics - Open Rank Tenure Track Professor in American Civics Fall 2027",
-   "institution": "University of Tennessee, Knoxville",
-   "department": "",
-   "type": "Tenure-track",
-   "section": "Full-Time Academic (Permanent, Tenure Track or Tenured)",
-   "fields": [
-    "Political Economy"
-   ],
-   "ag_env": false,
-   "geo": {
-    "countries": [
-     "United States"
-    ],
-    "regions": [
-     "US-South"
-    ],
-    "us_states": [
-     "Tennessee"
-    ],
-    "primary": "Tennessee"
-   },
-   "location_text": "Knoxville, Tennessee, United States",
-   "jel_codes": [],
-   "categories": [
-    "Public",
-    "Political Economy"
-   ],
-   "deadline": null,
-   "deadline_hard": null,
-   "listing_expires": "2026-12-04",
-   "priority_date": null,
-   "rolling": false,
-   "posted": "2026-08-01",
-   "start_date_text": "",
-   "start_year": 2027,
-   "degree_required": "",
-   "phd_required": true,
-   "requirements": [],
-   "salary": "",
-   "summary": "Description\n\nThe Institute of American Civics, located within the Howard H.\nBaker, Jr. School of Public Policy and Public Affairs at the\nUniversity of Tennessee, Knoxville, is seeking to fill a\ntenure-line 9-month faculty position at the assistant through full\nprofessor rank in American Civics to begin August 1, 2027.\n\nSuccessful candidates will be expected to teach undergraduate\nclasses on a 2-2 load and carry out a program of research and\nscholarship. They will also be expected to be actively engaged in\nthe Institute’s activities.\n\nWho We Are\n\nThe I nstitute of American Civics was created to",
-   "passes_filter": true,
-   "exclusion_reasons": [],
-   "sources": [
-    {
-     "source": "chronicle",
-     "url": "https://jobs.chronicle.com/job/38022439/institute-of-american-civics-open-rank-tenure-track-professor-in-american-civics-fall-2027/",
-     "id": "38022439"
-    }
-   ],
-   "source_keys": [
-    "chronicle:38022439"
    ],
    "first_seen": "2026-10-04",
    "last_seen": "2026-11-11",
@@ -98562,191 +98799,6 @@
    "status": "active"
   },
   {
-   "title": "Associate or Full Professor",
-   "institution": "Virginia Tech",
-   "department": "",
-   "type": "Tenure-track",
-   "section": "Full-Time Academic (Permanent, Tenure Track or Tenured)",
-   "fields": [
-    "Urban/Regional",
-    "Finance"
-   ],
-   "ag_env": false,
-   "geo": {
-    "countries": [
-     "United States"
-    ],
-    "regions": [
-     "US-South"
-    ],
-    "us_states": [
-     "Virginia"
-    ],
-    "primary": "Virginia"
-   },
-   "location_text": "Blacksburg, Virginia, United States",
-   "jel_codes": [],
-   "categories": [
-    "Finance",
-    "Urban/Regional"
-   ],
-   "deadline": null,
-   "deadline_hard": null,
-   "listing_expires": "2026-12-28",
-   "priority_date": null,
-   "rolling": true,
-   "posted": "2026-10-19",
-   "start_date_text": "",
-   "start_year": 2027,
-   "degree_required": "",
-   "phd_required": true,
-   "requirements": [],
-   "salary": "",
-   "summary": "Job Description\n\nThe Blackwood Department of Real Estate within the R. B. Pamplin\nCollege of Business at Virginia Tech invites applications for an\nAssociate or Full Professor of Real Estate who will hold the\nBlackwood Endowed Chair. This is an exciting opportunity for an\nestablished scholar to join a growing department interested in\nexpanding its research, teaching, and service capacity while\ncontinuing to build its international reputation. The position is a\ntenured, academic-year appointment beginning August 10, 2027. The\nsuccessful candidate will conduct high-quality research regularly\nlead",
-   "passes_filter": true,
-   "exclusion_reasons": [],
-   "sources": [
-    {
-     "source": "chronicle",
-     "url": "https://jobs.chronicle.com/job/38054160/associate-or-full-professor/",
-     "id": "38054160"
-    }
-   ],
-   "source_keys": [
-    "chronicle:38054160"
-   ],
-   "first_seen": "2026-10-28",
-   "last_seen": "2026-11-11",
-   "status": "active"
-  },
-  {
-   "title": "Assistant Professor, Agricultural Markets, Trade, and Rural Development Policy",
-   "institution": "Virginia Tech",
-   "department": "",
-   "type": "Tenure-track",
-   "section": "Full-Time Academic (Permanent, Tenure Track or Tenured)",
-   "fields": [
-    "Agricultural",
-    "Development",
-    "Urban/Regional",
-    "International/Trade"
-   ],
-   "ag_env": true,
-   "geo": {
-    "countries": [
-     "United States"
-    ],
-    "regions": [
-     "US-South"
-    ],
-    "us_states": [
-     "Virginia"
-    ],
-    "primary": "Virginia"
-   },
-   "location_text": "Blacksburg, Virginia, United States",
-   "jel_codes": [],
-   "categories": [
-    "Agricultural",
-    "Urban/Regional",
-    "Public"
-   ],
-   "deadline": null,
-   "deadline_hard": null,
-   "listing_expires": "2026-12-28",
-   "priority_date": null,
-   "rolling": false,
-   "posted": "2026-10-15",
-   "start_date_text": "",
-   "start_year": null,
-   "degree_required": "",
-   "phd_required": true,
-   "requirements": [
-    "Apply: http://www.ext.vt.edu/offices"
-   ],
-   "salary": "",
-   "summary": "Job Description\n\nThe Department of Agricultural and Applied Economics (AAEC) in the\nCollege of Agriculture and Life Sciences (CALS) invites\napplications for a tenure-track position in agricultural markets,\ntrade, and rural development policy. This is a 9-month,\nacademic-year appointment, with expectations to fund summer\nactivities through external grants or other mechanisms. The\nspecific appointment is 50 percent research and 50 percent\nExtension.\n\nThe successful candidate will maintain a visible, nationally\nrecognized, externally funded applied research and Extension\nprogram in agricultural m",
-   "passes_filter": true,
-   "exclusion_reasons": [],
-   "sources": [
-    {
-     "source": "chronicle",
-     "url": "https://jobs.chronicle.com/job/38052923/assistant-professor-agricultural-markets-trade-and-rural-development-policy/",
-     "id": "38052923"
-    },
-    {
-     "source": "aaea",
-     "url": "https://aaea.execinc.com/edibo/JobBoard/ViewPosting/next?SubmissionId=2679",
-     "id": "2679"
-    }
-   ],
-   "source_keys": [
-    "chronicle:38052923",
-    "aaea:2679"
-   ],
-   "first_seen": "2026-10-28",
-   "last_seen": "2026-11-11",
-   "status": "active"
-  },
-  {
-   "title": "Postdoctoral Associate",
-   "institution": "Virginia Tech",
-   "department": "",
-   "type": "Postdoc",
-   "section": "Postdoc",
-   "fields": [
-    "Finance"
-   ],
-   "ag_env": false,
-   "geo": {
-    "countries": [
-     "United States"
-    ],
-    "regions": [
-     "US-South"
-    ],
-    "us_states": [
-     "Virginia"
-    ],
-    "primary": "Virginia"
-   },
-   "location_text": "Blacksburg, Virginia, United States",
-   "jel_codes": [],
-   "categories": [
-    "Finance"
-   ],
-   "deadline": null,
-   "deadline_hard": null,
-   "listing_expires": "2026-12-04",
-   "priority_date": null,
-   "rolling": false,
-   "posted": "2026-04-10",
-   "start_date_text": "",
-   "start_year": 2026,
-   "degree_required": "",
-   "phd_required": true,
-   "requirements": [],
-   "salary": "",
-   "summary": "Job Description\n\nThe Department of Accounting and Information Systems seeks a\nPostdoctoral Associate to support and advance high-quality research\nin accounting. The Postdoctoral Associate will work closely with\nDr. Robert Davidson and other faculty members on active research\nprojects, with substantial opportunities for co-authorship. The\nposition is fully research-focused, with optional teaching\ndevelopment opportunities available by mutual agreement.\n\nThe department offers a collaborative and intellectually engaging\nresearch environment and maintains strong connections among faculty\nand docto",
-   "passes_filter": false,
-   "exclusion_reasons": [
-    "start year 2026"
-   ],
-   "sources": [
-    {
-     "source": "chronicle",
-     "url": "https://jobs.chronicle.com/job/37974835/postdoctoral-associate/",
-     "id": "37974835"
-    }
-   ],
-   "source_keys": [
-    "chronicle:37974835"
-   ],
-   "first_seen": "2026-10-04",
-   "last_seen": "2026-11-11",
-   "status": "active"
-  },
-  {
    "title": "Research Associate or Research Scientist in Applied Economics and Remote Sensing",
    "institution": "Virginia Tech, Agricultural & Applied Economics",
    "department": "",
@@ -99079,62 +99131,6 @@
    ],
    "source_keys": [
     "chronicle:38062480"
-   ],
-   "first_seen": "2026-11-07",
-   "last_seen": "2026-11-11",
-   "status": "active"
-  },
-  {
-   "title": "Assistant Professor of Political Science (International Relations)",
-   "institution": "Washington & Jefferson College",
-   "department": "",
-   "type": "Tenure-track",
-   "section": "Full-Time Academic (Permanent, Tenure Track or Tenured)",
-   "fields": [
-    "International/Trade"
-   ],
-   "ag_env": false,
-   "geo": {
-    "countries": [
-     "United States"
-    ],
-    "regions": [
-     "US-Northeast"
-    ],
-    "us_states": [
-     "Pennsylvania"
-    ],
-    "primary": "Pennsylvania"
-   },
-   "location_text": "Washington, Pennsylvania, United States",
-   "jel_codes": [],
-   "categories": [],
-   "deadline": null,
-   "deadline_hard": null,
-   "listing_expires": "2027-01-07",
-   "priority_date": null,
-   "rolling": false,
-   "posted": "2026-11-05",
-   "start_date_text": "",
-   "start_year": 2026,
-   "degree_required": "",
-   "phd_required": true,
-   "requirements": [],
-   "salary": "",
-   "summary": "Title: Ass istant Professor of Political Science (International\nRelations) FLSA Status: Exempt Summary The\nDepartment of Political Science at Washington and Jefferson College\ninvites applications for a tenure-track position at the rank of\nAssistant Professor in International Relations (IR) . The preferred\ncandidate will have expertise in two areas, except for Middle\nEastern and African politics, with training in East Asian Politics\nas a plus. Candidates are expected to teach introductory and\nupper-level IR courses, Research/Quantitative Methods, as well as\nengage in scholarly research, service",
-   "passes_filter": false,
-   "exclusion_reasons": [
-    "start year 2026"
-   ],
-   "sources": [
-    {
-     "source": "chronicle",
-     "url": "https://jobs.chronicle.com/job/38062378/assistant-professor-of-political-science-international-relations-/",
-     "id": "38062378"
-    }
-   ],
-   "source_keys": [
-    "chronicle:38062378"
    ],
    "first_seen": "2026-11-07",
    "last_seen": "2026-11-11",

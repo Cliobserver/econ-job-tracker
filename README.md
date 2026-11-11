@@ -31,7 +31,6 @@ _Last run: 2026-11-11. Active postings passing the filter: 1189 (0 new today)._
 |---|---|---|---|---|---|---|
 | 2026-11-11 | Tenure-Track Assistant Professor in Empirical Microeconomics (preferably Health) [EJM](https://econjobmarket.org/positions/12908) | Department of Economics Johannes Kepler University Linz | Austria | Health | Tenure-track |  |
 | 2026-11-11 | Tenure-Track Position for Empirical Microeconomics (preferably Health) [INOMICS](https://inomics.com/job/tenure-track-position-for-empirical-microeconomics-preferably-health-1555574) | Johannes Kepler University Linz (JKU) | Austria | Public, Labor, Health | Tenure-track |  |
-| 2026-11-11 | Project Scientist, Homelessness and Health Policy [JOE](https://www.aeaweb.org/joe/listing.php?JOE_ID=2026-02_111477806) | University of California, Los Angeles | California | Health, Micro | Visiting/Teaching |  |
 | 2026-11-11 | Assistant Professor - AI and Policy [JOE](https://www.aeaweb.org/joe/listing.php?JOE_ID=2026-02_111478256) | University of Chicago - Harris School of Public Policy | Illinois | Other, Any Field | Tenure-track |  |
 | 2026-11-11 | Assistant Professor [JOE](https://www.aeaweb.org/joe/listing.php?JOE_ID=2026-02_111478230) | University of Nebraska-Lincoln | Nebraska | Any Field | Tenure-track |  |
 | 2026-11-12 | Economics Research Specialist in Behavioral Economics and Finance [CHRONICLE](https://jobs.chronicle.com/job/38057166/economics-research-specialist-in-behavioral-economics-and-finance/) | Dartmouth College | New Hampshire | Finance, Industrial Organization, Behavioral/Experimental | Industry/Nonprofit |  |
@@ -89,5 +88,6 @@ _Last run: 2026-11-11. Active postings passing the filter: 1189 (0 new today)._
 | 2026-11-15 | Assistant Professor of International and Public Affairs [JOE](https://www.aeaweb.org/joe/listing.php?JOE_ID=2026-02_111477652) [EJM](https://econjobmarket.org/positions/12574) | Columbia University | New York | Environmental, International/Trade, Agricultural | Tenure-track |  |
 | 2026-11-15 | Senior Economist - PhD [JOE](https://www.aeaweb.org/joe/listing.php?JOE_ID=2026-02_111477876) | Compass Lexecon | Illinois | Micro, Industrial Organization, Finance | Industry/Nonprofit |  |
 | 2026-11-15 | Assistant Professor [JOE](https://www.aeaweb.org/joe/listing.php?JOE_ID=2026-02_111478190) | Connecticut College | Connecticut | Environmental, Econometrics | Tenure-track |  |
+| 2026-11-15 | Tenure-track Assistant Professor of Economics [INOMICS](https://inomics.com/job/tenure-track-assistant-professor-of-economics-1555511) | Connecticut College | Connecticut | Agricultural/Environmental, Any Field | Tenure-track |  |
 
 _Table shows the next deadlines only; use the dashboard for filtering by field, region, type, and source._
