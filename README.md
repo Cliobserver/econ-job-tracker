@@ -11,36 +11,24 @@ mailing-list e-mail (RESECON, CWAE, AAEA sections, ARE Grads) when Gmail credent
 Runs every third day at 12:00 America/Los_Angeles via GitHub Actions (manual runs any time from the Actions tab).
 
 
-_Last run: 2026-11-10. Active postings passing the filter: 1196 (33 new today)._
+_Last run: 2026-11-11. Active postings passing the filter: 1189 (0 new today)._
 
 | Source | Fetched | Status |
 |---|---|---|
-| joe | 734 | ok |
-| ejm | 346 | ok |
-| chronicle | 344 | ok |
+| joe | 733 | ok |
+| ejm | 342 | ok |
+| chronicle | 342 | ok |
 | substack | 19 | ok (live fetch failed; cached feed) |
 | aere | 7 | ok |
-| gmail | 25 | ok (imap login ok; 153 list e-mails scanned, 1 new postings) |
+| gmail | 25 | ok (imap login ok; 151 list e-mails scanned, 0 new postings) |
 | aaea | 15 | ok |
-| inomics | 112 | ok |
+| inomics | 111 | ok |
 | econjobs | 13 | ok (live feed unavailable (HTTP 429, HTML page); cached feed) |
 
 ## Next 60 deadlines
 
 | Deadline | Position | Institution | Location | Fields | Type | New |
 |---|---|---|---|---|---|---|
-| 2026-11-10 | Assistant department of Economics (EB21) [EJM](https://econjobmarket.org/positions/12827) [INOMICS](https://inomics.com/job/assistant-department-of-economics-eb21-1555490) | Department of Economics Ghent University | Belgium | Behavioral/Experimental, International/Trade, Macro | Tenure-track |  |
-| 2026-11-10 | Assistant Professor of Economics (Applied Microeconomics) [EJM](https://econjobmarket.org/positions/12760) | Economics University of Virginia | Virginia | Labor, International/Trade | Tenure-track |  |
-| 2026-11-10 | Assistant Professor of Economics (Microeconomic Theory and/or Industrial Organiz [EJM](https://econjobmarket.org/positions/12704) | Economics University of Virginia | Virginia | Micro, Industrial Organization | Tenure-track |  |
-| 2026-11-10 | Stanford Graduate School of Business - Faculty Positions in Economics [EJM](https://econjobmarket.org/positions/12733) | Economics, Graduate School of Business Stanford University | California | Any Field | Tenure-track |  |
-| 2026-11-10 | Postdoc in AI agents and human-AI interactions in financial systems [EJM](https://econjobmarket.org/positions/12809) | Institut Louis Bachelier | France | Finance, Macro, Behavioral/Experimental | Postdoc |  |
-| 2026-11-10 | Postdoctoral Fellow in Economics [JOE](https://www.aeaweb.org/joe/listing.php?JOE_ID=2026-02_111478089) [EJM](https://econjobmarket.org/positions/12741) | ROCKWOOL Foundation Berlin – Institute for the Economy and the Future of Work | Germany | Labor, Public, Industrial Organization | Postdoc |  |
-| 2026-11-10 | Postdoctoral Scholar in Quantitative Methods for Distributional Climate Impact Analysis [SUBSTACK](https://appliedeconjobs.substack.com/p/postdoctoral-scholar-in-quantitative) | Sant’Anna School of Advanced Studies | Italy | Environmental, Econometrics | Postdoc |  |
-| 2026-11-10 | Faculty Positions in Economics [JOE](https://www.aeaweb.org/joe/listing.php?JOE_ID=2026-02_111478079) | Stanford Graduate School of Business | California | Any Field | Tenure-track |  |
-| 2026-11-10 | Assistant Professor of Economics [JOE](https://www.aeaweb.org/joe/listing.php?JOE_ID=2026-02_111478108) | University of Virginia | Virginia | Labor, International/Trade | Tenure-track |  |
-| 2026-11-10 | Assistant Professor of Economics [JOE](https://www.aeaweb.org/joe/listing.php?JOE_ID=2026-02_111478012) | University of Virginia | Virginia | Micro, Industrial Organization | Tenure-track |  |
-| 2026-11-10 | Full-Time, Tenure-Track / Tenured Positions [JOE](https://www.aeaweb.org/joe/listing.php?JOE_ID=2026-02_111478087) | Wuhan University | China | Any Field | Tenure-track |  |
-| 2026-11-11 | Executive Director of Strategic Communications [CHRONICLE](https://jobs.chronicle.com/job/38031888/executive-director-of-strategic-communications/) | Butler University | Indiana | Unspecified | Industry/Nonprofit |  |
 | 2026-11-11 | Tenure-Track Assistant Professor in Empirical Microeconomics (preferably Health) [EJM](https://econjobmarket.org/positions/12908) | Department of Economics Johannes Kepler University Linz | Austria | Health | Tenure-track |  |
 | 2026-11-11 | Tenure-Track Position for Empirical Microeconomics (preferably Health) [INOMICS](https://inomics.com/job/tenure-track-position-for-empirical-microeconomics-preferably-health-1555574) | Johannes Kepler University Linz (JKU) | Austria | Public, Labor, Health | Tenure-track |  |
 | 2026-11-11 | Project Scientist, Homelessness and Health Policy [JOE](https://www.aeaweb.org/joe/listing.php?JOE_ID=2026-02_111477806) | University of California, Los Angeles | California | Health, Micro | Visiting/Teaching |  |
@@ -86,8 +74,20 @@ _Last run: 2026-11-10. Active postings passing the filter: 1196 (33 new today)._
 | 2026-11-14 | Assistant Professor of Economics [JOE](https://www.aeaweb.org/joe/listing.php?JOE_ID=2026-02_111477897) | University of California, Merced | California | Business/Management, Education | Tenure-track |  |
 | 2026-11-15 | Two Assistant Professor Positions in Economics for Junior Candidates [JOE](https://www.aeaweb.org/joe/listing.php?JOE_ID=2026-02_111478040) | Bocconi University | Italy | Any Field | Tenure-track |  |
 | 2026-11-15 | Assistant Professor [JOE](https://www.aeaweb.org/joe/listing.php?JOE_ID=2026-02_111478287) [INOMICS](https://inomics.com/job/assistant-professor-of-finance-1555489) | Boston University | Massachusetts | Health, Finance | Tenure-track |  |
-| 2026-11-15 | Assistant Professor, International Economic Policy [CHRONICLE](https://jobs.chronicle.com/job/38035751/assistant-professor-international-economic-policy/) | Boston University Pardee School of Global Studies | Massachusetts | International/Trade, Finance | Tenure-track |  |
 | 2026-11-15 | Assistant Professor, Economics [JOE](https://www.aeaweb.org/joe/listing.php?JOE_ID=2026-02_111478024) [CHRONICLE](https://jobs.chronicle.com/job/38043917/assistant-professor-of-economics/) | Bowdoin College | Maine | International/Trade, Finance, Industrial Organization | Tenure-track |  |
-| 2026-11-15 | Assistant Professor Of Economics [JOE](https://www.aeaweb.org/joe/listing.php?JOE_ID=2026-02_111478125) [CHRONICLE](https://jobs.chronicle.com/job/38045298/assistant-professor-of-economics-and-public-policy/) | Bucknell University | Pennsylvania | Macro, Econometrics, Any Field | Tenure-track |  |
+| 2026-11-15 | Tenure-Track Assistant Professor in Finance 2027-2028 [EJM](https://econjobmarket.org/positions/12674) | Business School IE University | Spain | Finance | Tenure-track |  |
+| 2026-11-15 | Assistant Professor positions [EJM](https://econjobmarket.org/positions/12691) | CUNEF Universidad | Spain | Any Field | Tenure-track |  |
+| 2026-11-15 | Tenure Track Assistant Professor of Economics [JOE](https://www.aeaweb.org/joe/listing.php?JOE_ID=2026-02_111477864) [CHRONICLE](https://jobs.chronicle.com/job/38039753/assistant-professor-of-economics/) [INOMICS](https://inomics.com/job/assistant-professor-of-economics-1555148) | California State University, Fullerton | California | Econometrics, Health, Labor | Tenure-track |  |
+| 2026-11-15 | Assistant Professor (tenure track) in Finance or Accounting [EJM](https://econjobmarket.org/positions/12663) | Católica Lisbon School of Business and Economics Catholic University of Portugal | Portugal | Finance | Tenure-track |  |
+| 2026-11-15 | Behavioral Economics [JOE](https://www.aeaweb.org/joe/listing.php?JOE_ID=2026-02_111477940) | Colgate University | New York | Behavioral/Experimental, Micro | Tenure-track |  |
+| 2026-11-15 | Tenure-Stream Position in Behavioral Economics [CHRONICLE](https://jobs.chronicle.com/job/38046489/tenure-stream-position-in-behavioral-economics/) | Colgate University | New York | Behavioral/Experimental | Tenure-track |  |
+| 2026-11-15 | Tenure-Stream Position in Gender Economics [CHRONICLE](https://jobs.chronicle.com/job/38046488/tenure-stream-position-in-gender-economics/) | Colgate University | New York | Labor | Tenure-track |  |
+| 2026-11-15 | Assistant Professor or Associate Professor [JOE](https://www.aeaweb.org/joe/listing.php?JOE_ID=2026-02_111477962) | College of the Holy Cross | Massachusetts | Micro, Energy, Development | Tenure-track |  |
+| 2026-11-15 | Assistant Professor or Associate Professor [JOE](https://www.aeaweb.org/joe/listing.php?JOE_ID=2026-02_111477965) | College of the Holy Cross | Massachusetts | Macro, Development, International/Trade | Tenure-track |  |
+| 2026-11-15 | Two Tenure-Track Faculty Positions in Microeconomics [CHRONICLE](https://jobs.chronicle.com/job/38041685/two-tenure-track-faculty-positions-in-microeconomics/) | College of the Holy Cross | Massachusetts | Energy, Development, Econometrics | Tenure-track |  |
+| 2026-11-15 | Two Tenure-Track Faculty Positions in Macroeconomics [CHRONICLE](https://jobs.chronicle.com/job/38041680/two-tenure-track-faculty-positions-in-macroeconomics/) | College of the Holy Cross | Massachusetts | International/Trade, Finance, Macro | Tenure-track |  |
+| 2026-11-15 | Assistant Professor of International and Public Affairs [JOE](https://www.aeaweb.org/joe/listing.php?JOE_ID=2026-02_111477652) [EJM](https://econjobmarket.org/positions/12574) | Columbia University | New York | Environmental, International/Trade, Agricultural | Tenure-track |  |
+| 2026-11-15 | Senior Economist - PhD [JOE](https://www.aeaweb.org/joe/listing.php?JOE_ID=2026-02_111477876) | Compass Lexecon | Illinois | Micro, Industrial Organization, Finance | Industry/Nonprofit |  |
+| 2026-11-15 | Assistant Professor [JOE](https://www.aeaweb.org/joe/listing.php?JOE_ID=2026-02_111478190) | Connecticut College | Connecticut | Environmental, Econometrics | Tenure-track |  |
 
 _Table shows the next deadlines only; use the dashboard for filtering by field, region, type, and source._
