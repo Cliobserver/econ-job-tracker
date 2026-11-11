@@ -95,6 +95,7 @@ def enrich(job) -> dict:
         "categories": job.categories,
         "deadline": effective_deadline(job.deadline, priority),
         "deadline_hard": job.deadline,          # the board's own deadline field / closing date
+        "listing_expires": getattr(job, "listing_expires", None),   # ad leaves the board (Chronicle)
         "priority_date": priority,              # "for full consideration apply by" / "review begins"
         "rolling": rolling,                     # text says applications accepted until filled
         "posted": job.posted,
@@ -125,7 +126,7 @@ def canonical(cluster) -> dict:
             for v in r[key]:
                 if v not in base[key]:
                     base[key].append(v)
-        for key in ("deadline_hard", "posted", "start_date_text", "degree_required", "department", "salary"):
+        for key in ("deadline_hard", "listing_expires", "posted", "start_date_text", "degree_required", "department", "salary"):
             if not base[key] and r[key]:
                 base[key] = r[key]
         if r["priority_date"] and (not base["priority_date"] or r["priority_date"] < base["priority_date"]):

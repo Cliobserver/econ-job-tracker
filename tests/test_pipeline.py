@@ -117,6 +117,18 @@ class FilterTests(unittest.TestCase):
         self.assertEqual(rec["deadline_hard"], "2027-03-01")
         self.assertEqual(rec["priority_date"], "2026-12-01")
         self.assertTrue(rec["rolling"])
+        # Rolling review that starts on a date (BU Pardee on Chronicle): that date is the priority date.
+        bu = ("Applications will be reviewed on a rolling basis, beginning October 23, 2026, but applications "
+              "will be accepted until the job is filled. The expected starting date for employment is July 1, 2027.")
+        self.assertEqual(priority_from_text(bu), "2026-10-23")
+        self.assertTrue(open_until_filled(bu))
+        j = mk(source="chronicle", full_text=bu, listing_expires="2026-11-15")
+        rec = enrich(j)
+        self.assertEqual(rec["deadline"], "2026-10-23")
+        self.assertIsNone(rec["deadline_hard"])
+        self.assertEqual(rec["listing_expires"], "2026-11-15")
+        self.assertEqual(priority_from_text("The committee will begin reviewing applications on November 1, 2026."), "2026-11-01")
+        self.assertIsNone(priority_from_text("Duties include reviewing manuscripts. The term starts July 1, 2027."))
         # A priority date later than the hard deadline is ignored.
         j = mk(deadline="2026-11-01", full_text="Review of applications begins December 1, 2026.")
         self.assertEqual(enrich(j)["deadline"], "2026-11-01")

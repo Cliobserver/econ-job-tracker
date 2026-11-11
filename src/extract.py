@@ -92,12 +92,14 @@ PRIORITY_CUE = re.compile(
     r"review of (?:the )?(?:applications|candidates|materials) (?:will |shall )?(?:begin|commence|start)s?(?: on)?|"
     r"(?:application |applicant )?review (?:will |shall )?(?:begin|commence|start)s?(?: on)?|"
     r"screening (?:of applications )?(?:will )?(?:begin|commence|start)s?(?: on)?|"
+    r"review(?:ed|ing)?\b[^.;\n]{0,40}?,? (?:beginning|starting|commencing)(?: on| from)?|"
+    r"(?:begin|start|commence)s? (?:to )?review(?:ing)?(?: of)?(?: the)?(?: applications| candidates| files| materials)?(?: on)?|"
     r"priority (?:deadline|date|review date|consideration date)(?: is| of)?:?|"
     r"preference (?:will be )?given to (?:applications|those|candidates) (?:received|submitted|completed) (?:by|before)|"
     r"applications received (?:by|before|on or before)",
     re.I)
 OPEN_UNTIL_FILLED_RE = re.compile(
-    r"until (?:the |a )?(?:position|search|post|vacancy|role)s? (?:is |are |has been |have been )?filled|"
+    r"until (?:the |a )?(?:position|search|post|vacancy|role|job|opening)s? (?:is |are |has been |have been )?filled|"
     r"open until filled|until filled|accepted until the position|rolling (?:basis|review|deadline|admission)|"
     r"(?:reviewed|considered|accepted) on a rolling basis|(?:will |shall )?remain open|"
     r"continue until (?:a |the )?(?:successful|suitable|qualified)|until (?:a |the )?(?:successful|suitable) (?:candidate|applicant)", re.I)

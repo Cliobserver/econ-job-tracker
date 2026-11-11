@@ -219,6 +219,7 @@
     if (j.rolling && past) note = '<div class="dlnote">rolling, priority date passed</div>';
     else if (isPriority) note = '<div class="dlnote">priority' + (j.rolling ? ", then rolling" : "") + (j.deadline_hard && j.deadline_hard > j.deadline ? " (closes " + esc(j.deadline_hard) + ")" : "") + '</div>';
     else if (j.rolling && !j.deadline) note = '<div class="dlnote">rolling</div>';
+    if (!j.deadline && j.listing_expires) note += '<div class="dlnote">ad listed until ' + esc(j.listing_expires) + '</div>';
     return dl + note;
   }
 
@@ -255,7 +256,7 @@
     const reqs = (j.requirements || []).length ? j.requirements.map(esc).join(", ") : "not listed";
     d.innerHTML = `<td colspan="7"><div class="detail-grid">
       <div><b>Location</b>${esc(j.location_text || j.geo.primary)}</div>
-      <div><b>Deadline</b>${esc(j.deadline || "not stated")}${j.priority_date ? ` · full consideration by ${esc(j.priority_date)}` : ""}${j.deadline_hard && j.deadline_hard !== j.deadline ? ` · closes ${esc(j.deadline_hard)}` : ""}${j.rolling ? " · open until filled" : ""}</div>
+      <div><b>Deadline</b>${esc(j.deadline || "not stated")}${j.priority_date ? ` · full consideration by ${esc(j.priority_date)}` : ""}${j.deadline_hard && j.deadline_hard !== j.deadline ? ` · closes ${esc(j.deadline_hard)}` : ""}${j.rolling ? " · open until filled" : ""}${j.listing_expires ? ` · ad listed until ${esc(j.listing_expires)}` : ""}</div>
       <div><b>Start</b>${esc(j.start_date_text || (j.start_year ? String(j.start_year) : "not stated"))}</div>
       <div><b>Degree</b>${esc(j.degree_required || (j.phd_required ? "PhD (inferred from text)" : "not stated"))}</div>
       <div><b>Posted / first seen</b>${esc(j.posted || "—")} / ${esc(j.first_seen)}</div>

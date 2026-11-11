@@ -76,10 +76,11 @@ class ChronicleTests(unittest.TestCase):
         self.assertEqual(j.url, "https://jobs.chronicle.com/job/38042395/assistant-or-untenured-associate-professor/")
         self.assertIn("Tenure Track", j.section)
 
-    def test_detail_fallback_to_valid_through(self):
+    def test_valid_through_is_ad_expiry_not_deadline(self):
         detail = CHRON_DETAIL.replace(b"Applications must be received by November 6, 2026.", b"")
         jobs = chronicle.fetch(raw_feeds=[CHRON_FEED], raw_details={"38042395": detail})
-        self.assertEqual(jobs[0].deadline, "2026-11-22")
+        self.assertIsNone(jobs[0].deadline)                     # no deadline in the text
+        self.assertEqual(jobs[0].listing_expires, "2026-11-22")  # validThrough = ad leaves the board
 
 
 class SubstackTests(unittest.TestCase):

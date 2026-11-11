@@ -193,7 +193,9 @@ def fetch(session=None, raw_feeds=None, raw_details=None) -> list[Job]:
             time.sleep(DETAIL_DELAY)
         text = detail.get("description", "")
         title = detail.get("title") or it["title"]
-        deadline = deadline_from_text(text) or _iso(detail.get("valid_through"))
+        # validThrough is when the paid ad leaves the board (usually posted + 60 days), not the
+        # application deadline, so it is kept separately and never shown as the deadline.
+        deadline = deadline_from_text(text)
         jobs.append(Job(
             source="chronicle",
             source_id=jid,
@@ -204,6 +206,7 @@ def fetch(session=None, raw_feeds=None, raw_details=None) -> list[Job]:
             locations=[_location(detail, it["location"])],
             categories=[],
             deadline=deadline,
+            listing_expires=_iso(detail.get("valid_through")),
             posted=_iso(detail.get("date_posted")) or _iso(it["pub"]),
             salary=it["salary"][:80] if it["salary"].lower() not in ("competitive", "competitive salary", "not specified") else "",
             full_text=text,

@@ -28,6 +28,7 @@ class Job:
     jel_codes: list[str] = field(default_factory=list)
     categories: list[str] = field(default_factory=list)   # free-text fields/keywords
     deadline: Optional[str] = None    # ISO yyyy-mm-dd
+    listing_expires: Optional[str] = None   # date the ad leaves the board (not an application deadline)
     posted: Optional[str] = None      # ISO yyyy-mm-dd
     start_date_text: str = ""
     degree_required: str = ""
