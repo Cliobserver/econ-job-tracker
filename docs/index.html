@@ -202,7 +202,8 @@
   // until the position is filled (then only a passed hard closing date closes it).
   function isClosed(j) {
     if (!j.deadline || j.deadline >= todayISO) return false;
-    if (j.rolling) return !!(j.deadline_hard && j.deadline_hard < todayISO);
+    // A "hard" date equal to the priority date is the review-begins date read twice, not a closing date.
+    if (j.rolling) return !!(j.deadline_hard && j.deadline_hard !== j.priority_date && j.deadline_hard < todayISO);
     return true;
   }
   // Sort key: upcoming deadline first; rolling postings whose priority date passed sort after dated ones.
