@@ -62,6 +62,13 @@
   .summary { grid-column: 1 / -1; color: var(--text); opacity: .9; }
   .excl { color: var(--danger); font-size: 12px; }
   .empty { padding: 40px; text-align: center; color: var(--muted); }
+  .views { display: flex; gap: 4px; margin: 0 0 8px; border-bottom: 1px solid var(--line); }
+  .view { border: 0; background: none; color: var(--muted); font: inherit; font-size: 14px; padding: 8px 14px; cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -1px; }
+  .view.on { color: var(--text); font-weight: 600; border-bottom-color: var(--accent); }
+  .view small { opacity: .7; margin-left: 4px; font-weight: 400; }
+  th.arc, td.arc { text-align: center; width: 56px; padding-left: 4px; padding-right: 4px; white-space: nowrap; cursor: default; }
+  td.arc label { display: inline-flex; padding: 4px 8px; cursor: pointer; }
+  td.arc input { width: 16px; height: 16px; cursor: pointer; accent-color: var(--accent); }
   @media (max-width: 760px) {
     th.hide-m, td.hide-m { display: none; }
     .detail-grid { grid-template-columns: 1fr; }
@@ -104,9 +111,14 @@
       <button class="chip" id="reset">Reset</button>
     </div>
   </div>
+  <div class="views" role="tablist">
+    <button class="view" id="view-main" role="tab">Main<small id="n-main"></small></button>
+    <button class="view" id="view-archive" role="tab">Archive<small id="n-archive"></small></button>
+  </div>
   <div class="meta" id="meta"></div>
   <table>
     <thead><tr>
+      <th class="arc" title="Tick to move a posting to the Archive tab; untick it there to bring it back">Archive</th>
       <th data-k="deadline">Deadline</th>
       <th data-k="title">Position</th>
       <th data-k="inst" class="hide-m">Institution</th>
@@ -117,13 +129,13 @@
     </tr></thead>
     <tbody id="rows"></tbody>
   </table>
-  <div class="empty" id="empty" hidden>No postings match these filters.</div>
+  <div class="empty" id="empty" hidden></div>
 </main>
 <script>
 (function () {
   const $ = (s) => document.querySelector(s);
   const state = { q: "", fields: new Set(), regions: new Set(), states: new Set(), types: new Set(),
-                  newonly: false, agonly: false, showexcl: false, pastdl: false, sort: "deadline", window: "all" };
+                  newonly: false, agonly: false, showexcl: false, pastdl: false, sort: "deadline", window: "all", view: "main" };
   let DATA = null;
   const todayISO = new Date().toISOString().slice(0, 10);
   const SRC_LABEL = { joe: "JOE", ejm: "EJM", chronicle: "CHE", substack: "AEJ", aere: "AERE", gmail: "MAIL", aaea: "AAEA", inomics: "INOMICS", econjobs: "EJOBS" };
@@ -133,8 +145,20 @@
   try {
     const saved = JSON.parse(localStorage.getItem("ejt-filters") || "null");
     if (saved) { for (const k of ["fields","regions","states","types"]) state[k] = new Set(saved[k] || []);
-      for (const k of ["q","newonly","agonly","showexcl","pastdl","sort","window"]) if (k in saved) state[k] = saved[k]; }
+      for (const k of ["q","newonly","agonly","showexcl","pastdl","sort","window","view"]) if (k in saved) state[k] = saved[k]; }
   } catch (e) {}
+  if (state.view !== "archive") state.view = "main";
+
+  // Archive: postings the reader has put aside. Kept in this browser (localStorage) as board ids
+  // ("joe:123"), so a posting stays archived when the same ad is later merged with another board's copy.
+  let archived = new Set();
+  try { archived = new Set(JSON.parse(localStorage.getItem("ejt-archived") || "[]")); } catch (e) {}
+  const jobKeys = j => (j.source_keys && j.source_keys.length ? j.source_keys : j.sources.map(s => s.source + ":" + s.id));
+  const isArchived = j => jobKeys(j).some(k => archived.has(k));
+  function setArchived(j, on) {
+    for (const k of jobKeys(j)) on ? archived.add(k) : archived.delete(k);
+    try { localStorage.setItem("ejt-archived", JSON.stringify([...archived])); } catch (e) {}
+  }
   function persist() {
     try { localStorage.setItem("ejt-filters", JSON.stringify({ ...state, fields: [...state.fields], regions: [...state.regions],
       states: [...state.states], types: [...state.types] })); } catch (e) {}
@@ -175,15 +199,22 @@
     $("#window").onchange = e => { state.window = e.target.value; render(); };
     for (const k of ["newonly","agonly","showexcl","pastdl"]) $("#" + k).onchange = e => { state[k] = e.target.checked; render(); };
     $("#reset").onclick = () => { for (const k of ["fields","regions","states","types"]) state[k].clear();
-      Object.assign(state, { q: "", newonly: false, agonly: false, showexcl: false, pastdl: false, sort: "deadline", window: "all" }); init(); render(); };
+      Object.assign(state, { q: "", newonly: false, agonly: false, showexcl: false, pastdl: false, sort: "deadline", window: "all", view: "main" }); init(); render(); };
+    for (const v of ["main", "archive"]) $("#view-" + v).onclick = () => { state.view = v; render(); };
     document.querySelectorAll("th[data-k]").forEach(th => th.onclick = () => { state.sort = th.dataset.k === "inst" ? "inst" : th.dataset.k === "deadline" ? "deadline" : state.sort; $("#sort").value = state.sort; render(); });
     render();
   }
 
+  // The Archive tab lists every archived posting, including closed and excluded ones, so that nothing
+  // put aside becomes unreachable; the search box and chips still narrow it.
   function matches(j) {
     if (j.status === "gone") return false;
-    if (!state.showexcl && !j.passes_filter) return false;
-    if (!state.pastdl && isClosed(j)) return false;
+    const inArchive = isArchived(j);
+    if (inArchive !== (state.view === "archive")) return false;
+    if (!inArchive) {
+      if (!state.showexcl && !j.passes_filter) return false;
+      if (!state.pastdl && isClosed(j)) return false;
+    }
     if (state.window !== "all") { if (!j.deadline) return false; const d = daysBetween(j.deadline, todayISO); if (d < 0 || d > +state.window) return false; }
     if (state.newonly && daysBetween(todayISO, j.first_seen) > 7) return false;
     if (state.agonly && !j.ag_env) return false;
@@ -241,21 +272,34 @@
     if (state.sort === "new") list.sort((a, b) => (b.first_seen.localeCompare(a.first_seen)) || (a.deadline || "9999").localeCompare(b.deadline || "9999"));
     else list.sort((a, b) => key(a).localeCompare(key(b)));
     const newCount = list.filter(j => daysBetween(todayISO, j.first_seen) <= 7).length;
-    $("#meta").innerHTML = `<span>${list.length} postings shown</span><span>${newCount} new in last 7 days</span>`;
+    const nArchived = DATA.jobs.filter(j => j.status !== "gone" && isArchived(j)).length;
+    const inArchiveView = state.view === "archive";
+    $("#view-main").classList.toggle("on", !inArchiveView); $("#view-archive").classList.toggle("on", inArchiveView);
+    $("#view-main").setAttribute("aria-selected", String(!inArchiveView)); $("#view-archive").setAttribute("aria-selected", String(inArchiveView));
+    $("#n-archive").textContent = String(nArchived);
+    $("#n-main").textContent = inArchiveView ? "" : String(list.length);
+    $("#meta").innerHTML = inArchiveView
+      ? `<span>${list.length} archived postings shown</span><span>untick Archive to move a posting back to Main</span>`
+      : `<span>${list.length} postings shown</span><span>${newCount} new in last 7 days</span>`;
     const tb = $("#rows"); tb.innerHTML = "";
     $("#empty").hidden = list.length > 0;
+    $("#empty").textContent = inArchiveView
+      ? (nArchived ? "No archived postings match these filters." : "Nothing archived yet. Tick Archive on a posting in Main to move it here.")
+      : "No postings match these filters.";
     for (const j of list) {
       const tr = document.createElement("tr"); tr.className = "job";
       const soon = j.deadline && daysBetween(j.deadline, todayISO) <= 10 && daysBetween(j.deadline, todayISO) >= 0;
       const isNew = daysBetween(todayISO, j.first_seen) <= 1;
-      tr.innerHTML = `<td class="dl${soon ? " soon" : ""}">${dlCell(j)}</td>
+      tr.innerHTML = `<td class="arc"><label title="${inArchiveView ? "Untick to move back to Main" : "Tick to move to Archive"}"><input type="checkbox" aria-label="Archive ${esc(j.title)}"${inArchiveView ? " checked" : ""}></label></td>
+        <td class="dl${soon ? " soon" : ""}">${dlCell(j)}</td>
         <td><span class="t">${esc(j.title)}</span>${isNew ? '<span class="badge-new">NEW</span>' : ""}${j.passes_filter ? "" : ' <span class="excl">excluded: ' + esc(j.exclusion_reasons.join("; ")) + '</span>'}<div class="inst">${esc(j.department || "")}</div></td>
         <td class="hide-m">${esc(j.institution)}</td>
         <td>${esc(j.geo.primary)}<div class="inst">${esc(j.geo.regions.join(", "))}</div></td>
         <td class="hide-m">${j.fields.map(f => `<span class="tag${j.ag_env && /Agri|Envir|Resource|Energy/.test(f) ? " ag" : ""}">${esc(f)}</span>`).join("")}</td>
         <td class="hide-m">${esc(j.type)}</td>
         <td class="src">${j.sources.map(s => `<a href="${esc(s.url)}" target="_blank" rel="noopener" title="${esc(SRC_TITLE[s.source] || s.source)}">${esc(SRC_LABEL[s.source] || s.source.toUpperCase())}</a>`).join("")}</td>`;
-      tr.onclick = (e) => { if (e.target.tagName === "A") return; toggle(tr, j); };
+      tr.querySelector("td.arc input").onchange = (e) => { setArchived(j, e.target.checked); render(); };
+      tr.onclick = (e) => { if (e.target.tagName === "A" || e.target.closest("td.arc")) return; toggle(tr, j); };
       tb.appendChild(tr);
     }
   }
@@ -265,7 +309,7 @@
     if (next && next.classList.contains("detail")) { next.remove(); return; }
     const d = document.createElement("tr"); d.className = "detail";
     const reqs = (j.requirements || []).length ? j.requirements.map(esc).join(", ") : "not listed";
-    d.innerHTML = `<td colspan="7"><div class="detail-grid">
+    d.innerHTML = `<td colspan="8"><div class="detail-grid">
       <div><b>Location</b>${esc(j.location_text || j.geo.primary)}</div>
       <div><b>Deadline</b>${esc(j.deadline || "not stated")}${j.priority_date ? ` · full consideration by ${esc(j.priority_date)}` : ""}${j.deadline_hard && j.deadline_hard !== j.deadline ? ` · closes ${esc(j.deadline_hard)}` : ""}${j.rolling ? " · open until filled" : ""}${j.listing_expires ? ` · ad listed until ${esc(j.listing_expires)}` : ""}${isRemoved(j) ? ` · ad no longer on the board (last seen ${esc(j.last_seen)})` : ""}</div>
       <div><b>Start</b>${esc(j.start_date_text || (j.start_year ? String(j.start_year) : "not stated"))}</div>
