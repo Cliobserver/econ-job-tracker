@@ -49,6 +49,7 @@
   td.dl { white-space: nowrap; font-variant-numeric: tabular-nums; }
   td.dl.soon { color: var(--danger); font-weight: 600; }
   .dlnote { font-size: 11px; font-weight: 400; color: var(--muted); white-space: nowrap; }
+  .dlnote.removed { color: var(--danger); }
   .t { font-weight: 600; }
   .inst { color: var(--muted); font-size: 13px; }
   .tag { display: inline-block; font-size: 12px; padding: 1px 7px; border-radius: 6px; background: var(--chip); margin: 1px 3px 1px 0; }
@@ -99,7 +100,7 @@
       <label class="tog"><input type="checkbox" id="newonly"> new in last 7 days</label>
       <label class="tog"><input type="checkbox" id="agonly"> ag / env / resource only</label>
       <label class="tog"><input type="checkbox" id="showexcl"> include excluded (non-PhD / non-2027)</label>
-      <label class="tog"><input type="checkbox" id="pastdl"> include past deadlines</label>
+      <label class="tog"><input type="checkbox" id="pastdl"> include past deadlines / removed ads</label>
       <button class="chip" id="reset">Reset</button>
     </div>
   </div>
@@ -180,7 +181,7 @@
   }
 
   function matches(j) {
-    if (j.status === "gone") return false;   // "missing" = not seen for a few days, still shown
+    if (j.status === "gone") return false;
     if (!state.showexcl && !j.passes_filter) return false;
     if (!state.pastdl && isClosed(j)) return false;
     if (state.window !== "all") { if (!j.deadline) return false; const d = daysBetween(j.deadline, todayISO); if (d < 0 || d > +state.window) return false; }
@@ -200,7 +201,15 @@
 
   // A posting is closed when its deadline has passed, unless the ad says applications are accepted
   // until the position is filled (then only a passed hard closing date closes it).
+  // "missing" = the ad is no longer on any board it was collected from. On live boards that means it was
+  // taken down (EJM answers 410, Chronicle says "job has expired"). Newsletter and e-mail sources only
+  // carry recent items, so dropping off those says nothing about the position.
+  const FEED_SOURCES = new Set(["substack", "gmail"]);
+  function isRemoved(j) {
+    return j.status === "missing" && j.sources.some(s => !FEED_SOURCES.has(s.source));
+  }
   function isClosed(j) {
+    if (isRemoved(j)) return true;
     if (!j.deadline || j.deadline >= todayISO) return false;
     // A "hard" date equal to the priority date is the review-begins date read twice, not a closing date.
     if (j.rolling) return !!(j.deadline_hard && j.deadline_hard !== j.priority_date && j.deadline_hard < todayISO);
@@ -221,6 +230,7 @@
     else if (isPriority) note = '<div class="dlnote">priority' + (j.rolling ? ", then rolling" : "") + (j.deadline_hard && j.deadline_hard > j.deadline ? " (closes " + esc(j.deadline_hard) + ")" : "") + '</div>';
     else if (j.rolling && !j.deadline) note = '<div class="dlnote">rolling</div>';
     if (!j.deadline && j.listing_expires) note += '<div class="dlnote">ad listed until ' + esc(j.listing_expires) + '</div>';
+    if (isRemoved(j)) note += '<div class="dlnote removed">ad removed (last seen ' + esc(j.last_seen) + ')</div>';
     return dl + note;
   }
 
@@ -257,7 +267,7 @@
     const reqs = (j.requirements || []).length ? j.requirements.map(esc).join(", ") : "not listed";
     d.innerHTML = `<td colspan="7"><div class="detail-grid">
       <div><b>Location</b>${esc(j.location_text || j.geo.primary)}</div>
-      <div><b>Deadline</b>${esc(j.deadline || "not stated")}${j.priority_date ? ` · full consideration by ${esc(j.priority_date)}` : ""}${j.deadline_hard && j.deadline_hard !== j.deadline ? ` · closes ${esc(j.deadline_hard)}` : ""}${j.rolling ? " · open until filled" : ""}${j.listing_expires ? ` · ad listed until ${esc(j.listing_expires)}` : ""}</div>
+      <div><b>Deadline</b>${esc(j.deadline || "not stated")}${j.priority_date ? ` · full consideration by ${esc(j.priority_date)}` : ""}${j.deadline_hard && j.deadline_hard !== j.deadline ? ` · closes ${esc(j.deadline_hard)}` : ""}${j.rolling ? " · open until filled" : ""}${j.listing_expires ? ` · ad listed until ${esc(j.listing_expires)}` : ""}${isRemoved(j) ? ` · ad no longer on the board (last seen ${esc(j.last_seen)})` : ""}</div>
       <div><b>Start</b>${esc(j.start_date_text || (j.start_year ? String(j.start_year) : "not stated"))}</div>
       <div><b>Degree</b>${esc(j.degree_required || (j.phd_required ? "PhD (inferred from text)" : "not stated"))}</div>
       <div><b>Posted / first seen</b>${esc(j.posted || "—")} / ${esc(j.first_seen)}</div>
