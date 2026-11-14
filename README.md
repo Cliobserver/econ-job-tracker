@@ -11,56 +11,42 @@ mailing-list e-mail (RESECON, CWAE, AAEA sections, ARE Grads) when Gmail credent
 Runs every third day at 12:00 America/Los_Angeles via GitHub Actions (manual runs any time from the Actions tab).
 
 
-_Last run: 2026-11-11. Active postings passing the filter: 1189 (0 new today)._
+_Last run: 2026-11-13. Active postings passing the filter: 1217 (53 new today)._
 
 | Source | Fetched | Status |
 |---|---|---|
-| joe | 733 | ok |
-| ejm | 342 | ok |
-| chronicle | 342 | ok |
-| substack | 19 | ok (live fetch failed; cached feed) |
-| aere | 7 | ok |
-| gmail | 25 | ok (imap login ok; 151 list e-mails scanned, 0 new postings) |
+| joe | 770 | ok |
+| ejm | 346 | ok |
+| chronicle | 339 | ok |
+| substack | 19 | ok |
+| aere | 8 | ok |
+| gmail | 27 | ok (imap login ok; 151 list e-mails scanned, 2 new postings) |
 | aaea | 15 | ok |
-| inomics | 111 | ok |
+| inomics | 121 | ok |
 | econjobs | 13 | ok (live feed unavailable (HTTP 429, HTML page); cached feed) |
 
 ## Next 60 deadlines
 
 | Deadline | Position | Institution | Location | Fields | Type | New |
 |---|---|---|---|---|---|---|
-| 2026-11-11 | Tenure-Track Assistant Professor in Empirical Microeconomics (preferably Health) [EJM](https://econjobmarket.org/positions/12908) | Department of Economics Johannes Kepler University Linz | Austria | Health | Tenure-track |  |
-| 2026-11-11 | Tenure-Track Position for Empirical Microeconomics (preferably Health) [INOMICS](https://inomics.com/job/tenure-track-position-for-empirical-microeconomics-preferably-health-1555574) | Johannes Kepler University Linz (JKU) | Austria | Public, Labor, Health | Tenure-track |  |
-| 2026-11-11 | Assistant Professor - AI and Policy [JOE](https://www.aeaweb.org/joe/listing.php?JOE_ID=2026-02_111478256) | University of Chicago - Harris School of Public Policy | Illinois | Other, Any Field | Tenure-track |  |
-| 2026-11-11 | Assistant Professor [JOE](https://www.aeaweb.org/joe/listing.php?JOE_ID=2026-02_111478230) | University of Nebraska-Lincoln | Nebraska | Any Field | Tenure-track |  |
-| 2026-11-12 | Economics Research Specialist in Behavioral Economics and Finance [CHRONICLE](https://jobs.chronicle.com/job/38057166/economics-research-specialist-in-behavioral-economics-and-finance/) | Dartmouth College | New Hampshire | Finance, Industrial Organization, Behavioral/Experimental | Industry/Nonprofit |  |
-| 2026-11-12 | Assistant Professor [JOE](https://www.aeaweb.org/joe/listing.php?JOE_ID=2026-02_111477949) | University of Illinois at Urbana-Champaign | Illinois | Other, Any Field | Tenure-track |  |
 | 2026-11-13 | Two new job postings in ERS! [GMAIL](https://mail.google.com/mail/u/0/#search/Two%20new%20job%20postings%20in%20ERS%21) |  | Kansas | Unspecified | Government/IO |  |
-| 2026-11-13 | Four fellowship to tenure-track positions for research economists [EJM](https://econjobmarket.org/positions/12968) | Banca d'Italia | Italy | Development, Health, Education | Industry/Nonprofit |  |
 | 2026-11-13 | Assistant Professor/Associate Professor (tenure-track) [JOE](https://www.aeaweb.org/joe/listing.php?JOE_ID=2026-02_111478138) [EJM](https://econjobmarket.org/positions/12750) | Columbia University | New York | Macro, Finance, Labor | Tenure-track |  |
-| 2026-11-13 | Assistant Professor (Lecturer) in Finance [EJM](https://econjobmarket.org/positions/12826) | Department of Economics University College London | United Kingdom | Finance | Visiting/Teaching |  |
-| 2026-11-13 | Assistant Professor (Lecturer) in Economics [EJM](https://econjobmarket.org/positions/12850) | Department of Economics University College London | United Kingdom | Any Field | Visiting/Teaching |  |
-| 2026-11-13 | Research Fellow [EJM](https://econjobmarket.org/positions/12781) | Department of Economics University College London | United Kingdom | Unspecified | Postdoc |  |
 | 2026-11-13 | Assistant/Associate Professor Tenure Track [JOE](https://www.aeaweb.org/joe/listing.php?JOE_ID=2026-02_111478472) | Duke University | North Carolina | Any Field | Tenure-track |  |
 | 2026-11-13 | Assistant Professor [JOE](https://www.aeaweb.org/joe/listing.php?JOE_ID=2026-02_111477992) | EIEF Einaudi Institute for Economics and Finance | Italy | Finance, Any Field | Tenure-track |  |
-| 2026-11-13 | Tenure Track Position in Macroeconomics or Applied Microeconomics [EJM](https://econjobmarket.org/positions/12820) | Economics Toronto Metropolitan University | Canada | Macro | Tenure-track |  |
 | 2026-11-13 | Assistant Professor of Economics [EJM](https://econjobmarket.org/positions/12677) | Economics Universidad Carlos III de Madrid | Spain | International/Trade, Macro, Econometrics | Tenure-track |  |
 | 2026-11-13 | Associate Professorship in Economics [EJM](https://econjobmarket.org/positions/12960) | Economics University of Oxford | United Kingdom | Any Field | Tenure-track |  |
 | 2026-11-13 | Associate Professorship in Economics [EJM](https://econjobmarket.org/positions/12918) | Economics University of Oxford | United Kingdom | Any Field | Tenure-track |  |
 | 2026-11-13 | Associate Professorships in Economics (Two Posts) [EJM](https://econjobmarket.org/positions/12897) | Economics University of Oxford | United Kingdom | Any Field | Tenure-track |  |
-| 2026-11-13 | Assistant Professor (Tenure-Track) [EJM](https://econjobmarket.org/positions/12688) | Einaudi Institute for Economics and Finance | Italy | Any Field | Tenure-track |  |
 | 2026-11-13 | Economists, Senior Economists, and Principal Economists [JOE](https://www.aeaweb.org/joe/listing.php?JOE_ID=2026-02_111478374) | Federal Reserve Board of Governors | District of Columbia | Any Field | Government/IO |  |
-| 2026-11-13 | Assistant professor of Finance [EJM](https://econjobmarket.org/positions/12819) | Finance HEC Paris | France | Finance | Tenure-track |  |
 | 2026-11-13 | Assistant, Associate, or Full Professor [JOE](https://www.aeaweb.org/joe/listing.php?JOE_ID=2026-02_111478213) | Hong Kong University of Science and Technology, Hong Kong Campus | Hong Kong | Finance | Tenure-track |  |
-| 2026-11-13 | Tenure Track Assistant Professor/IIES-Stockholm University [EJM](https://econjobmarket.org/positions/12840) | Institute for International Economic Studies Stockholm University | Sweden | Any Field | Tenure-track |  |
-| 2026-11-13 | Development Effectiveness and Impact Evaluation Consultant [JOE](https://www.aeaweb.org/joe/listing.php?JOE_ID=2026-02_111478414) [EJM](https://econjobmarket.org/positions/12925) | Inter-American Development Bank | District of Columbia | Development, Econometrics, Any Field | Industry/Nonprofit |  |
+| 2026-11-13 | Development Effectiveness and Impact Evaluation Consultant [JOE](https://www.aeaweb.org/joe/listing.php?JOE_ID=2026-02_111478414) | Inter-American Development Bank | District of Columbia | Development, Econometrics, Any Field | Industry/Nonprofit |  |
 | 2026-11-13 | Assistant Professor in Finance [JOE](https://www.aeaweb.org/joe/listing.php?JOE_ID=2026-02_111477821) | London School of Economics | United Kingdom | Finance | Tenure-track |  |
 | 2026-11-13 | Assistant Professor - Tenure Track [JOE](https://www.aeaweb.org/joe/listing.php?JOE_ID=2026-02_111477634) | Macalester College | Minnesota | Behavioral/Experimental, Macro | Tenure-track |  |
 | 2026-11-13 | Assistant Professor of Finance [JOE](https://www.aeaweb.org/joe/listing.php?JOE_ID=2026-02_111478192) | New York University | New York | Finance | Tenure-track |  |
 | 2026-11-13 | Assistant or Associate Professor of Economics [JOE](https://www.aeaweb.org/joe/listing.php?JOE_ID=2026-02_111477951) | Pittsburg State University | Kansas | Any Field | Tenure-track |  |
+| 2026-11-13 | Assistant Professor of Finance [JOE](https://www.aeaweb.org/joe/listing.php?JOE_ID=2026-02_111478483) | Pittsburg State University | Kansas | Finance | Tenure-track | 🆕 |
 | 2026-11-13 | Chair of the Department of Economics and Finance [JOE](https://www.aeaweb.org/joe/listing.php?JOE_ID=2026-02_111478146) [INOMICS](https://inomics.com/job/chair-economics-and-finance-1555390) | Stephen F. Austin State University | Texas | Education, Finance, Any Field | Visiting/Teaching |  |
 | 2026-11-13 | Tenure Track Assistant Professor [JOE](https://www.aeaweb.org/joe/listing.php?JOE_ID=2026-02_111478318) | Stockholm University | Sweden | International/Trade, Any Field | Tenure-track |  |
-| 2026-11-13 | Research Agricultural Economist (two positions) in Food Prices and Expenditures Branch [SUBSTACK](https://appliedeconjobs.substack.com/p/research-agricultural-economist-two) | USDA Economic Research Service | Kansas | Agricultural, Econometrics | Government/IO |  |
 | 2026-11-13 | Assistant/Associate/Full Professor [JOE](https://www.aeaweb.org/joe/listing.php?JOE_ID=2026-02_111478299) | University College London | United Kingdom | Finance | Tenure-track |  |
 | 2026-11-13 | Assistant Professor [JOE](https://www.aeaweb.org/joe/listing.php?JOE_ID=2026-02_111478281) | University of Chicago | Illinois | Environmental, Energy, Any Field | Tenure-track |  |
 | 2026-11-13 | Assistant Professor of Economics [JOE](https://www.aeaweb.org/joe/listing.php?JOE_ID=2026-02_111477788) | Washington and Lee University | Virginia | Macro | Tenure-track |  |
@@ -86,8 +72,22 @@ _Last run: 2026-11-11. Active postings passing the filter: 1189 (0 new today)._
 | 2026-11-15 | Two Tenure-Track Faculty Positions in Microeconomics [CHRONICLE](https://jobs.chronicle.com/job/38041685/two-tenure-track-faculty-positions-in-microeconomics/) | College of the Holy Cross | Massachusetts | Energy, Development, Econometrics | Tenure-track |  |
 | 2026-11-15 | Two Tenure-Track Faculty Positions in Macroeconomics [CHRONICLE](https://jobs.chronicle.com/job/38041680/two-tenure-track-faculty-positions-in-macroeconomics/) | College of the Holy Cross | Massachusetts | International/Trade, Finance, Macro | Tenure-track |  |
 | 2026-11-15 | Assistant Professor of International and Public Affairs [JOE](https://www.aeaweb.org/joe/listing.php?JOE_ID=2026-02_111477652) [EJM](https://econjobmarket.org/positions/12574) | Columbia University | New York | Environmental, International/Trade, Agricultural | Tenure-track |  |
+| 2026-11-15 | Assistant Professor of Environmental, Resource, or Energy Economics [SUBSTACK](https://appliedeconjobs.substack.com/p/assistant-professor-of-environmental-bee) | Columbia University School of International and Public Affairs | New York | Environmental, Energy | Tenure-track | 🆕 |
 | 2026-11-15 | Senior Economist - PhD [JOE](https://www.aeaweb.org/joe/listing.php?JOE_ID=2026-02_111477876) | Compass Lexecon | Illinois | Micro, Industrial Organization, Finance | Industry/Nonprofit |  |
 | 2026-11-15 | Assistant Professor [JOE](https://www.aeaweb.org/joe/listing.php?JOE_ID=2026-02_111478190) | Connecticut College | Connecticut | Environmental, Econometrics | Tenure-track |  |
-| 2026-11-15 | Tenure-track Assistant Professor of Economics [INOMICS](https://inomics.com/job/tenure-track-assistant-professor-of-economics-1555511) | Connecticut College | Connecticut | Agricultural/Environmental, Any Field | Tenure-track |  |
+| 2026-11-15 | Tenure-track Assistant Professor of Economics [INOMICS](https://inomics.com/job/tenure-track-assistant-professor-of-economics-1555511) | Connecticut College | Unknown | Agricultural/Environmental, Any Field | Tenure-track |  |
+| 2026-11-15 | Economist/Senior Economist/Adviser [EJM](https://econjobmarket.org/positions/12834) | Danmarks Nationalbank | Denmark | Labor, Public, International/Trade | Industry/Nonprofit |  |
+| 2026-11-15 | Assistant Professor [JOE](https://www.aeaweb.org/joe/listing.php?JOE_ID=2026-02_111477809) | DePaul University | Illinois | Macro, International/Trade, Economic History | Tenure-track |  |
+| 2026-11-15 | Assistant/Associate/Full Professor [EJM](https://econjobmarket.org/positions/12592) | Department of Economics Hebrew University of Jerusalem | Israel | Any Field | Tenure-track |  |
+| 2026-11-15 | Two Assistant Professorships in Econometrics (W1 with Tenure Track to W2) [EJM](https://econjobmarket.org/positions/12593) | Department of Economics University of Bonn | Germany | Econometrics | Tenure-track |  |
+| 2026-11-15 | Assistant Professor in Environmental Economics [EJM](https://econjobmarket.org/positions/12746) | Department of Economics University of Gothenburg | Sweden | Agricultural, Environmental, Energy | Tenure-track |  |
+| 2026-11-15 | Assistant Professor in Applied Microeconomics [EJM](https://econjobmarket.org/positions/12747) | Department of Economics University of Gothenburg | Sweden | Health, Education, Labor | Tenure-track |  |
+| 2026-11-15 | Assistant Professor of Theoretical Public Economics (W1) [EJM](https://econjobmarket.org/positions/12800) [INOMICS](https://inomics.com/job/assistant-professor-of-theoretical-public-economics-w1-1555456) | Department of Economics University of Mannheim | Germany | Agricultural, Environmental, Energy | Tenure-track |  |
+| 2026-11-15 | Two Assistant Professorships in Macroeconomics [EJM](https://econjobmarket.org/positions/12801) [INOMICS](https://inomics.com/job/two-assistant-professorships-in-macroeconomics-1555457) | Department of Economics University of Mannheim | Germany | Macro, Health, Education | Tenure-track |  |
+| 2026-11-15 | Postdoctoral Position in Applied Microeconomics [EJM](https://econjobmarket.org/positions/12818) | Department of Economics University of Mannheim | Germany | Behavioral/Experimental | Postdoc |  |
+| 2026-11-15 | Postdoctoral Researcher (f/m/d) in Applied Microeconomics [EJM](https://econjobmarket.org/positions/12911) | Department of Economics University of Tübingen | Germany | Development, Labor, Macro | Postdoc |  |
+| 2026-11-15 | Faculty Position in Finance [EJM](https://econjobmarket.org/positions/12964) | Department of Finance Norwegian School of Economics (NHH) | Norway | Finance | Tenure-track |  |
+| 2026-11-15 | Tenure-Track Faculty [JOE](https://www.aeaweb.org/joe/listing.php?JOE_ID=2026-02_111477596) | Duke University | North Carolina | Finance | Tenure-track |  |
+| 2026-11-15 | Assistant Professor of Finance [EJM](https://econjobmarket.org/positions/12815) | Economics Bocconi University | Italy | Finance | Tenure-track |  |
 
 _Table shows the next deadlines only; use the dashboard for filtering by field, region, type, and source._
