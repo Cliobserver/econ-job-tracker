@@ -9,7 +9,7 @@ from __future__ import annotations
 import argparse
 import sys
 import traceback
-from datetime import date, datetime
+from datetime import date, datetime, timedelta
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
@@ -71,10 +71,12 @@ def effective_deadline(hard, priority):
     return hard
 
 
-def sane_priority(hard, priority):
-    """Drop a full-consideration date that is the closing date with last year's number: the ad
-    mistyped the year ("no later than January 6, 2026" on a search that closes 2027-01-06)."""
-    if hard and priority and priority[4:] == hard[4:] and priority[:4] < hard[:4]:
+def sane_priority(hard, priority, today=None):
+    """Drop a full-consideration date that is the closing date with last year's number and already
+    long past: the ad mistyped the year ("no later than January 6, 2026" on a search that closes
+    2027-01-06). A date still ahead or recent is real (priority 2026-12-01, accepted until 2027-12-01)."""
+    today = today or date.today()
+    if hard and priority and priority[4:] == hard[4:] and priority[:4] < hard[:4] and priority < (today - timedelta(days=180)).isoformat():
         return None
     return priority
 

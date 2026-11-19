@@ -150,8 +150,12 @@ class FilterTests(unittest.TestCase):
         self.assertIsNone(priority_from_text("Apply to ensure full consideration by the committee. Final date: Monday, Aug 30, 2027."))
         # A priority date that is the closing date with the previous year's number is a typo in the ad.
         from src.run import sane_priority
-        self.assertIsNone(sane_priority("2027-01-06", "2026-01-06"))
-        self.assertEqual(sane_priority("2027-08-30", "2026-11-23"), "2026-11-23")
+        from datetime import date
+        run_day = date(2026, 11, 18)
+        self.assertIsNone(sane_priority("2027-01-06", "2026-01-06", run_day))
+        self.assertEqual(sane_priority("2027-08-30", "2026-11-23", run_day), "2026-11-23")
+        # Same month and day a year apart, but the earlier one is still ahead: a real priority date.
+        self.assertEqual(sane_priority("2027-12-01", "2026-12-01", run_day), "2026-12-01")
         # A priority date later than the hard deadline is ignored.
         j = mk(deadline="2026-11-01", full_text="Review of applications begins December 1, 2026.")
         self.assertEqual(enrich(j)["deadline"], "2026-11-01")
