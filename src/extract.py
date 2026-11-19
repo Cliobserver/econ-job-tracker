@@ -114,8 +114,19 @@ OPEN_UNTIL_FILLED_RE = re.compile(
 
 # HR-system form labels ("Review Date 11/29/2026"): the date must follow the label directly, because
 # the next form field often carries an unrelated date ("Review Date Open Until Filled Posting Date ...").
+# An optional weekday may sit between label and date ("Next review date: Monday, Nov 23, 2026", UC Recruit).
 PRIORITY_LABEL = re.compile(
-    r"\b(?:(?:initial|first|priority|application|applicant) )?(?:review|screening)(?: begin| begins| start| starts)? date\s*[:\-]?\s*", re.I)
+    r"\b(?:(?:initial|first|next|priority|application|applicant) )?(?:review|screening)(?: begin| begins| start| starts)? date\s*[:\-]?\s*"
+    r"(?:(?:mon|tues|wednes|thurs|fri|satur|sun)day,?\s+)?", re.I)
+# Date first, cue second: "Apply by November 23, 2026, for full consideration."
+PRIORITY_AFTER_DATE = re.compile(
+    r"\W{0,3}(?:at [^,.;]{0,25})?(?:\([^)]{0,30}\))?\W{0,3}"
+    r"(?:for|to (?:ensure|receive|guarantee|assure|secure|be (?:assured|guaranteed|given|eligible for))|"
+    r"in order to (?:ensure|receive|be (?:assured|guaranteed|given))|will (?:receive|be given|be assured|be guaranteed)|"
+    r"(?:are|is) (?:assured|guaranteed)) (?:of )?(?:full|fullest|best|priority|first|guaranteed|complete|maximum) (?:consideration|review)", re.I)
+# A sentence ends between cue and date: the date belongs to the next statement
+# ("...to ensure full consideration by the committee. Final date: Monday, Aug 30, 2027").
+SENTENCE_BREAK = re.compile(r"[.;]\s+[A-Z]")
 
 
 def priority_from_text(text: str) -> str | None:
@@ -124,8 +135,12 @@ def priority_from_text(text: str) -> str | None:
         return None
     text = _flat(text)
     for cue in PRIORITY_CUE.finditer(text):
-        m = DATE_RE.search(text[cue.end(): cue.end() + 60])
-        if m and _to_iso(m):
+        window = text[cue.end(): cue.end() + 60]
+        m = DATE_RE.search(window)
+        if m and _to_iso(m) and not SENTENCE_BREAK.search(window[:m.start()]):
+            return _to_iso(m)
+    for m in DATE_RE.finditer(text):
+        if _to_iso(m) and PRIORITY_AFTER_DATE.match(text, m.end()):
             return _to_iso(m)
     for cue in PRIORITY_LABEL.finditer(text):
         m = DATE_RE.match(text, cue.end())

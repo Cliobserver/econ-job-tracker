@@ -137,6 +137,21 @@ class FilterTests(unittest.TestCase):
         # HR-system form label without a verb (Virginia Tech).
         self.assertEqual(priority_from_text("Hours per week 40 Review Date 11/29/2026 Additional Information"), "2026-11-29")
         self.assertIsNone(priority_from_text("Review Date Open Until Filled Posting Date 10/01/2026"))
+        # Date first, cue second (UC San Diego on JOE and others).
+        self.assertEqual(priority_from_text("Apply by November 23, 2026, for full consideration. Rank and salary depend on qualifications."), "2026-11-23")
+        self.assertEqual(priority_from_text("Applications must be received by November 21, 2026 to be guaranteed full consideration, but will be accepted until filled."), "2026-11-21")
+        self.assertEqual(priority_from_text("Applications received by 30 November 2026 will receive full consideration."), "2026-11-30")
+        self.assertEqual(priority_from_text("Review of applications will begin immediately. Applications submitted by January 4, 2027 will receive priority review."), "2027-01-04")
+        # UC Recruit layout: weekday inside the label, and the final date must not be taken as the priority date.
+        uc = ("Application Window Open date: September 18, 2026 Next review date: Monday, Nov 23, 2026 at 11:59pm (Pacific Time) "
+              "Apply by this date to ensure full consideration by the committee. Final date: Monday, Aug 30, 2027 at 11:59pm (Pacific Time) "
+              "Applications will continue to be accepted until this date.")
+        self.assertEqual(priority_from_text(uc), "2026-11-23")
+        self.assertIsNone(priority_from_text("Apply to ensure full consideration by the committee. Final date: Monday, Aug 30, 2027."))
+        # A priority date that is the closing date with the previous year's number is a typo in the ad.
+        from src.run import sane_priority
+        self.assertIsNone(sane_priority("2027-01-06", "2026-01-06"))
+        self.assertEqual(sane_priority("2027-08-30", "2026-11-23"), "2026-11-23")
         # A priority date later than the hard deadline is ignored.
         j = mk(deadline="2026-11-01", full_text="Review of applications begins December 1, 2026.")
         self.assertEqual(enrich(j)["deadline"], "2026-11-01")
