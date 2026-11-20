@@ -11,30 +11,24 @@ mailing-list e-mail (RESECON, CWAE, AAEA sections, ARE Grads) when Gmail credent
 Runs every third day at 12:00 America/Los_Angeles via GitHub Actions (manual runs any time from the Actions tab).
 
 
-_Last run: 2026-11-18. Active postings passing the filter: 1193 (33 new today)._
+_Last run: 2026-11-19. Active postings passing the filter: 1214 (25 new today)._
 
 | Source | Fetched | Status |
 |---|---|---|
-| joe | 788 | ok |
-| ejm | 308 | ok |
-| chronicle | 325 | ok |
+| joe | 797 | ok |
+| ejm | 313 | ok |
+| chronicle | 326 | ok |
 | substack | 19 | ok |
 | aere | 8 | ok |
-| gmail | 31 | ok (not configured; stored postings only) |
+| gmail | 36 | ok (imap login ok; 162 list e-mails scanned, 5 new postings) |
 | aaea | 14 | ok |
-| inomics | 113 | ok |
-| econjobs | 13 | ok (live feed unavailable (HTTP 200, HTML page); cached feed) |
+| inomics | 116 | ok |
+| econjobs | 13 | ok (live feed unavailable (HTTP 429, HTML page); cached feed) |
 
 ## Next 60 deadlines
 
 | Deadline | Position | Institution | Location | Fields | Type | New |
 |---|---|---|---|---|---|---|
-| 2026-11-18 | Professor in international economics (any level) [EJM](https://econjobmarket.org/positions/12695) | Département des sciences économiques Université du Québec à Montréal (UQAM) | Canada | International/Trade, Finance, Macro | Tenure-track |  |
-| 2026-11-18 | PhD Associate [JOE](https://www.aeaweb.org/joe/listing.php?JOE_ID=2026-02_111477997) | Econic Partners | District of Columbia | Industrial Organization | Industry/Nonprofit |  |
-| 2026-11-18 | Economist/Sr. Economist/Research Advisor/Sr. Research Advisor [JOE](https://www.aeaweb.org/joe/listing.php?JOE_ID=2026-02_111477758) | Federal Reserve Bank of San Francisco | California | International/Trade, Macro, Labor | Government/IO |  |
-| 2026-11-18 | Fair-Cycle Project Postdoctoral Researcher at Post-Growth Innovation Lab [SUBSTACK](https://appliedeconjobs.substack.com/p/fair-cycle-project-postdoctoral-researcher) | Universida de Vigo | Spain | Macro | Postdoc |  |
-| 2026-11-18 | Assistant Professor - Economic Analysis & Policy [JOE](https://www.aeaweb.org/joe/listing.php?JOE_ID=2026-02_111477786) | University of California Berkeley | California | Any Field | Tenure-track |  |
-| 2026-11-18 | Assistant Professor [JOE](https://www.aeaweb.org/joe/listing.php?JOE_ID=2026-02_111477588) | University of California Berkeley | California | Finance | Tenure-track |  |
 | 2026-11-19 | PhD Economics Intern – Structural IO, Summer 2027 [ECONJOBS](https://econ-jobs.com/job-offer/phd-economics-intern-structural-io-summer-2027/) | Amazon.com | Washington | Industrial Organization | PhD Internship |  |
 | 2026-11-19 | PhD Economics Intern – Reduced Form Causal Inference, Summer 2027 [ECONJOBS](https://econ-jobs.com/job-offer/phd-economics-intern-reduced-form-causal-inference-summer-2027/) | Amazon.com | Washington | Econometrics | PhD Internship |  |
 | 2026-11-19 | Assistant/Associate Professor in Econometrics [EJM](https://econjobmarket.org/positions/12855) | Economics Institut Polytechnique de Paris | France | Econometrics | Tenure-track |  |
@@ -42,9 +36,8 @@ _Last run: 2026-11-18. Active postings passing the filter: 1193 (33 new today)._
 | 2026-11-19 | Assistant Professor of Finance [EJM](https://econjobmarket.org/positions/12892) | SDU Business School University of Southern Denmark | Denmark | Finance | Tenure-track |  |
 | 2026-11-19 | Energy Economist/Senior Economist [JOE](https://www.aeaweb.org/joe/listing.php?JOE_ID=2026-02_111478247) | The Institute for Policy Integrity at NYU School of Law | New York | Econometrics, Law & Economics, Industrial Organization | Industry/Nonprofit |  |
 | 2026-11-19 | Health Economic & Outcomes Research Strategy Lead (UK) [ECONJOBS](https://econ-jobs.com/job-offer/health-economic-outcomes-research-strategy-lead-uk/) | UCB | United Kingdom | Health | Industry/Nonprofit |  |
-| 2026-11-19 | Assistant or Associate Professor (Industrial Organization or Regulatory Economics) [JOE](https://www.aeaweb.org/joe/listing.php?JOE_ID=2026-02_111477781) [EJM](https://econjobmarket.org/positions/12623) | University of Calgary | Canada | Industrial Organization, Public | Tenure-track |  |
+| 2026-11-19 | Assistant or Associate Professor (Industrial Organization or Regulatory Economics) [JOE](https://www.aeaweb.org/joe/listing.php?JOE_ID=2026-02_111477781) | University of Calgary | Canada | Industrial Organization, Public | Tenure-track |  |
 | 2026-11-19 | Research Associate In Health Economics [ECONJOBS](https://econ-jobs.com/job-offer/research-associate-in-health-economics/) | University of Manchester | United Kingdom | Health | Other |  |
-| 2026-11-19 | Senior Economist [SUBSTACK](https://appliedeconjobs.substack.com/p/senior-economist-at-washington-state) | Washington State Office of Financial Management | Washington | Labor, Econometrics | Industry/Nonprofit |  |
 | 2026-11-20 | Several Research Associate positions [EJM](https://econjobmarket.org/positions/12849) | Berlin School of Economics | Germany | Agricultural, Environmental, Energy | Postdoc |  |
 | 2026-11-20 | PERMIT Lab Postdoctoral Scholar Research Associate [JOE](https://www.aeaweb.org/joe/listing.php?JOE_ID=2026-02_111478168) | California Institute of Technology | California | Agricultural/Environmental, Urban/Regional, Industrial Organization | Postdoc |  |
 | 2026-11-20 | Assistant Professor of Economics & Business-Macroeconomics [JOE](https://www.aeaweb.org/joe/listing.php?JOE_ID=2026-02_111478102) [CHRONICLE](https://jobs.chronicle.com/job/38045306/assistant-professor-of-economics-and-business-macroeconomics-/) [INOMICS](https://inomics.com/job/assistant-professor-of-economics-and-business-1555353) | Centre College | Kentucky | Macro, Finance, Any Field | Tenure-track |  |
@@ -55,7 +48,7 @@ _Last run: 2026-11-18. Active postings passing the filter: 1193 (33 new today)._
 | 2026-11-20 | Assistant Professor Positions, (Finance) [JOE](https://www.aeaweb.org/joe/listing.php?JOE_ID=2026-02_111477825) | Indiana University | Indiana | Finance, Urban/Regional | Tenure-track |  |
 | 2026-11-20 | Assistant Professor positions, Kelley School of Business (Finance) [CHRONICLE](https://jobs.chronicle.com/job/38021649/assistant-professor-positions-kelley-school-of-business-finance-/) | Indiana University Bloomington | Indiana | Finance | Tenure-track |  |
 | 2026-11-20 | Research Associate in Labor Economics [EJM](https://econjobmarket.org/positions/12692) | Institute for Employment Research | Germany | Health, Education, Labor | Postdoc |  |
-| 2026-11-20 | (Senior) Lecturer in Economics [SUBSTACK](https://appliedeconjobs.substack.com/p/senior-lecturer-in-economics-at-lincoln) | Lincoln University | New Zealand | Agricultural | Visiting/Teaching | 🆕 |
+| 2026-11-20 | (Senior) Lecturer in Economics [SUBSTACK](https://appliedeconjobs.substack.com/p/senior-lecturer-in-economics-at-lincoln) | Lincoln University | New Zealand | Agricultural | Visiting/Teaching |  |
 | 2026-11-20 | Assistant Professor / Associate Professor/ Professor [JOE](https://www.aeaweb.org/joe/listing.php?JOE_ID=2026-02_111478107) | National University of Singapore | Singapore | Urban/Regional, Finance | Tenure-track |  |
 | 2026-11-20 | Tenured/Tenure-Track Positions in Finance [JOE](https://www.aeaweb.org/joe/listing.php?JOE_ID=2026-02_111478129) | New York University Shanghai | China | Finance, Any Field | Tenure-track |  |
 | 2026-11-20 | Finance Professor at Nova School of Business and Economics [EJM](https://econjobmarket.org/positions/12829) | Nova School of Business and Economics Universidade Nova de Lisboa | Portugal | Finance | Tenure-track |  |
@@ -89,5 +82,12 @@ _Last run: 2026-11-18. Active postings passing the filter: 1193 (33 new today)._
 | 2026-11-22 | Assistant Professor of Economics — Microeconomics [EJM](https://econjobmarket.org/positions/12619) | Economics University of Helsinki | Finland | Micro | Tenure-track |  |
 | 2026-11-22 | Assistant Professor (tenure-track) in Finance [EJM](https://econjobmarket.org/positions/12880) | Economics and Finance Hanken School of Economics | Finland | Finance, Any Field | Tenure-track |  |
 | 2026-11-22 | Postdoctoral Researcher in Innovation Economics [EJM](https://econjobmarket.org/positions/12803) | Economics and Management Leibniz Universität Hannover | Germany | Public, Micro, Industrial Organization | Postdoc |  |
+| 2026-11-22 | Assistant/Associate Professor of Economics [EJM](https://econjobmarket.org/positions/12595) | Economics, Finance, and Marketing Tennessee Tech University | Tennessee | Any Field | Tenure-track |  |
+| 2026-11-22 | Assistant/Associate Professor of Finance – Paris Campus (France) [EJM](https://econjobmarket.org/positions/12883) | Finance ESCP Business School | France | Finance | Tenure-track |  |
+| 2026-11-22 | Assistant, Associate, or Full Professor [JOE](https://www.aeaweb.org/joe/listing.php?JOE_ID=2026-02_111477656) | Hong Kong University of Science and Technology | Hong Kong | Public, Health, Labor | Tenure-track |  |
+| 2026-11-22 | Assistant Professor in Economics [EJM](https://econjobmarket.org/positions/12814) | Institute of Economics Corvinus University of Budapest | Hungary | Macro, Econometrics, Any Field | Tenure-track |  |
+| 2026-11-22 | Senior Economist [EJM](https://econjobmarket.org/positions/12946) | National Bank of Slovakia | Slovakia | Agricultural, Environmental, Energy | Government/IO |  |
+| 2026-11-22 | Clinical Assistant Professor [JOE](https://www.aeaweb.org/joe/listing.php?JOE_ID=2026-02_111478329) | New York University Arts and Science | New York | Political Economy, Macro, Any Field | Visiting/Teaching |  |
+| 2026-11-22 | CLINICAL ASSISTANT/ASSOCIATE PROFESSOR OF SPORT MANAGEMENT [CHRONICLE](https://jobs.chronicle.com/job/38058479/clinical-assistant-associate-professor-of-sport-management/) | New York University School of Professional Studies | New York | Finance | Visiting/Teaching |  |
 
 _Table shows the next deadlines only; use the dashboard for filtering by field, region, type, and source._
